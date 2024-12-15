@@ -1,0 +1,16 @@
+<div *ngIf="isLoading">Loading prices...</div>
+<div *ngIf="!isLoading">
+  <div *ngIf="error" class="error-message">{{ error }}</div>
+  <div *ngIf="!error">
+    <ul>
+      <!-- Loop through the keys of the cryptoPrices object -->
+      <li *ngFor="let coinId of objectKeys(cryptoPrices)">
+        <div>
+          <!-- Display the image for each coin -->
+          <img *ngIf="cryptoPrices[coinId].imageUrl" [src]="cryptoPrices[coinId].imageUrl" alt="{{ coinId }} logo" width="30" height="30">
+          <p>{{ coinId | uppercase }}: {{ cryptoPrices[coinId].price | currency:'USD' }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
