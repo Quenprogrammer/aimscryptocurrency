@@ -1,0 +1,41 @@
+<div>
+  <h1>Top 30 Cryptocurrencies</h1>
+  <div *ngFor="let crypto of cryptos" class="crypto-card">
+    <h2>{{ crypto.name }} ({{ crypto.symbol.toUpperCase() }})</h2>
+    <img *ngIf="crypto.logo" [src]="crypto.logo" alt="Logo" width="50" height="50">
+    <p>Website: <a [href]="crypto.website" target="_blank">{{ crypto.website }}</a></p>
+    <button> <!--(click)="addToUserList(crypto)-->">Select</button>
+  </div>
+</div>
+
+
+
+
+<div class="mb-3">
+  <label for="select-input" class="form-label">Select</label>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="select-input1" data-bs-toggle="dropdown" aria-expanded="false">
+      <img *ngIf="selectedImage" [src]="selectedImage" style="width: 20px; margin-right: 10px;">
+      {{ selectedOption || 'Choose option...'}}
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="select-input">
+      <li *ngFor="let option of options" (click)="selectOption(option)">
+        <a class="dropdown-item" >
+          <img [src]="option.img" style="width: 20px; margin-right: 10px;"> {{ option.text }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="mb-3">
+  <label for="select-input" class="form-label">Select</label>
+  <select class="form-select" id="select-input">
+    <option>Choose option...</option>
+    @for (items of options; track items.text){
+
+
+    <option>Option item 1 </option>
+    }
+  </select>
+</div>

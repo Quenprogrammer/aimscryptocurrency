@@ -1,0 +1,28 @@
+.crypto-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  display: inline-block;
+  width: 250px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.crypto-card img {
+  border-radius: 50%;
+  margin: 10px 0;
+}
+
+.crypto-card button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.crypto-card button:hover {
+  background-color: #45a049;
+}

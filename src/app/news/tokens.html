@@ -1,0 +1,14 @@
+
+
+<div class="container">
+  <div class="row">
+
+  @for (item of News; track item.name) {
+    <div class="col-sm-12 col-lg-4 mb-3">
+      <app-news-card [newsArticle]="item"></app-news-card>
+
+    </div>
+
+  }
+</div>
+</div>

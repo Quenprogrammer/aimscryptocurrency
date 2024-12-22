@@ -1,0 +1,148 @@
+
+<app-data-stats></app-data-stats>
+
+
+
+
+
+
+
+
+
+
+
+<ng-template #longContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <div class="col d-flex justify-content-center">
+      <div class="col-12  d-flex justify-content-center">
+        <div class="col-9"  >
+          <div class="row">
+            @for(items of tokenStats; track items.name){
+              <div class="col-4 col-md-3 text-center" ><img style="width: 50%; border-radius: 100%" [src]=items.logo alt="Square image">
+                <p class="text-center">{{items.name}}</p>
+              </div>
+
+            }
+          </div>
+
+        </div></div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
+<button class="btn btn-outline-primary mb-2 me-2" (click)="openScrollableContent(longContent)">
+  Modal scrollable content
+</button>
+
+<ng-template #longContent1 let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Exchangers</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <div class="col d-flex justify-content-center">
+      <div class="col-12  d-flex justify-content-center">
+        <div class="col-9"  >
+          <div class="row">
+            @for(items of exchangers; track items.name){
+              <div class="col-4 col-md-3 text-center" ><img style="border-radius: 100%; width:50%;" [src]=items.logo alt="Square image">
+                <p class="text-center">{{items.name}}</p>
+              </div>
+
+            }
+          </div>
+
+        </div></div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
+<button class="btn btn-outline-primary mb-2 me-2" (click)="cex(longContent1)">
+  Modal scrollable content
+</button>
+
+
+
+<ng-template #longContent2 let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Blockchains Technology</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <div class="col d-flex justify-content-center">
+      <div class="col-12  d-flex justify-content-center">
+        <div class="col-9"  >
+          <div class="row">
+            @for(items of blockchains; track items.name){
+              <div class="col-4 col-md-3 text-center" ><img style="width: 50%;border-radius: 100%" [src]=items.logo alt="Square image">
+                <p class="text-center">{{items.name}}</p>
+              </div>
+
+            }
+          </div>
+
+        </div></div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
+<button class="btn btn-outline-primary mb-2 me-2" (click)="blockChain(longContent2)">
+  Modal scrollable content
+</button>
+
+
+<ng-template #WalletTokensModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Crypto wallet tokens</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <div class="col d-flex justify-content-center">
+      <div class="col-12  d-flex justify-content-center">
+        <div class="col-9"  >
+          <div class="row">
+            @for(items of WalletTokens; track items.name){
+              <div class="col-4 col-md-3 text-center" ><img style="width: 50%;border-radius: 100%" [src]=items.logo alt="Square image">
+                <p class="text-center">{{items.name}}</p>
+              </div>
+
+            }
+          </div>
+
+        </div></div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
+<button class="btn btn-outline-primary mb-2 me-2" (click)=" WalletTokensModalOpen(WalletTokensModal)">
+  Modal scrollable content
+</button>
+
+
+<ng-template #converter let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Blockchains Technology</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <app-converter></app-converter>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
+<button class="btn btn-outline-primary mb-2 me-2" (click)="cryConvert(converter)">
+  Modal scrollable content
+</button>

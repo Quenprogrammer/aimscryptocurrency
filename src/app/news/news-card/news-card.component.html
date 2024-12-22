@@ -1,0 +1,15 @@
+
+<div class="container">
+
+    <div class="">
+      <div class="card h-100 border-0 rounded-4 shadow-lg">
+        <div class="bg-secondary position-absolute top-0 start-0 w-100 h-100 rounded-4 d-none d-dark-mode-block"></div>
+        <div class="card-body position-relative z-2">
+          <img style="width:90px" class="d-block mb-4" [src]=newsArticle().logo  alt="Mailchimp">
+          <a class="text-dark" [routerLink]="['/news-details', newsArticle().id]"><h6>{{newsArticle().name}}</h6></a>
+
+          <p class="mb-0">{{newsArticle().additionalInformation.description | truncateText:170}}</p>
+        </div>
+      </div>
+    </div>
+  </div>

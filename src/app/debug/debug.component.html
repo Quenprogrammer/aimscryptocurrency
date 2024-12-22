@@ -1,0 +1,30 @@
+<div>
+  <!-- Form to take inputs from the user -->
+  <div>
+    <label for="purchasedPrice">Purchased Price:</label>
+    <input id="purchasedPrice" type="number" [(ngModel)]="purchasedPrice" (input)="calculate()">
+  </div>
+
+  <div>
+    <label for="currentPrice">Current Price:</label>
+    <input id="currentPrice" type="number" [(ngModel)]="currentPrice" (input)="calculate()">
+  </div>
+
+  <div>
+    <label for="currentVolume">Current Volume:</label>
+    <input id="currentVolume" type="number" [(ngModel)]="currentVolume" (input)="calculate()">
+  </div>
+
+  <div>
+    <label for="volume">Volume:</label>
+    <input id="volume" type="number" [(ngModel)]="volume" (input)="calculate()">
+  </div>
+
+  <!-- Display the calculated values -->
+  <div *ngIf="percentageGain || percentageLost || gainCurrency || lostCurrency">
+    <p id="percentageGain">{{ percentageGain | number:'1.2-2' }}%</p>
+    <p id="percentageLost">{{ percentageLost | number:'1.2-2' }}%</p>
+    <p id="gainCurrency">{{ gainCurrency | currency }}</p>
+    <p id="lostCurrency">{{ lostCurrency | currency }}</p>
+  </div>
+</div>

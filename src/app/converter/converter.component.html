@@ -1,0 +1,127 @@
+<!--
+<div class="container mt-1">
+
+
+
+  <div class="col">
+  <div class="card ">
+    <div class="card-body">
+  &lt;!&ndash; Input field for the base currency amount &ndash;&gt;
+  <div class="form-group">
+    <label for="baseAmount">Enter Base Amount (BTC, ETH, USDT):</label>
+    <input
+      type="number"
+      class="form-control"
+      id="baseAmount"
+      [(ngModel)]="baseAmount"
+      (ngModelChange)="onBaseAmountChange()"
+      placeholder="Enter Amount"
+    />
+  </div>
+
+  &lt;!&ndash; Dropdown for selecting the base currency &ndash;&gt;
+  <div class="form-group">
+    <label for="baseSelect">Select Base Currency:</label>
+    <select
+      class="form-control"
+      id="baseSelect"
+      [(ngModel)]="selectedBase"
+      (ngModelChange)="onBaseChange()"
+    >
+      <option *ngFor="let base of baseList" [value]="base">{{ base | uppercase }}</option>
+    </select>
+  </div>
+
+  &lt;!&ndash; Dropdown for selecting the target token &ndash;&gt;
+  <div class="form-group">
+    <label for="tokenSelect">Select Token to Convert To:</label>
+    <select
+      class="form-control"
+      id="tokenSelect"
+      [(ngModel)]="selectedToken"
+      (ngModelChange)="onTokenChange()"
+    >
+      &lt;!&ndash; Loop through the prices object and create options dynamically &ndash;&gt;
+      <option *ngFor="let token of tokenList" [value]="token">{{ token | uppercase }}</option>
+    </select>
+  </div>
+
+  &lt;!&ndash; Display the conversion result &ndash;&gt;
+  <div class="result mt-3">
+    <h3>Converted Amount:</h3>
+    <p>
+      {{ baseAmount }} {{ selectedBase | uppercase }} = {{ convertedAmount.toFixed(6) }} {{ selectedToken | uppercase }}
+    </p>
+  </div>
+    </div>
+    </div>
+  </div>
+
+    </div>
+
+-->
+
+
+<div *ngIf="isLoading" class="loading">
+  <p>Loading prices, please wait...</p>
+</div>
+
+<div *ngIf="errorMessage" class="error">
+  <p>{{ errorMessage }}</p>
+</div>
+
+<div *ngIf="!isLoading && !errorMessage">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <!-- Input field for the base currency amount -->
+        <div class="form-group">
+          <label for="baseAmount">Enter Base Amount (BTC, ETH, USDT):</label>
+          <input
+            type="number"
+            class="form-control"
+            id="baseAmount"
+            [(ngModel)]="baseAmount"
+            (ngModelChange)="onBaseAmountChange()"
+            placeholder="Enter Amount"
+          />
+        </div>
+
+        <!-- Dropdown for selecting the base currency -->
+        <div class="form-group">
+          <label for="baseSelect">Select Base Currency:</label>
+          <select
+            class="form-control"
+            id="baseSelect"
+            [(ngModel)]="selectedBase"
+            (ngModelChange)="onBaseChange()"
+          >
+            <option *ngFor="let base of baseList" [value]="base">{{ base | uppercase }}</option>
+          </select>
+        </div>
+
+        <!-- Dropdown for selecting the target token -->
+        <div class="form-group">
+          <label for="tokenSelect">Select Token to Convert To:</label>
+          <select
+            class="form-control"
+            id="tokenSelect"
+            [(ngModel)]="selectedToken"
+            (ngModelChange)="onTokenChange()"
+          >
+            <!-- Loop through the token list and create options dynamically -->
+            <option *ngFor="let token of tokenList" [value]="token">{{ token | uppercase }}</option>
+          </select>
+        </div>
+
+        <!-- Display the conversion result -->
+        <div class="result mt-3">
+          <h3>Converted Amount:</h3>
+          <p>
+            {{ baseAmount }} {{ selectedBase | uppercase }} = {{ convertedAmount.toFixed(6) }} {{ selectedToken | uppercase }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

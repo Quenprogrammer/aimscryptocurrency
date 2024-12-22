@@ -1,1 +1,216 @@
-<app-test-crypto></app-test-crypto>
+<!--
+<div class="container text-center mt-5">
+
+
+  <div class="row row-cols-4 row-cols-lg-6 ">
+    @for (items of test; track items.name){
+    <div class="cols mb-4">
+<img style="width: 50px" src="assets/icons/blockchain.svg" alt="">
+      <h6 class="">{{items.name}}</h6>
+   </div>
+
+    }
+  </div>
+
+
+
+
+
+
+
+</div>
+<div class="container">
+  <table class="table table-striped-columns">
+    <thead>
+    <tr>
+      <th scope="col" style="width: 50%">Coin</th>
+      <th scope="col">Price</th>
+      <th scope="col">Change</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr >
+      <td>
+        <div class="row">
+          <div class="col-auto"><img style="width: 40px" src="assets/icons/blockchain.svg" alt=""></div>
+          <div class="col-auto"> <h6 class="mt-2">Bitcoin</h6></div>
+        </div>
+
+      </td>
+      <td>
+        <h6 class="mt-2">$240.34</h6></td>
+      <td>
+       <button class="btn btn-danger">50.65%</button>
+
+      </td>
+
+    </tr>
+    <tr >
+      <td>
+        <div class="row">
+          <div class="col-auto"><img style="width: 40px" src="assets/icons/blockchain.svg" alt=""></div>
+          <div class="col-auto"> <h6 class="mt-2">Bitcoin</h6></div>
+        </div>
+
+      </td>
+      <td>
+        <h6 class="mt-2">$240.34</h6></td>
+      <td>
+        <button class="btn btn-danger">50.65%</button>
+
+      </td>
+
+    </tr>
+    <tr >
+      <td>
+        <div class="row">
+          <div class="col-auto"><img style="width: 40px" src="assets/icons/blockchain.svg" alt=""></div>
+          <div class="col-auto"> <h6 class="mt-2">Bitcoin</h6></div>
+        </div>
+
+      </td>
+      <td>
+        <h6 class="mt-2">$240.34</h6></td>
+      <td>
+        <button class="btn btn-danger">50.65%</button>
+
+      </td>
+
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+
+
+
+<ng-template #longContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+
+    <div class="mb-3">
+      <label for="select-input" class="form-label">Select</label>
+      <select class="form-select" id="select-input">
+        <option><img src="favicon.ico" alt="">Choose option...</option>
+        <option>Option item 1</option>
+        <option>Option item 2</option>
+        <option>Option item 3</option>
+      </select>
+    </div>
+
+      <input type="text" class="textbox" placeholder="0.00000000000">
+      <button class="btn btn-outline-primary mt-2 button">Convert</button>
+
+    </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
+<button class="btn btn-outline-primary mb-2 me-2" (click)="openScrollableContent(longContent)">
+  Modal scrollable content
+</button>
+
+
+
+
+
+<div class="mb-3">
+  <label for="select-input" class="form-label">Select</label>
+  <select class="form-select" id="select-input">
+    <option>Choose option...</option>
+    <option><img src=
+                   "https://media.geeksforgeeks.org/wp-content/uploads/20200630132500/bflag.jpg"
+                 width="20" height="15"> Brazil</option>
+    <option>Option item 2</option>
+    <option>Option item 3</option>
+  </select>
+</div>
+<p>Current Price:</p><p id="currentPrice">68</p>
+<p>Price:</p><p id="PurchasePrice">80</p>
+<p>volume:</p>
+<p id="volume">40</p>
+
+
+
+<p>Bought AT: {{ result }}</p>
+<p>now AT: {{ now }}</p>
+<p>now AT: {{ profit }}</p>
+<p>now AT: {{ profitPercentage }}</p>
+
+
+
+
+
+
+<p id="purchasedPrice">purchasedPrice{{ purchasedPrice }}</p>
+<p id="currentPrice">currentPrice{{ currentPrice }}</p>
+<p id="currentVolume">currentVolume{{ currentVolume }}</p>
+<p id="volume">volume{{ volume }}</p>
+
+<div class="row">
+  <div class="col-6">
+    <h1>$2.0001</h1>
+    <h1>$2.0001</h1>
+  </div>
+  <div class="col-auto">
+    <h6 class="subHeader" id="currentPrice mb-0 mt-0 ">currentPrice</h6>
+    <h1 class="header mb-0 mt-0" id="currentPrice">{{ currentPrice }}%</h1>
+  </div>
+</div>
+
+<div class="">
+
+  <div class="col-12">
+
+  </div>
+  <div class="col-12">
+    <h6 class="subHeader" id="currentPrice mb-0 mt-0">boughtPrice</h6>
+    <h1 class="header mb-0 mt-0" id="currentPrice">{{ purchasedPrice }}%</h1>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-auto"><p id="gainCurrency">gainCurrency</p></div>
+  <div class="col-auto"><p id="gainCurrency">{{ gainCurrency }}</p></div>
+</div>
+
+
+
+
+<div [ngStyle]="{ 'color': lostCurrency | colorPipe }">
+  <div class="row">
+    <div class="col-auto"><p style="color: #040000">Change</p></div>
+    <div class="col"><p id="percentageLost">{{ stats }}%</p></div>
+  </div>
+
+</div>-->
+
+<div class="justify-content-center mx-auto " style="width: 100%">
+  <p class="bg-dark  text-white text-center px-5 py-3 mb-0">✌️ Coins: 16,210
+    Exchanges: 1,197
+    Market Cap: $3.425T 7.8%
+    24h Vol: $481.596B
+    Dominance:
+    BTC 55.3%
+    ETH 11.7%
+    <a href="https://folio.webestica.com/index-personal-portfolio.html#" class="fw-semibold hover-underline-animation text-white">Hire me</a>
+  </p>
+</div>
+
+<router-outlet></router-outlet>
+<app-platforms></app-platforms>

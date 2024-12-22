@@ -1,0 +1,332 @@
+
+
+
+
+<div #statisticsSection class="container mt-5">
+  <div class="row">
+    <div class="col-6 col-md-3  text-center mb-7 highlight-column" *ngFor="let stat of statistics; let i = index">
+      <div class="highlight highlight--bordered card shadow-lg mb-2" [ngClass]="{ 'no-border-right': (i + 1) % 4 === 0 }">
+
+        <div class="row">
+          <div class="col-3">
+            <div class="highlight-head"><img class="avatar avatar-lg  mb-0" [src]="stat.icon" alt="Image Description" data-hs-theme-appearance="default" style="max-width: 70px; margin: 5px; padding: 10px"></div>
+          </div>
+          <div class="col-6">
+            <div class="highlight-head"><h1 class="display-4 display-md-4">{{ stat.animatedValue || 0 }}</h1></div>
+            <div class="highlight-body"><p>{{ stat.label }}</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class=" pt-1 pb-4">
+  <div class="container py-lg-2 py-xl-4 py-xxl-5">
+    <div class="row mt-1 pt-sm-2 pt-md-3 pt-lg-4">
+      <div class="col-lg-5 mb-5 mb-lg-0">
+        <h2 class="h1">Benefits of working with us</h2>
+        <p class="pb-1 pb-md-0 mb-4 mb-md-5">Morbi et massa fames ac scelerisque sit commodo dignissim faucibus vel quisque proin lectus.</p>
+        <h3 class="mb-4">Send your request!</h3>
+
+
+      </div>
+
+      <!-- Benefits -->
+      <div class="col-lg-7 col-xl-6 offset-xl-1">
+        <div class="row row-cols-1 row-cols-sm-2">
+          <div class="col">
+
+            <!-- Card -->
+            <div class="card border-0 mb-4 shadow-lg">
+              <div class="card-body">
+                <svg class="d-block mb-3" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="text-warning" d="M31.5412 14.6389C30.9843 23.6874 23.7303 30.927 14.6641 31.4828V35.9999H36.0671V14.6389H31.5412Z" fill="currentColor"></path>
+                  <path class="text-primary" d="M13.5469 27.0373C21.0277 27.0373 27.0922 20.9848 27.0922 13.5186H13.5469V27.0373Z" fill="currentColor"></path>
+                  <path class="text-warning" d="M26.3276 9.03734C24.475 3.77395 19.4522 0 13.5453 0C6.06443 0 0 6.0525 0 13.5187C0 19.4139 3.78139 24.4269 9.05514 26.2758V9.03734H26.3276Z" fill="currentColor"></path>
+                </svg>
+                <h3 class="h4" style="max-width: 180px;">Blockchains </h3>
+                <p class="card-text fs-sm">Pharetra in morbi quis is massa maecenas arcu vulputate pulvinar elit non nullage a, duis tortor mi massa ipsum in eu eu eget libero.</p>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card border-0 bg-primary" data-bs-theme="dark">
+              <div class="card-body">
+                <svg class="d-block mb-3" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.7496 11.4756C25.3743 8.85089 25.3743 4.59539 22.7496 1.97068C20.1249 -0.654032 15.8694 -0.654033 13.2447 1.97068C10.6199 4.59539 10.6199 8.85089 13.2447 11.4756C15.8694 14.1003 20.1249 14.1003 22.7496 11.4756Z" fill="white"></path>
+                  <path class="text-warning" d="M13.2173 26.3746C14.0903 24.3107 15.2282 22.395 16.6119 20.6516C12.48 16.1818 6.56698 13.3827 0 13.3827V36H11.2733C11.2733 32.6628 11.9274 29.4243 13.2173 26.3746Z" fill="currentColor"></path>
+                  <path class="text-warning" d="M36.0001 36.0001V13.3828C23.5089 13.3828 13.3828 23.5089 13.3828 36.0001H36.0001Z" fill="currentColor"></path>
+                </svg>
+                <h3 class="h4" style="max-width: 180px;">Tokens</h3>
+                <p class="card-text fs-sm">Pharetra in morbi quis is massa maecenas arcu vulputate pulvinar elit non nullage a, duis tortor mi massa ipsum in eu eu eget libero.</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col d-flex flex-column pt-4 mt-sm-3">
+
+            <!-- Card -->
+            <div class="card border-0 order-sm-2 mb-4 mb-sm-0 shadow-lg">
+              <div class="card-body">
+                <svg class="d-block mb-3" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="text-warning" d="M31.5412 14.6389C30.9843 23.6874 23.7303 30.927 14.6641 31.4828V35.9999H36.0671V14.6389H31.5412Z" fill="currentColor"></path>
+                  <path class="text-primary" d="M13.5469 27.0373C21.0277 27.0373 27.0922 20.9848 27.0922 13.5186H13.5469V27.0373Z" fill="currentColor"></path>
+                  <path class="text-warning" d="M26.3276 9.03734C24.475 3.77395 19.4522 0 13.5453 0C6.06443 0 0 6.0525 0 13.5187C0 19.4139 3.78139 24.4269 9.05514 26.2758V9.03734H26.3276Z" fill="currentColor"></path>
+                </svg>
+                <h3 class="h4" style="max-width: 180px;">Wallet Tokens</h3>
+                <p class="card-text fs-sm">Pharetra in morbi quis is massa maecenas arcu vulputate pulvinar elit non nullage a, duis tortor mi massa ipsum in eu eu eget libero.</p>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card border-0 bg-primary order-sm-1 mb-sm-4" data-bs-theme="dark">
+              <div class="card-body">
+                <svg class="d-block mb-3" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.4844 22.4814H36.0031V36.0001H22.4844V22.4814Z" fill="white"></path>
+                  <path class="text-warning" d="M8.96266 18C8.96266 13.0088 13.0088 8.96266 18 8.96266C22.9912 8.96266 27.0373 13.0088 27.0373 18H36C36 8.05887 27.9411 0 18 0C8.05887 0 0 8.05887 0 18C0 27.9411 8.05887 36 18 36V27.0373C13.0088 27.0373 8.96266 22.9912 8.96266 18Z" fill="currentColor"></path>
+                </svg>
+                <h3 class="h4" style="max-width: 180px;">DEX</h3>
+                <p class="card-text fs-sm">Pharetra in morbi quis is massa maecenas arcu vulputate pulvinar elit non nullage a, duis tortor mi massa ipsum in eu eu eget libero.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="container  ">
+  <div class="row  g-4 g-sm-3 g-md-4">
+    <div class="col-lg-8 order-lg-2">
+      <div class="d-md-flex h-100 bg-primary rounded-2 overflow-hidden px-4 px-sm-5 pt-5">
+        <div class="d-md-flex px-2 px-sm-0 px-xl-2 px-xxl-4 pt-xl-3">
+          <div class="text-center text-md-start pe-md-5 pb-3 pb-md-0 me-xxl-3 mb-4 md-0">
+            <h2 class="h1 text-white pb-2 pb-md-3 mb-lg-4">How Does It Work?</h2>
+            <a class="btn btn-icon btn-xl btn-warning rounded-circle" href="https://www.youtube.com/watch?v=j5Rb-OkP-Go" data-bs-toggle="video" aria-label="Play video" data-lg-id="787b6444-f4ec-4031-84e3-018906c909e8">
+              <i class="ai-play-filled"></i>
+            </a>
+          </div>
+          <div class="w-100 flex-md-shrink-0 mx-auto" style="max-width: 472px;">
+            <img class="d-dark-mode-none" src="assets/img/landing/saas-1/features/01-light.png" alt="Image">
+            <img class="d-none d-dark-mode-block" src="assets/img/landing/saas-1/features/01-dark.png" alt="Image">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 order-lg-1">
+      <div class="card border-0 bg-secondary h-100 py-lg-2 py-xl-4">
+        <div class="card-body">
+          <h3>Target your audience effectively</h3>
+          <p class="mb-0">Nisl in enim, gravida risus enim risus non et in iaculis non facilisis eget blandit id vulputate morbi proin vitae tincidunt vestibulum viverra. Quis odio mauris velit egestas risus vulputate.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 order-lg-3">
+      <div class="card border-0 bg-secondary h-100 py-lg-2 py-xl-4">
+        <div class="card-body">
+          <h3>Build dashboard in minutes</h3>
+          <p class="mb-0">Facilisi eu neque amet, orci tellus nibh amet tincidunt nunc, feugiat arcu vulputate duis. Quis odio mauris, in sed pharetra velit egestas risus purus tincidunt.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 order-lg-4">
+      <div class="card border-0 bg-secondary h-100 py-lg-2 py-xl-4">
+        <div class="card-body">
+          <h3>Easily download your tables and data</h3>
+          <p class="mb-0">Cursus dolor sagittis, nisi sit pharetra pharetra ornare nec diam id in in commodo mattis at retium at id nisi ullamcorper tortor augue parturient at tellus lorem enim.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 order-lg-5">
+      <div class="card border-0 bg-secondary h-100 py-lg-2 py-xl-4">
+        <div class="card-body">
+          <h3>Access to dashboard from all devices</h3>
+          <p class="mb-0">Ac pharetra pharetra morbi turpis auctor vel eget amet nulla diam facilisis sit morbi sit aliquam in amet ultrices aliquet leo facilisis  lorem proin pharetra ornare.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<section class="position-relative py-5" >
+
+  <div class="bg-secondary position-absolute top-0 start-0 w-100 h-100 d-dark-mode-none"></div>
+  <div class="container position-relative z-2 py-2 py-sm-3 py-md-4 py-lg-5 mb-sm-2 mb-md-3 mb-xxl-5 my-xl-4">
+     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4 pb-xxl-3">
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4">
+          <div class="bg-secondary position-absolute top-0 start-0 w-100 h-100 rounded-4 d-none d-dark-mode-block"></div>
+          <div class="card-body position-relative z-2">
+            <img class="d-block mb-4" src="assets/img/landing/saas-3/tools/google.svg" alt="Google">
+            <p class="mb-0">Lorem magnis pretium sed curabitur nunc facilisi nunc cursus sagittis volutpat.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4">
+          <div class="bg-secondary position-absolute top-0 start-0 w-100 h-100 rounded-4 d-none d-dark-mode-block"></div>
+          <div class="card-body position-relative z-2">
+            <img class="d-block mb-4" src="assets/img/landing/saas-3/tools/zoom.svg" alt="Zoom">
+            <p class="mb-0">In eget a mauris quis. Tortor dui tempus quis integer est sit natoque placerat dolor.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4">
+          <div class="bg-secondary position-absolute top-0 start-0 w-100 h-100 rounded-4 d-none d-dark-mode-block"></div>
+          <div class="card-body position-relative z-2">
+            <img class="d-block mb-4" src="assets/img/landing/saas-3/tools/slack.svg" alt="Slack">
+            <p class="mb-0">Donec blandit nulla elementum eu. Est dui nibh eget amet curabitur nunc.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4">
+          <div class="bg-secondary position-absolute top-0 start-0 w-100 h-100 rounded-4 d-none d-dark-mode-block"></div>
+          <div class="card-body position-relative z-2">
+            <img class="d-block mb-4" src="assets/img/landing/saas-3/tools/gmail.svg" alt="Gmail">
+            <p class="mb-0">Rutrum interdum tortor, sed at nulla. A cursus bibendum elit purus cras praesent.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4">
+          <div class="bg-secondary position-absolute top-0 start-0 w-100 h-100 rounded-4 d-none d-dark-mode-block"></div>
+          <div class="card-body position-relative z-2">
+            <img class="d-block mb-4" src="assets/img/landing/saas-3/tools/trello.svg" alt="Trello">
+            <p class="mb-0">Congue pellentesque amet, viverra curabitur quam diam scelerisque fermentum urna.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4">
+          <div class="bg-secondary position-absolute top-0 start-0 w-100 h-100 rounded-4 d-none d-dark-mode-block"></div>
+          <div class="card-body position-relative z-2">
+            <img class="d-block mb-4" src="assets/img/landing/saas-3/tools/mailchimp.svg" alt="Mailchimp">
+            <p class="mb-0">Turpis fermentum, volutpat ultrices sed ultrices proin risus bibendum elit purus.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4">
+          <div class="bg-secondary position-absolute top-0 start-0 w-100 h-100 rounded-4 d-none d-dark-mode-block"></div>
+          <div class="card-body position-relative z-2">
+            <img class="d-block mb-4" src="assets/img/landing/saas-3/tools/dropbox.svg" alt="Dropbox">
+            <p class="mb-0">Ut in turpis consequat odio diam lectus elementum. Est faucibus blandit platea.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4">
+          <div class="bg-secondary position-absolute top-0 start-0 w-100 h-100 rounded-4 d-none d-dark-mode-block"></div>
+          <div class="card-body position-relative z-2">
+            <img class="d-block mb-4" src="assets/img/landing/saas-3/tools/evernote.svg" alt="Evernote">
+            <p class="mb-0">Arcu, lorem facilisis nunc tellus, molestie urna nam mi, ullamcorper tempus quis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+-->
+
+
+
+
+<section class="container mt-3">
+  <div class="shadow-lg bg-opacity-10 rounded-3 py-1 px-4 p-sm-5">
+    <div class="d-lg-flex align-items-center g-0 ">
+      <div class="order-lg-2 text-center text-lg-start ps-lg-5 mx-auto me-lg-0">
+        <h2 class="h1 mb-4">The tools <br class="d-none d-lg-inline">we work with</h2>
+        <p class="pb-3 mb-3 mb-lg-4">Morbi et massa fames ac scelerisque sit commodo dignissim faucibus vel quisque proin lectus. Morbi et massa fames ac scelerisque sit commodo dignissim.</p><a class="btn btn-primary d-none d-lg-inline-flex" href="#">See all tools</a>
+      </div>
+      <div class="order-lg-1 w-100 mx-auto mx-lg-0" >
+        <div class="row row-cols-3 g-3 g-sm-4 g-lg-3 g-xl-4">
+          <div class="col">
+            <div class="bg-light rounded-3 aos-init aos-animate" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300">
+              <img src="assets/img/landing/marketing-agency/tools/bing.svg" alt="Bing">
+            </div>
+          </div>
+          <div class="col">
+            <div class="bg-light rounded-3 aos-init aos-animate" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="500">
+              <img src="assets/img/landing/marketing-agency/tools/facebook.svg" alt="Facebook">
+            </div>
+          </div>
+          <div class="col">
+            <div class="bg-light rounded-3 aos-init aos-animate" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="200">
+              <img class="d-dark-mode-none" src="assets/img/landing/marketing-agency/tools/microsoft-dark.svg" alt="Facebook">
+              <img class="d-none d-dark-mode-block" src="assets/img/landing/marketing-agency/tools/microsoft-light.svg" alt="Facebook">
+            </div>
+          </div>
+          <div class="col">
+            <div class="bg-light rounded-3 aos-init aos-animate" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="800">
+              <img src="assets/img/landing/marketing-agency/tools/google.svg" alt="Google">
+            </div>
+          </div>
+          <div class="col">
+            <div class="bg-light rounded-3 aos-init aos-animate" data-aos="zoom-in" data-aos-easing="ease-out-back">
+              <img class="d-dark-mode-none" src="assets/img/landing/marketing-agency/tools/google-ads-dark.svg" alt="Google Ads">
+              <img class="d-none d-dark-mode-block" src="assets/img/landing/marketing-agency/tools/google-ads-light.svg" alt="Google Ads">
+            </div>
+          </div>
+          <div class="col">
+            <div class="bg-light rounded-3 aos-init aos-animate" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="600">
+              <img class="d-dark-mode-none" src="assets/img/landing/marketing-agency/tools/admitad-dark.svg" alt="Admitad">
+              <img class="d-none d-dark-mode-block" src="assets/img/landing/marketing-agency/tools/admitad-light.svg" alt="Admitad">
+            </div>
+          </div>
+          <div class="col">
+            <div class="bg-light rounded-3 aos-init aos-animate" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="400">
+              <img class="d-dark-mode-none" src="assets/img/landing/marketing-agency/tools/google-analytics-dark.svg" alt="Google Analytics">
+              <img class="d-none d-dark-mode-block" src="assets/img/landing/marketing-agency/tools/google-analytics-light.svg" alt="Google Analytics">
+            </div>
+          </div>
+          <div class="col">
+            <div class="bg-light rounded-3 aos-init aos-animate" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="700">
+              <img class="d-dark-mode-none" src="assets/img/landing/marketing-agency/tools/instagram-dark.svg" alt="Instagram">
+              <img class="d-none d-dark-mode-block" src="assets/img/landing/marketing-agency/tools/instagram-light.svg" alt="Instagram">
+            </div>
+          </div>
+          <div class="col">
+            <div class="bg-light rounded-3 aos-init aos-animate" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="100">
+              <img class="d-dark-mode-none" src="assets/img/landing/marketing-agency/tools/tiktok-dark.svg" alt="TikTok">
+              <img class="d-none d-dark-mode-block" src="assets/img/landing/marketing-agency/tools/tiktok-light.svg" alt="TikTok">
+            </div>
+          </div>
+        </div>
+        <div class="d-lg-none text-center pt-4 mt-2 mt-md-3 aos-init aos-animate" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="900">
+          <a class="btn btn-primary" href="#">See all tools</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
