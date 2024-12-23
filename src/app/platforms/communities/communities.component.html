@@ -1,0 +1,28 @@
+<section class="container mt-3">
+
+
+<div class="row mt-5 overflow-hidden shadow-lg " style="padding: 5px">
+  <div class="col-5">
+
+
+    <div class="col mb-2"><img style="width: 400px; height:400px; border-radius: 5px; object-fit: cover" [src]="randomImageUrl" alt="Bing"></div>
+
+  </div>
+  <div class="col-md-7 ">
+    <div class="row">
+    @for (items of communitiesData; track items.name){
+    <div class="col-4 col-lg-2 mt-2">
+      <div class=" rounded-3 aos-init aos-animate text-center" data-aos="zoom-in" data-aos-easing="ease-out-back"
+           data-aos-delay="300">
+
+        <div class="col "><img style="max-width: 50px; border-radius: 5px" [src]=items.logo alt="Bing"></div>
+        <div class="col-auto "><h6>{{items.name}}</h6></div>
+
+
+      </div>
+    </div>
+  }
+    </div>
+  </div>
+</div>
+</section>

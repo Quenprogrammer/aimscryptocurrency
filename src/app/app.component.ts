@@ -6,7 +6,7 @@ import {FormsModule} from "@angular/forms";
 import { Pipe, PipeTransform } from '@angular/core';
 import {ColorPipePipe} from "../pipes/color-pipe.pipe";
 import {RouterOutlet} from "@angular/router";
-import {SelectTokenComponent} from "./select-token/select-token.component";
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -17,7 +17,7 @@ import {SelectTokenComponent} from "./select-token/select-token.component";
     ColorPipePipe,
     RouterOutlet,
     PlatformsComponent,
-    SelectTokenComponent
+
 
   ],
   templateUrl: './app.component.html',
