@@ -1161,3 +1161,348 @@ const htxInfo = {
     compliance: ["AML", "KYC"]
   }
 };
+const okxInfo = {
+  about: {
+    description: "OKX is one of the largest global cryptocurrency exchanges, providing an advanced platform for trading a variety of digital assets. Offering spot, margin, futures, and perpetual contracts, OKX has built a strong reputation for its liquidity, security, and commitment to innovation. The exchange also offers additional services like staking, decentralized finance (DeFi), and an integrated wallet.",
+    founded: "2014",
+    founders: ["Star Xu"],
+    headquarters: "Malta",
+    offices: ["Singapore", "Hong Kong", "United States", "Japan"],
+    website: "https://www.okx.com"
+  },
+  community: {
+    users: 20000000,
+    platforms: ["Twitter", "LinkedIn", "Telegram", "Reddit"],
+    engagement: "Active community focused on discussions, trading strategies, and the latest crypto developments."
+  },
+  coins: {
+    totalCryptocurrencies: 400,
+    totalFiatCurrencies: 70,
+    popularCoins: [
+      { name: "Bitcoin", symbol: "BTC" },
+      { name: "Ethereum", symbol: "ETH" },
+      { name: "Tether", symbol: "USDT" },
+      { name: "USD Coin", symbol: "USDC" },
+      { name: "Binance Coin", symbol: "BNB" },
+      { name: "Cardano", symbol: "ADA" },
+      { name: "Solana", symbol: "SOL" },
+      { name: "Polkadot", symbol: "DOT" },
+      { name: "Dogecoin", symbol: "DOGE" },
+      { name: "Shiba Inu", symbol: "SHIB" }
+    ],
+    defiCoins: [
+      { name: "Uniswap", symbol: "UNI" },
+      { name: "Aave", symbol: "AAVE" },
+      { name: "SushiSwap", symbol: "SUSHI" },
+      { name: "Compound", symbol: "COMP" },
+      { name: "Chainlink", symbol: "LINK" },
+      { name: "Curve DAO Token", symbol: "CRV" },
+      { name: "Yearn.finance", symbol: "YFI" },
+      { name: "Maker", symbol: "MKR" },
+      { name: "The Graph", symbol: "GRT" },
+      { name: "Decentraland", symbol: "MANA" }
+    ],
+    gamingCoins: [
+      { name: "Axie Infinity", symbol: "AXS" },
+      { name: "The Sandbox", symbol: "SAND" },
+      { name: "Gala", symbol: "GALA" },
+      { name: "Illuvium", symbol: "ILV" },
+      { name: "Star Atlas", symbol: "ATLAS" },
+      { name: "My Neighbor Alice", symbol: "ALICE" },
+      { name: "Decentral Games", symbol: "DG" },
+      { name: "Alien Worlds", symbol: "TLM" },
+      { name: "Splinterlands", symbol: "SPS" },
+      { name: "Upland", symbol: "UPX" }
+    ],
+    otherCoins: [
+      { name: "Litecoin", symbol: "LTC" },
+      { name: "Bitcoin Cash", symbol: "BCH" },
+      { name: "TRON", symbol: "TRX" },
+      { name: "Monero", symbol: "XMR" },
+      { name: "Zcash", symbol: "ZEC" },
+      { name: "NEO", symbol: "NEO" },
+      { name: "Dash", symbol: "DASH" },
+      { name: "OmiseGO", symbol: "OMG" },
+      { name: "Basic Attention Token", symbol: "BAT" },
+      { name: "Qtum", symbol: "QTUM" }
+    ]
+  },
+  trading: {
+    types: ["Spot", "Margin", "Futures", "Perpetual"],
+    marginLeverage: {
+      desktop: 5,
+      mobile: 3
+    }
+  },
+  payments: {
+    acceptedMethods: [
+      "Credit/Debit Cards (Visa, Mastercard, etc.)",
+      "Bank Transfers (SWIFT, SEPA)",
+      "Cryptocurrencies",
+      "E-wallets (PayPal, Skrill, Neteller)"
+    ],
+    withdrawal: {
+      minAmount: 20,
+      processingTime: {
+        crypto: "1-2 hours",
+        fiat: "2-4 business days"
+      },
+      accelerationService: "Available for an additional fee."
+    },
+    fiatDeposit: {
+      supportedCurrencies: ["USD", "EUR", "GBP", "CNY", "JPY"],
+      methods: ["Credit/Debit Cards", "Bank Transfers"]
+    }
+  },
+  security: {
+    measures: [
+      "Two-Factor Authentication (2FA)",
+      "Cold Storage",
+      "Advanced Threat Detection",
+      "Regular Security Audits"
+    ]
+  },
+  fees: {
+    trading: { maker: 0.1, taker: 0.2 },
+    deposit: "Free for most cryptocurrencies",
+    withdrawal: "Varies by currency and method"
+  },
+  customerSupport: {
+    availability: "24/7",
+    languages: ["English", "Chinese", "Korean", "Japanese"]
+  },
+  specialFeatures: [
+    "OKB Token",
+    "OKX Earn",
+    "Launchpad",
+    "DeFi Services"
+  ],
+  mobileApp: {
+    platforms: ["iOS", "Android"],
+    features: ["Trading", "Depositing", "Withdrawing", "Staking"]
+  },
+  history: {
+    keyEvents: [
+      "Founded in 2014 by Star Xu as OKCoin, rebranded to OKX in 2017.",
+      "Significant growth, with a focus on expanding its global presence and regulatory compliance.",
+      "Launched OKB Token and expanded into decentralized finance (DeFi)."
+    ]
+  },
+  regulations: {
+    license: "Malta",
+    compliance: ["AML", "KYC"]
+  }
+};
+const backpackExchangeInfo = {
+  about: {
+    description: "Backpack Exchange is a decentralized cryptocurrency exchange that aims to provide a seamless and secure trading experience for digital assets. Known for its unique focus on user privacy and minimal fees, Backpack Exchange offers a platform for peer-to-peer trading, token swapping, and decentralized finance applications.",
+    founded: "2020",
+    founders: ["Backpack Team"],
+    headquarters: "Decentralized (No Central Headquarters)",
+    offices: ["Global"],
+    website: "https://www.backpack.exchange"
+  },
+  community: {
+    users: 500000,
+    platforms: ["Twitter", "Telegram", "Reddit"],
+    engagement: "A niche but active community focused on privacy, decentralized trading, and innovative solutions in the crypto space."
+  },
+  coins: {
+    totalCryptocurrencies: 200,
+    totalFiatCurrencies: 20,
+    popularCoins: [
+      { name: "Bitcoin", symbol: "BTC" },
+      { name: "Ethereum", symbol: "ETH" },
+      { name: "Tether", symbol: "USDT" },
+      { name: "USD Coin", symbol: "USDC" },
+      { name: "Binance Coin", symbol: "BNB" }
+    ],
+    defiCoins: [
+      { name: "Uniswap", symbol: "UNI" },
+      { name: "Aave", symbol: "AAVE" },
+      { name: "SushiSwap", symbol: "SUSHI" },
+      { name: "Compound", symbol: "COMP" }
+    ],
+    gamingCoins: [
+      { name: "Axie Infinity", symbol: "AXS" },
+      { name: "The Sandbox", symbol: "SAND" },
+      { name: "Gala", symbol: "GALA" }
+    ],
+    otherCoins: [
+      { name: "Litecoin", symbol: "LTC" },
+      { name: "Monero", symbol: "XMR" }
+    ]
+  },
+  trading: {
+    types: ["Spot", "P2P", "Token Swap"],
+    marginLeverage: {
+      desktop: 3,
+      mobile: 2
+    }
+  },
+  payments: {
+    acceptedMethods: [
+      "Cryptocurrencies",
+      "Fiat (via P2P)"
+    ],
+    withdrawal: {
+      minAmount: 10,
+      processingTime: {
+        crypto: "Instant",
+        fiat: "Varies (P2P)"
+      },
+      accelerationService: "Not available"
+    },
+    fiatDeposit: {
+      supportedCurrencies: ["USD", "EUR", "GBP"],
+      methods: ["P2P Transactions"]
+    }
+  },
+  security: {
+    measures: [
+      "Decentralized Security Protocols",
+      "Cold Storage for Major Assets",
+      "Regular Security Audits"
+    ]
+  },
+  fees: {
+    trading: { maker: 0.05, taker: 0.1 },
+    deposit: "Free for most cryptocurrencies",
+    withdrawal: "Varies by currency"
+  },
+  customerSupport: {
+    availability: "24/7",
+    languages: ["English"]
+  },
+  specialFeatures: [
+    "Decentralized Exchange",
+    "Privacy Focused",
+    "Low Fees"
+  ],
+  mobileApp: {
+    platforms: ["iOS", "Android"],
+    features: ["Trading", "P2P Transactions"]
+  },
+  history: {
+    keyEvents: [
+      "Launched in 2020 with a focus on decentralized privacy-first exchange.",
+      "Expanded services to include token swaps and DeFi applications."
+    ]
+  },
+  regulations: {
+    license: "No Centralized License",
+    compliance: ["AML", "KYC"]
+  }
+};
+const whitebitInfo = {
+  about: {
+    description: "WhiteBIT is a European cryptocurrency exchange that provides a secure and reliable trading platform for digital assets. The exchange is known for its user-friendly interface, high liquidity, and support for a wide range of cryptocurrencies. WhiteBIT offers services like spot trading, margin trading, and staking, and is focused on regulatory compliance.",
+    founded: "2018",
+    founders: ["WhiteBIT Team"],
+    headquarters: "Estonia",
+    offices: ["Ukraine", "Turkey"],
+    website: "https://www.whitebit.com"
+  },
+  community: {
+    users: 4000000,
+    platforms: ["Twitter", "LinkedIn", "Telegram", "Reddit"],
+    engagement: "Active community with a focus on customer support, crypto education, and trading strategies."
+  },
+  coins: {
+    totalCryptocurrencies: 250,
+    totalFiatCurrencies: 40,
+    popularCoins: [
+      { name: "Bitcoin", symbol: "BTC" },
+      { name: "Ethereum", symbol: "ETH" },
+      { name: "Tether", symbol: "USDT" },
+      { name: "USD Coin", symbol: "USDC" },
+      { name: "Binance Coin", symbol: "BNB" },
+      { name: "Cardano", symbol: "ADA" },
+      { name: "Solana", symbol: "SOL" },
+      { name: "Polkadot", symbol: "DOT" },
+      { name: "Dogecoin", symbol: "DOGE" },
+      { name: "Shiba Inu", symbol: "SHIB" }
+    ],
+    defiCoins: [
+      { name: "Uniswap", symbol: "UNI" },
+      { name: "Aave", symbol: "AAVE" },
+      { name: "SushiSwap", symbol: "SUSHI" },
+      { name: "Maker", symbol: "MKR" },
+      { name: "Chainlink", symbol: "LINK" }
+    ],
+    gamingCoins: [
+      { name: "Axie Infinity", symbol: "AXS" },
+      { name: "The Sandbox", symbol: "SAND" },
+      { name: "Gala", symbol: "GALA" }
+    ],
+    otherCoins: [
+      { name: "Litecoin", symbol: "LTC" },
+      { name: "Bitcoin Cash", symbol: "BCH" },
+      { name: "Monero", symbol: "XMR" }
+    ]
+  },
+  trading: {
+    types: ["Spot", "Margin"],
+    marginLeverage: {
+      desktop: 5,
+      mobile: 3
+    }
+  },
+  payments: {
+    acceptedMethods: [
+      "Credit/Debit Cards (Visa, Mastercard, etc.)",
+      "Bank Transfers (SWIFT, SEPA)",
+      "Cryptocurrencies",
+      "E-wallets (PayPal, Skrill, Neteller)"
+    ],
+    withdrawal: {
+      minAmount: 20,
+      processingTime: {
+        crypto: "1-2 hours",
+        fiat: "2-4 business days"
+      },
+      accelerationService: "Available for an additional fee."
+    },
+    fiatDeposit: {
+      supportedCurrencies: ["USD", "EUR", "GBP", "JPY", "UAH"],
+      methods: ["Credit/Debit Cards", "Bank Transfers"]
+    }
+  },
+  security: {
+    measures: [
+      "Two-Factor Authentication (2FA)",
+      "Cold Storage",
+      "Anti-Phishing Protection",
+      "Regular Security Audits"
+    ]
+  },
+  fees: {
+    trading: { maker: 0.1, taker: 0.2 },
+    deposit: "Free for most cryptocurrencies",
+    withdrawal: "Varies by currency"
+  },
+  customerSupport: {
+    availability: "24/7",
+    languages: ["English", "Russian", "Ukrainian"]
+  },
+  specialFeatures: [
+    "WhiteBIT Token",
+    "Staking",
+    "Advanced Charting Tools"
+  ],
+  mobileApp: {
+    platforms: ["iOS", "Android"],
+    features: ["Trading", "Depositing", "Withdrawing", "Staking"]
+  },
+  history: {
+    keyEvents: [
+      "Founded in 2018 as a European cryptocurrency exchange.",
+      "Expanded services to include margin trading and staking.",
+      "Grew rapidly in 2020-2021 with increased global attention."
+    ]
+  },
+  regulations: {
+    license: "Estonia",
+    compliance: ["AML", "KYC"]
+  }
+};
