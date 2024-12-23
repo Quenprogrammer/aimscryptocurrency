@@ -6,7 +6,6 @@ export const exchangers=[
 { SN: 10, name: 'NULL', logo: exchangersPath  + '20-12-06-WeChat_Image_20220117220452.png'},
 { SN: 10, name: 'NULL', logo: exchangersPath  + '20-12-09-kucoin.png'},
 { SN: 10, name: 'NULL', logo: exchangersPath  + '20-12-12-kraken.jpg'},
-{ SN: 10, name: 'NULL', logo: exchangersPath  + '20-12-18-hashkey_2.png'},
 { SN: 10, name: 'NULL', logo: exchangersPath  + '20-12-22-Binance.png'},
 { SN: 10, name: 'NULL', logo: exchangersPath  + '20-12-25-20240422-181043.jpg'},
 { SN: 10, name: 'NULL', logo: exchangersPath  + '20-12-28-backpack.jpeg'},
@@ -230,5 +229,935 @@ export const exchangers=[
 { SN: 10, name: 'NULL', logo: exchangersPath  + '20-20-53-bit2me.png'},
 { SN: 10, name: 'NULL', logo: exchangersPath  + '20-20-57-Logo_Icon_FMCPAY_200X200_(2).png'},
 
-
 ]
+
+
+const binanceInfo = {
+  about: {
+    description: "Binance is one of the world's leading cryptocurrency exchanges, providing a comprehensive platform for trading a wide range of digital assets. It aims to offer fast, secure, and efficient trading services while fostering innovation within the crypto space. Binance has a global presence, offering users advanced trading tools and a variety of financial products.",
+    founded: "July 2017",
+    founders: ["Changpeng Zhao", "Yi He"],
+    headquarters: "Cayman Islands",
+    offices: ["Singapore", "Taiwan", "Uganda", "Brazil"],
+    website: "https://www.binance.com"
+  },
+  community: {
+    users: 100000000,
+    platforms: ["Twitter", "LinkedIn", "Telegram", "Reddit"],
+    engagement: "Extremely active community, with regular updates, discussions, and promotions."
+  },
+  coins: {
+    totalCryptocurrencies: 1500,
+    totalFiatCurrencies: 60,
+    popularCoins: [
+      { name: "Bitcoin", symbol: "BTC" },
+      { name: "Ethereum", symbol: "ETH" },
+      { name: "Tether", symbol: "USDT" },
+      { name: "BNB", symbol: "BNB" },
+      { name: "USD Coin", symbol: "USDC" },
+      { name: "XRP", symbol: "XRP" },
+      { name: "Dogecoin", symbol: "DOGE" },
+      { name: "Solana", symbol: "SOL" },
+      { name: "Cardano", symbol: "ADA" },
+      { name: "Polkadot", symbol: "DOT" }
+    ],
+    defiCoins: [
+      { name: "Uniswap", symbol: "UNI" },
+      { name: "Aave", symbol: "AAVE" },
+      { name: "SushiSwap", symbol: "SUSHI" },
+      { name: "Compound", symbol: "COMP" },
+      { name: "Yearn.finance", symbol: "YFI" },
+      { name: "Maker", symbol: "MKR" },
+      { name: "Chainlink", symbol: "LINK" },
+      { name: "Curve DAO Token", symbol: "CRV" },
+      { name: "The Graph", symbol: "GRT" },
+      { name: "Decentraland", symbol: "MANA" }
+    ],
+    gamingCoins: [
+      { name: "Axie Infinity", symbol: "AXS" },
+      { name: "The Sandbox", symbol: "SAND" },
+      { name: "Gala", symbol: "GALA" },
+      { name: "Illuvium", symbol: "ILV" },
+      { name: "Star Atlas", symbol: "ATLAS" },
+      { name: "Upland", symbol: "UPX" },
+      { name: "Alien Worlds", symbol: "TLM" },
+      { name: "My Neighbor Alice", symbol: "ALICE" },
+      { name: "Splinterlands", symbol: "SPS" },
+      { name: "Decentral Games", symbol: "DG" }
+    ],
+    otherCoins: [
+      { name: "Litecoin", symbol: "LTC" },
+      { name: "Bitcoin Cash", symbol: "BCH" },
+      { name: "TRON", symbol: "TRX" },
+      { name: "EOS", symbol: "EOS" },
+      { name: "Monero", symbol: "XMR" },
+      { name: "NEO", symbol: "NEO" },
+      { name: "Dash", symbol: "DASH" },
+      { name: "Qtum", symbol: "QTUM" },
+      { name: "OmiseGO", symbol: "OMG" },
+      { name: "Zcash", symbol: "ZEC" }
+    ]
+  },
+  trading: {
+    types: ["Spot", "Margin", "Futures", "Options"],
+    marginLeverage: {
+      desktop: 20,
+      mobile: 5
+    }
+  },
+  payments: {
+    acceptedMethods: [
+      "Credit/Debit Cards (Visa, Mastercard, etc.)",
+      "Bank Transfers (SWIFT, SEPA)",
+      "Cryptocurrencies",
+      "P2P Trading",
+      "E-wallets (PayPal, Skrill, Neteller)"
+    ],
+    withdrawal: {
+      minAmount: 10,
+      processingTime: {
+        crypto: "1 hour",
+        fiat: "2-5 business days"
+      },
+      accelerationService: "Available for an additional fee."
+    },
+    fiatDeposit: {
+      supportedCurrencies: ["USD", "EUR", "GBP", "AUD", "JPY", "and more"],
+      methods: ["Credit/Debit Cards", "Bank Transfers", "P2P"]
+    }
+  },
+  security: {
+    measures: [
+      "Two-Factor Authentication (2FA)",
+      "Cold Storage",
+      "Regular Security Audits",
+      "Risk Control System",
+      "Advanced Encryption"
+    ]
+  },
+  fees: {
+    trading: { maker: 0.1, taker: 0.1 },
+    deposit: "Free for most cryptocurrencies",
+    withdrawal: "Varies by currency and method"
+  },
+  customerSupport: {
+    availability: "24/7",
+    languages: ["English", "Chinese", "Spanish", "Russian", "Korean"]
+  },
+  specialFeatures: [
+    "Binance Launchpad",
+    "Binance Staking",
+    "Binance Earn",
+    "Binance NFT Marketplace"
+  ],
+  mobileApp: {
+    platforms: ["iOS", "Android"],
+    features: ["Trading", "Depositing", "Withdrawing", "Staking", "NFT Trading"]
+  },
+  history: {
+    keyEvents: [
+      "Founded in July 2017 by Changpeng Zhao and Yi He.",
+      "Grew rapidly to become the largest cryptocurrency exchange by trading volume.",
+      "Introduced Binance Coin (BNB) as the native exchange token.",
+      "Expanded services globally with multiple partnerships."
+    ]
+  },
+  regulations: {
+    license: "Cayman Islands",
+    compliance: ["AML", "KYC"]
+  }
+};
+const krakenInfo = {
+  about: {
+    description: "Kraken is one of the largest and most trusted cryptocurrency exchanges in the world. The platform offers a secure and user-friendly experience for trading a variety of digital assets, including Bitcoin, Ethereum, and many others. Kraken aims to provide reliable services for both beginner and experienced traders, offering advanced trading features, as well as futures and margin trading.",
+    founded: "2011",
+    founders: ["Jesse Powell"],
+    headquarters: "San Francisco, California, USA",
+    offices: ["London", "Dublin", "Singapore", "Tokyo"],
+    website: "https://www.kraken.com"
+  },
+  community: {
+    users: 9000000,
+    platforms: ["Twitter", "LinkedIn", "Telegram", "Reddit"],
+    engagement: "Engaged community with a focus on education, security, and technology."
+  },
+  coins: {
+    totalCryptocurrencies: 200,
+    totalFiatCurrencies: 50,
+    popularCoins: [
+      { name: "Bitcoin", symbol: "BTC" },
+      { name: "Ethereum", symbol: "ETH" },
+      { name: "Tether", symbol: "USDT" },
+      { name: "USD Coin", symbol: "USDC" },
+      { name: "Litecoin", symbol: "LTC" },
+      { name: "Ripple", symbol: "XRP" },
+      { name: "Polkadot", symbol: "DOT" },
+      { name: "Chainlink", symbol: "LINK" },
+      { name: "Cardano", symbol: "ADA" },
+      { name: "Solana", symbol: "SOL" }
+    ],
+    defiCoins: [
+      { name: "Uniswap", symbol: "UNI" },
+      { name: "Aave", symbol: "AAVE" },
+      { name: "SushiSwap", symbol: "SUSHI" },
+      { name: "Compound", symbol: "COMP" },
+      { name: "Maker", symbol: "MKR" },
+      { name: "Yearn.finance", symbol: "YFI" },
+      { name: "Curve DAO Token", symbol: "CRV" },
+      { name: "The Graph", symbol: "GRT" },
+      { name: "Decentraland", symbol: "MANA" },
+      { name: "Chainlink", symbol: "LINK" }
+    ],
+    gamingCoins: [
+      { name: "Axie Infinity", symbol: "AXS" },
+      { name: "The Sandbox", symbol: "SAND" },
+      { name: "Illuvium", symbol: "ILV" },
+      { name: "Gala", symbol: "GALA" },
+      { name: "My Neighbor Alice", symbol: "ALICE" },
+      { name: "Star Atlas", symbol: "ATLAS" },
+      { name: "Decentral Games", symbol: "DG" },
+      { name: "Alien Worlds", symbol: "TLM" },
+      { name: "Upland", symbol: "UPX" },
+      { name: "Splinterlands", symbol: "SPS" }
+    ],
+    otherCoins: [
+      { name: "Bitcoin Cash", symbol: "BCH" },
+      { name: "Monero", symbol: "XMR" },
+      { name: "TRON", symbol: "TRX" },
+      { name: "Dash", symbol: "DASH" },
+      { name: "EOS", symbol: "EOS" },
+      { name: "NEO", symbol: "NEO" },
+      { name: "Zcash", symbol: "ZEC" },
+      { name: "Qtum", symbol: "QTUM" },
+      { name: "OmiseGO", symbol: "OMG" },
+      { name: "Basic Attention Token", symbol: "BAT" }
+    ]
+  },
+  trading: {
+    types: ["Spot", "Margin", "Futures", "Staking"],
+    marginLeverage: {
+      desktop: 5,
+      mobile: 2
+    }
+  },
+  payments: {
+    acceptedMethods: [
+      "Credit/Debit Cards (Visa, Mastercard, etc.)",
+      "Bank Transfers (SWIFT, SEPA)",
+      "Cryptocurrencies",
+      "E-wallets (PayPal, Skrill, Neteller)"
+    ],
+    withdrawal: {
+      minAmount: 10,
+      processingTime: {
+        crypto: "1 hour",
+        fiat: "2-5 business days"
+      },
+      accelerationService: "Available for an additional fee."
+    },
+    fiatDeposit: {
+      supportedCurrencies: ["USD", "EUR", "GBP", "CAD", "AUD", "JPY", "and more"],
+      methods: ["Credit/Debit Cards", "Bank Transfers"]
+    }
+  },
+  security: {
+    measures: [
+      "Two-Factor Authentication (2FA)",
+      "Cold Storage",
+      "Regular Security Audits",
+      "FIPS-140-2 Hardware Security Modules (HSMs)"
+    ]
+  },
+  fees: {
+    trading: { maker: 0.16, taker: 0.26 },
+    deposit: "Free for most cryptocurrencies",
+    withdrawal: "Varies by currency and method"
+  },
+  customerSupport: {
+    availability: "24/7",
+    languages: ["English", "Chinese", "Japanese", "Spanish", "Russian"]
+  },
+  specialFeatures: [
+    "Kraken Futures",
+    "Kraken Staking",
+    "Kraken OTC Trading",
+    "Kraken Learn"
+  ],
+  mobileApp: {
+    platforms: ["iOS", "Android"],
+    features: ["Trading", "Depositing", "Withdrawing", "Staking"]
+  },
+  history: {
+    keyEvents: [
+      "Founded in 2011 by Jesse Powell in San Francisco.",
+      "Became one of the largest and most trusted cryptocurrency exchanges in the world.",
+      "Acquired Cryptowatch in 2017, expanding its trading tools and services.",
+      "Introduced Kraken Futures and Kraken Staking to cater to advanced traders."
+    ]
+  },
+  regulations: {
+    license: "USA (FinCEN registered)",
+    compliance: ["AML", "KYC"]
+  }
+};
+const gateIoInfo = {
+  about: {
+    description: "Gate.io is a global cryptocurrency exchange known for its wide range of digital assets and high-quality trading services. The platform offers a secure and user-friendly environment for both beginners and advanced traders, providing various features such as spot trading, margin trading, and futures. Gate.io aims to promote the adoption of cryptocurrency worldwide by offering a seamless experience across its platform.",
+    founded: "2013",
+    founders: ["Lin Han"],
+    headquarters: "Seychelles",
+    offices: ["Hong Kong", "United States", "Europe"],
+    website: "https://www.gate.io"
+  },
+  community: {
+    users: 10000000,
+    platforms: ["Twitter", "LinkedIn", "Telegram", "Reddit"],
+    engagement: "Active community, with regular updates, trading competitions, and educational content."
+  },
+  coins: {
+    totalCryptocurrencies: 1400,
+    totalFiatCurrencies: 50,
+    popularCoins: [
+      { name: "Bitcoin", symbol: "BTC" },
+      { name: "Ethereum", symbol: "ETH" },
+      { name: "Tether", symbol: "USDT" },
+      { name: "USD Coin", symbol: "USDC" },
+      { name: "Binance Coin", symbol: "BNB" },
+      { name: "Cardano", symbol: "ADA" },
+      { name: "Dogecoin", symbol: "DOGE" },
+      { name: "Shiba Inu", symbol: "SHIB" },
+      { name: "Polkadot", symbol: "DOT" },
+      { name: "Solana", symbol: "SOL" }
+    ],
+    defiCoins: [
+      { name: "Uniswap", symbol: "UNI" },
+      { name: "Aave", symbol: "AAVE" },
+      { name: "SushiSwap", symbol: "SUSHI" },
+      { name: "Compound", symbol: "COMP" },
+      { name: "Maker", symbol: "MKR" },
+      { name: "Curve DAO Token", symbol: "CRV" },
+      { name: "Chainlink", symbol: "LINK" },
+      { name: "Yearn.finance", symbol: "YFI" },
+      { name: "The Graph", symbol: "GRT" },
+      { name: "Decentraland", symbol: "MANA" }
+    ],
+    gamingCoins: [
+      { name: "Axie Infinity", symbol: "AXS" },
+      { name: "The Sandbox", symbol: "SAND" },
+      { name: "Illuvium", symbol: "ILV" },
+      { name: "Gala", symbol: "GALA" },
+      { name: "Star Atlas", symbol: "ATLAS" },
+      { name: "Alien Worlds", symbol: "TLM" },
+      { name: "Upland", symbol: "UPX" },
+      { name: "Splinterlands", symbol: "SPS" },
+      { name: "My Neighbor Alice", symbol: "ALICE" },
+      { name: "Decentral Games", symbol: "DG" }
+    ],
+    otherCoins: [
+      { name: "Litecoin", symbol: "LTC" },
+      { name: "Bitcoin Cash", symbol: "BCH" },
+      { name: "TRON", symbol: "TRX" },
+      { name: "Monero", symbol: "XMR" },
+      { name: "NEO", symbol: "NEO" },
+      { name: "Dash", symbol: "DASH" },
+      { name: "Qtum", symbol: "QTUM" },
+      { name: "Zcash", symbol: "ZEC" },
+      { name: "OmiseGO", symbol: "OMG" },
+      { name: "Basic Attention Token", symbol: "BAT" }
+    ]
+  },
+  trading: {
+    types: ["Spot", "Margin", "Futures", "Options"],
+    marginLeverage: {
+      desktop: 5,
+      mobile: 2
+    }
+  },
+  payments: {
+    acceptedMethods: [
+      "Credit/Debit Cards (Visa, Mastercard, etc.)",
+      "Bank Transfers (SWIFT, SEPA)",
+      "Cryptocurrencies",
+      "E-wallets (PayPal, Skrill, Neteller)"
+    ],
+    withdrawal: {
+      minAmount: 10,
+      processingTime: {
+        crypto: "1 hour",
+        fiat: "2-5 business days"
+      },
+      accelerationService: "Available for an additional fee."
+    },
+    fiatDeposit: {
+      supportedCurrencies: ["USD", "EUR", "GBP", "JPY", "AUD", "CNY", "and more"],
+      methods: ["Credit/Debit Cards", "Bank Transfers"]
+    }
+  },
+  security: {
+    measures: [
+      "Two-Factor Authentication (2FA)",
+      "Cold Storage",
+      "Regular Security Audits",
+      "Anti-Phishing Protection"
+    ]
+  },
+  fees: {
+    trading: { maker: 0.2, taker: 0.2 },
+    deposit: "Free for most cryptocurrencies",
+    withdrawal: "Varies by currency and method"
+  },
+  customerSupport: {
+    availability: "24/7",
+    languages: ["English", "Chinese", "Russian", "Korean", "Spanish"]
+  },
+  specialFeatures: [
+    "Gate Token (GT)",
+    "Gate.io Launchpad",
+    "Gate.io Earn",
+    "Gate.io NFT Marketplace"
+  ],
+  mobileApp: {
+    platforms: ["iOS", "Android"],
+    features: ["Trading", "Depositing", "Withdrawing", "Staking", "NFT Trading"]
+  },
+  history: {
+    keyEvents: [
+      "Founded in 2013 by Lin Han.",
+      "Became one of the top global exchanges with a wide selection of cryptocurrencies.",
+      "Launched Gate.io Earn and Gate.io NFT Marketplace to expand its offerings."
+    ]
+  },
+  regulations: {
+    license: "Seychelles",
+    compliance: ["AML", "KYC"]
+  }
+};
+const hashKeyExchangeInfo = {
+  about: {
+    description: "HashKey Exchange is a prominent cryptocurrency exchange known for its secure and reliable trading environment, offering services for both retail and institutional investors. The platform provides a wide range of digital assets, along with advanced features like margin trading and institutional-grade services. HashKey Exchange aims to bridge traditional finance with blockchain technology, providing a seamless experience for users across the globe.",
+    founded: "2018",
+    founders: ["Liang Qiu"],
+    headquarters: "Hong Kong",
+    offices: ["Singapore", "United States", "South Korea"],
+    website: "https://www.hashkey.com"
+  },
+  community: {
+    users: 1500000,
+    platforms: ["Twitter", "LinkedIn", "Telegram", "Reddit"],
+    engagement: "Active community focused on blockchain development, trading, and financial inclusion."
+  },
+  coins: {
+    totalCryptocurrencies: 200,
+    totalFiatCurrencies: 50,
+    popularCoins: [
+      { name: "Bitcoin", symbol: "BTC" },
+      { name: "Ethereum", symbol: "ETH" },
+      { name: "Tether", symbol: "USDT" },
+      { name: "USD Coin", symbol: "USDC" },
+      { name: "Binance Coin", symbol: "BNB" },
+      { name: "Cardano", symbol: "ADA" },
+      { name: "Solana", symbol: "SOL" },
+      { name: "Polkadot", symbol: "DOT" },
+      { name: "Dogecoin", symbol: "DOGE" },
+      { name: "Shiba Inu", symbol: "SHIB" }
+    ],
+    defiCoins: [
+      { name: "Uniswap", symbol: "UNI" },
+      { name: "Aave", symbol: "AAVE" },
+      { name: "SushiSwap", symbol: "SUSHI" },
+      { name: "Compound", symbol: "COMP" },
+      { name: "Curve DAO Token", symbol: "CRV" },
+      { name: "Yearn.finance", symbol: "YFI" },
+      { name: "Maker", symbol: "MKR" },
+      { name: "Chainlink", symbol: "LINK" },
+      { name: "The Graph", symbol: "GRT" },
+      { name: "Decentraland", symbol: "MANA" }
+    ],
+    gamingCoins: [
+      { name: "Axie Infinity", symbol: "AXS" },
+      { name: "The Sandbox", symbol: "SAND" },
+      { name: "Gala", symbol: "GALA" },
+      { name: "Illuvium", symbol: "ILV" },
+      { name: "Star Atlas", symbol: "ATLAS" },
+      { name: "Decentral Games", symbol: "DG" },
+      { name: "My Neighbor Alice", symbol: "ALICE" },
+      { name: "Alien Worlds", symbol: "TLM" },
+      { name: "Splinterlands", symbol: "SPS" },
+      { name: "Upland", symbol: "UPX" }
+    ],
+    otherCoins: [
+      { name: "Litecoin", symbol: "LTC" },
+      { name: "Bitcoin Cash", symbol: "BCH" },
+      { name: "TRON", symbol: "TRX" },
+      { name: "Monero", symbol: "XMR" },
+      { name: "Zcash", symbol: "ZEC" },
+      { name: "NEO", symbol: "NEO" },
+      { name: "Dash", symbol: "DASH" },
+      { name: "Qtum", symbol: "QTUM" },
+      { name: "OmiseGO", symbol: "OMG" },
+      { name: "Basic Attention Token", symbol: "BAT" }
+    ]
+  },
+  trading: {
+    types: ["Spot", "Margin", "Futures", "OTC"],
+    marginLeverage: {
+      desktop: 5,
+      mobile: 3
+    }
+  },
+  payments: {
+    acceptedMethods: [
+      "Credit/Debit Cards (Visa, Mastercard, etc.)",
+      "Bank Transfers (SWIFT, SEPA)",
+      "Cryptocurrencies",
+      "E-wallets (PayPal, Skrill, Neteller)"
+    ],
+    withdrawal: {
+      minAmount: 20,
+      processingTime: {
+        crypto: "1-2 hours",
+        fiat: "2-4 business days"
+      },
+      accelerationService: "Available for an additional fee."
+    },
+    fiatDeposit: {
+      supportedCurrencies: ["USD", "EUR", "GBP", "CNY", "JPY", "AUD"],
+      methods: ["Credit/Debit Cards", "Bank Transfers"]
+    }
+  },
+  security: {
+    measures: [
+      "Two-Factor Authentication (2FA)",
+      "Cold Storage",
+      "Regular Security Audits",
+      "Advanced Threat Detection"
+    ]
+  },
+  fees: {
+    trading: { maker: 0.1, taker: 0.2 },
+    deposit: "Free for most cryptocurrencies",
+    withdrawal: "Varies by currency and method"
+  },
+  customerSupport: {
+    availability: "24/7",
+    languages: ["English", "Chinese", "Japanese", "Korean"]
+  },
+  specialFeatures: [
+    "HashKey Token (HKT)",
+    "Institutional Services",
+    "HashKey Academy",
+    "HashKey Launchpad"
+  ],
+  mobileApp: {
+    platforms: ["iOS", "Android"],
+    features: ["Trading", "Depositing", "Withdrawing", "Staking"]
+  },
+  history: {
+    keyEvents: [
+      "Founded in 2018 by Liang Qiu.",
+      "Gained recognition for its focus on institutional investors.",
+      "Launched HashKey Token (HKT) as part of its ecosystem.",
+      "Expanded services globally with strategic partnerships."
+    ]
+  },
+  regulations: {
+    license: "Seychelles",
+    compliance: ["AML", "KYC"]
+  }
+};
+const whiteBitInfo = {
+  about: {
+    description: "WhiteBIT is a leading global cryptocurrency exchange that offers a wide range of digital assets for trading. The platform is known for its advanced security measures, user-friendly interface, and variety of trading options, including spot and margin trading. WhiteBIT aims to provide a reliable and secure trading environment for users of all experience levels, ensuring seamless trading and liquidity.",
+    founded: "2018",
+    founders: ["Vasyl Bukhnytsky"],
+    headquarters: "Estonia",
+    offices: ["Ukraine", "Lithuania", "Turkey"],
+    website: "https://www.whitebit.com"
+  },
+  community: {
+    users: 2000000,
+    platforms: ["Twitter", "LinkedIn", "Telegram", "Reddit"],
+    engagement: "Highly engaged community, with active discussions and support channels, regular updates, and educational content."
+  },
+  coins: {
+    totalCryptocurrencies: 300,
+    totalFiatCurrencies: 40,
+    popularCoins: [
+      { name: "Bitcoin", symbol: "BTC" },
+      { name: "Ethereum", symbol: "ETH" },
+      { name: "Tether", symbol: "USDT" },
+      { name: "USD Coin", symbol: "USDC" },
+      { name: "Binance Coin", symbol: "BNB" },
+      { name: "Cardano", symbol: "ADA" },
+      { name: "Dogecoin", symbol: "DOGE" },
+      { name: "Shiba Inu", symbol: "SHIB" },
+      { name: "Polkadot", symbol: "DOT" },
+      { name: "Solana", symbol: "SOL" }
+    ],
+    defiCoins: [
+      { name: "Uniswap", symbol: "UNI" },
+      { name: "SushiSwap", symbol: "SUSHI" },
+      { name: "Aave", symbol: "AAVE" },
+      { name: "Compound", symbol: "COMP" },
+      { name: "Maker", symbol: "MKR" },
+      { name: "Chainlink", symbol: "LINK" },
+      { name: "Curve DAO Token", symbol: "CRV" },
+      { name: "Yearn.finance", symbol: "YFI" },
+      { name: "The Graph", symbol: "GRT" },
+      { name: "Decentraland", symbol: "MANA" }
+    ],
+    gamingCoins: [
+      { name: "Axie Infinity", symbol: "AXS" },
+      { name: "The Sandbox", symbol: "SAND" },
+      { name: "Gala", symbol: "GALA" },
+      { name: "Illuvium", symbol: "ILV" },
+      { name: "Star Atlas", symbol: "ATLAS" },
+      { name: "Alien Worlds", symbol: "TLM" },
+      { name: "My Neighbor Alice", symbol: "ALICE" },
+      { name: "Upland", symbol: "UPX" },
+      { name: "Splinterlands", symbol: "SPS" },
+      { name: "Decentral Games", symbol: "DG" }
+    ],
+    otherCoins: [
+      { name: "Litecoin", symbol: "LTC" },
+      { name: "Bitcoin Cash", symbol: "BCH" },
+      { name: "TRON", symbol: "TRX" },
+      { name: "Monero", symbol: "XMR" },
+      { name: "NEO", symbol: "NEO" },
+      { name: "Dash", symbol: "DASH" },
+      { name: "Qtum", symbol: "QTUM" },
+      { name: "Zcash", symbol: "ZEC" },
+      { name: "OmiseGO", symbol: "OMG" },
+      { name: "Basic Attention Token", symbol: "BAT" }
+    ]
+  },
+  trading: {
+    types: ["Spot", "Margin", "Futures"],
+    marginLeverage: {
+      desktop: 5,
+      mobile: 3
+    }
+  },
+  payments: {
+    acceptedMethods: [
+      "Credit/Debit Cards (Visa, Mastercard, etc.)",
+      "Bank Transfers (SWIFT, SEPA)",
+      "Cryptocurrencies",
+      "E-wallets (PayPal, Skrill, Neteller)"
+    ],
+    withdrawal: {
+      minAmount: 10,
+      processingTime: {
+        crypto: "1-2 hours",
+        fiat: "1-3 business days"
+      },
+      accelerationService: "Available for an additional fee."
+    },
+    fiatDeposit: {
+      supportedCurrencies: ["USD", "EUR", "GBP", "JPY", "CNY", "AUD"],
+      methods: ["Credit/Debit Cards", "Bank Transfers"]
+    }
+  },
+  security: {
+    measures: [
+      "Two-Factor Authentication (2FA)",
+      "Cold Storage",
+      "Anti-Phishing Protection",
+      "Regular Security Audits"
+    ]
+  },
+  fees: {
+    trading: { maker: 0.1, taker: 0.2 },
+    deposit: "Free for most cryptocurrencies",
+    withdrawal: "Varies by currency and method"
+  },
+  customerSupport: {
+    availability: "24/7",
+    languages: ["English", "Russian", "Ukrainian", "Turkish"]
+  },
+  specialFeatures: [
+    "WhiteBIT Token (WTB)",
+    "WhiteBIT Academy",
+    "WhiteBIT Launchpad",
+    "WhiteBIT Staking"
+  ],
+  mobileApp: {
+    platforms: ["iOS", "Android"],
+    features: ["Trading", "Depositing", "Withdrawing", "Staking"]
+  },
+  history: {
+    keyEvents: [
+      "Founded in 2018 by Vasyl Bukhnytsky.",
+      "Grew rapidly to become one of Europe's top exchanges.",
+      "Expanded services to more global regions, offering localized options in multiple languages."
+    ]
+  },
+  regulations: {
+    license: "Estonia",
+    compliance: ["AML", "KYC"]
+  }
+};
+const mexcInfo = {
+  about: {
+    description: "MEXC is a global cryptocurrency exchange that offers a wide range of digital assets and trading options. Known for its high liquidity and low fees, MEXC aims to provide a seamless experience for retail and institutional investors alike. The platform offers spot, margin, and futures trading, alongside innovative features like staking and lending services.",
+    founded: "2018",
+    founders: ["MEXC Global Team"],
+    headquarters: "Singapore",
+    offices: ["South Korea", "United States", "Russia"],
+    website: "https://www.mexc.com"
+  },
+  community: {
+    users: 8000000,
+    platforms: ["Twitter", "LinkedIn", "Telegram", "Reddit"],
+    engagement: "Highly active community with frequent promotions, discussions, and educational content for traders."
+  },
+  coins: {
+    totalCryptocurrencies: 350,
+    totalFiatCurrencies: 50,
+    popularCoins: [
+      { name: "Bitcoin", symbol: "BTC" },
+      { name: "Ethereum", symbol: "ETH" },
+      { name: "Tether", symbol: "USDT" },
+      { name: "USD Coin", symbol: "USDC" },
+      { name: "Binance Coin", symbol: "BNB" },
+      { name: "Cardano", symbol: "ADA" },
+      { name: "Solana", symbol: "SOL" },
+      { name: "Polkadot", symbol: "DOT" },
+      { name: "Dogecoin", symbol: "DOGE" },
+      { name: "Shiba Inu", symbol: "SHIB" }
+    ],
+    defiCoins: [
+      { name: "Uniswap", symbol: "UNI" },
+      { name: "Aave", symbol: "AAVE" },
+      { name: "SushiSwap", symbol: "SUSHI" },
+      { name: "Compound", symbol: "COMP" },
+      { name: "Chainlink", symbol: "LINK" },
+      { name: "Curve DAO Token", symbol: "CRV" },
+      { name: "Yearn.finance", symbol: "YFI" },
+      { name: "Maker", symbol: "MKR" },
+      { name: "The Graph", symbol: "GRT" },
+      { name: "Decentraland", symbol: "MANA" }
+    ],
+    gamingCoins: [
+      { name: "Axie Infinity", symbol: "AXS" },
+      { name: "The Sandbox", symbol: "SAND" },
+      { name: "Gala", symbol: "GALA" },
+      { name: "Illuvium", symbol: "ILV" },
+      { name: "Star Atlas", symbol: "ATLAS" },
+      { name: "My Neighbor Alice", symbol: "ALICE" },
+      { name: "Decentral Games", symbol: "DG" },
+      { name: "Alien Worlds", symbol: "TLM" },
+      { name: "Upland", symbol: "UPX" },
+      { name: "Splinterlands", symbol: "SPS" }
+    ],
+    otherCoins: [
+      { name: "Litecoin", symbol: "LTC" },
+      { name: "Bitcoin Cash", symbol: "BCH" },
+      { name: "TRON", symbol: "TRX" },
+      { name: "Monero", symbol: "XMR" },
+      { name: "Zcash", symbol: "ZEC" },
+      { name: "NEO", symbol: "NEO" },
+      { name: "Dash", symbol: "DASH" },
+      { name: "OmiseGO", symbol: "OMG" },
+      { name: "Basic Attention Token", symbol: "BAT" },
+      { name: "Qtum", symbol: "QTUM" }
+    ]
+  },
+  trading: {
+    types: ["Spot", "Margin", "Futures", "Perpetual"],
+    marginLeverage: {
+      desktop: 10,
+      mobile: 5
+    }
+  },
+  payments: {
+    acceptedMethods: [
+      "Credit/Debit Cards (Visa, Mastercard, etc.)",
+      "Bank Transfers (SWIFT, SEPA)",
+      "Cryptocurrencies",
+      "E-wallets (PayPal, Skrill, Neteller)"
+    ],
+    withdrawal: {
+      minAmount: 20,
+      processingTime: {
+        crypto: "1-2 hours",
+        fiat: "2-4 business days"
+      },
+      accelerationService: "Available for an additional fee."
+    },
+    fiatDeposit: {
+      supportedCurrencies: ["USD", "EUR", "GBP", "JPY", "CNY", "AUD"],
+      methods: ["Credit/Debit Cards", "Bank Transfers"]
+    }
+  },
+  security: {
+    measures: [
+      "Two-Factor Authentication (2FA)",
+      "Cold Storage",
+      "Anti-Phishing Protection",
+      "Regular Security Audits"
+    ]
+  },
+  fees: {
+    trading: { maker: 0.1, taker: 0.2 },
+    deposit: "Free for most cryptocurrencies",
+    withdrawal: "Varies by currency and method"
+  },
+  customerSupport: {
+    availability: "24/7",
+    languages: ["English", "Chinese", "Korean", "Japanese"]
+  },
+  specialFeatures: [
+    "MEXC Token (MX)",
+    "MEXC Staking",
+    "Launchpad",
+    "MEXC Academy"
+  ],
+  mobileApp: {
+    platforms: ["iOS", "Android"],
+    features: ["Trading", "Depositing", "Withdrawing", "Staking"]
+  },
+  history: {
+    keyEvents: [
+      "Founded in 2018, MEXC rapidly grew to become one of the top exchanges globally.",
+      "Launch of MEXC Token (MX) and staking features to enhance user engagement.",
+      "Expanded into several global markets including Southeast Asia, Europe, and the Americas."
+    ]
+  },
+  regulations: {
+    license: "Estonia",
+    compliance: ["AML", "KYC"]
+  }
+};
+const htxInfo = {
+  about: {
+    description: "HTX (formerly Huobi) is one of the leading cryptocurrency exchanges, offering a wide variety of digital assets for trading with advanced tools, high liquidity, and secure transaction environments. HTX provides a professional trading platform with access to spot, margin, and futures trading, alongside staking, lending, and other DeFi features.",
+    founded: "2013",
+    founders: ["Leon Li"],
+    headquarters: "Seychelles",
+    offices: ["Singapore", "South Korea", "Japan"],
+    website: "https://www.htx.com"
+  },
+  community: {
+    users: 10000000,
+    platforms: ["Twitter", "LinkedIn", "Telegram", "Reddit"],
+    engagement: "Strong community with regular updates, educational content, and support across multiple platforms."
+  },
+  coins: {
+    totalCryptocurrencies: 400,
+    totalFiatCurrencies: 50,
+    popularCoins: [
+      { name: "Bitcoin", symbol: "BTC" },
+      { name: "Ethereum", symbol: "ETH" },
+      { name: "Tether", symbol: "USDT" },
+      { name: "USD Coin", symbol: "USDC" },
+      { name: "Binance Coin", symbol: "BNB" },
+      { name: "Cardano", symbol: "ADA" },
+      { name: "Solana", symbol: "SOL" },
+      { name: "Polkadot", symbol: "DOT" },
+      { name: "Dogecoin", symbol: "DOGE" },
+      { name: "Shiba Inu", symbol: "SHIB" }
+    ],
+    defiCoins: [
+      { name: "Uniswap", symbol: "UNI" },
+      { name: "Aave", symbol: "AAVE" },
+      { name: "SushiSwap", symbol: "SUSHI" },
+      { name: "Maker", symbol: "MKR" },
+      { name: "Chainlink", symbol: "LINK" },
+      { name: "Curve DAO Token", symbol: "CRV" },
+      { name: "Yearn.finance", symbol: "YFI" },
+      { name: "Compound", symbol: "COMP" },
+      { name: "The Graph", symbol: "GRT" },
+      { name: "Decentraland", symbol: "MANA" }
+    ],
+    gamingCoins: [
+      { name: "Axie Infinity", symbol: "AXS" },
+      { name: "The Sandbox", symbol: "SAND" },
+      { name: "Gala", symbol: "GALA" },
+      { name: "Illuvium", symbol: "ILV" },
+      { name: "Star Atlas", symbol: "ATLAS" },
+      { name: "My Neighbor Alice", symbol: "ALICE" },
+      { name: "Decentral Games", symbol: "DG" },
+      { name: "Alien Worlds", symbol: "TLM" },
+      { name: "Splinterlands", symbol: "SPS" },
+      { name: "Upland", symbol: "UPX" }
+    ],
+    otherCoins: [
+      { name: "Litecoin", symbol: "LTC" },
+      { name: "Bitcoin Cash", symbol: "BCH" },
+      { name: "TRON", symbol: "TRX" },
+      { name: "Monero", symbol: "XMR" },
+      { name: "Zcash", symbol: "ZEC" },
+      { name: "NEO", symbol: "NEO" },
+      { name: "Dash", symbol: "DASH" },
+      { name: "OmiseGO", symbol: "OMG" },
+      { name: "Basic Attention Token", symbol: "BAT" },
+      { name: "Qtum", symbol: "QTUM" }
+    ]
+  },
+  trading: {
+    types: ["Spot", "Margin", "Futures", "Perpetual", "OTC"],
+    marginLeverage: {
+      desktop: 5,
+      mobile: 3
+    }
+  },
+  payments: {
+    acceptedMethods: [
+      "Credit/Debit Cards (Visa, Mastercard, etc.)",
+      "Bank Transfers (SWIFT, SEPA)",
+      "Cryptocurrencies",
+      "E-wallets (PayPal, Skrill, Neteller)"
+    ],
+    withdrawal: {
+      minAmount: 10,
+      processingTime: {
+        crypto: "1-2 hours",
+        fiat: "2-4 business days"
+      },
+      accelerationService: "Available for an additional fee."
+    },
+    fiatDeposit: {
+      supportedCurrencies: ["USD", "EUR", "GBP", "CNY", "JPY"],
+      methods: ["Credit/Debit Cards", "Bank Transfers"]
+    }
+  },
+  security: {
+    measures: [
+      "Two-Factor Authentication (2FA)",
+      "Cold Storage",
+      "Advanced Threat Detection",
+      "Regular Security Audits"
+    ]
+  },
+  fees: {
+    trading: { maker: 0.1, taker: 0.2 },
+    deposit: "Free for most cryptocurrencies",
+    withdrawal: "Varies by currency and method"
+  },
+  customerSupport: {
+    availability: "24/7",
+    languages: ["English", "Chinese", "Korean", "Japanese"]
+  },
+  specialFeatures: [
+    "HTX Token (HT)",
+    "Launchpad",
+    "HTX Staking",
+    "Educational Resources"
+  ],
+  mobileApp: {
+    platforms: ["iOS", "Android"],
+    features: ["Trading", "Depositing", "Withdrawing", "Staking"]
+  },
+  history: {
+    keyEvents: [
+      "Founded in 2013 as Huobi, rebranded to HTX in 2024.",
+      "Grew rapidly to become a leader in Asia and globally.",
+      "Introduced HTX Token (HT) to enhance user participation."
+    ]
+  },
+  regulations: {
+    license: "Seychelles",
+    compliance: ["AML", "KYC"]
+  }
+};
