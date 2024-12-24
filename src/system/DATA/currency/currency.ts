@@ -1,4 +1,4 @@
-import { currencies} from "../variables";
+import { currencies} from "../../variables";
 
 
 export const countriesCurrencies=[

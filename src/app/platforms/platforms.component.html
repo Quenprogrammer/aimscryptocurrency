@@ -1,5 +1,24 @@
 
 <app-data-stats></app-data-stats>
+<app-debug></app-debug>
+<div class="search-container">
+  <h1>Choose Your Search Engine</h1>
+
+  <!-- Dropdown to select the search engine -->
+  <select [(ngModel)]="selectedSearchEngine">
+    <option value="google">Google</option>
+    <option value="bing">Microsoft Bing</option>
+    <option value="yahoo">Yahoo Search</option>
+    <option value="baidu">Baidu</option>
+    <option value="yandex">Yandex</option>
+    <option value="duckduckgo">DuckDuckGo</option>
+  </select>
+
+  <br />
+
+  <input type="text" [(ngModel)]="query1" placeholder="Enter search term" />
+  <button (click)="search()">Search</button>
+</div>
 
 
 
@@ -21,7 +40,7 @@
           <div class="col" >
 
             <!-- Card -->
-            <div class="card border-0 mb-4 shadow-lg" (click)="blockChain(longContent2)">
+            <div  class="card border-0 mb-4 shadow-lg" (click)="blockChain(longContent2)" style="cursor: pointer;">
               <div class="card-body">
                 <svg class="d-block mb-3" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path class="text-warning" d="M31.5412 14.6389C30.9843 23.6874 23.7303 30.927 14.6641 31.4828V35.9999H36.0671V14.6389H31.5412Z" fill="currentColor"></path>
@@ -34,7 +53,7 @@
             </div>
 
             <!-- Card -->
-            <div class="card border-0 bg-primary" data-bs-theme="dark" (click)="openScrollableContent(longContent)" >
+            <div style="cursor: pointer;" class="card border-0 bg-primary" data-bs-theme="dark" (click)="openScrollableContent(longContent)" >
               <div class="card-body">
                 <svg class="d-block mb-3" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M22.7496 11.4756C25.3743 8.85089 25.3743 4.59539 22.7496 1.97068C20.1249 -0.654032 15.8694 -0.654033 13.2447 1.97068C10.6199 4.59539 10.6199 8.85089 13.2447 11.4756C15.8694 14.1003 20.1249 14.1003 22.7496 11.4756Z" fill="white"></path>
@@ -52,7 +71,7 @@
           <div class="col d-flex flex-column pt-4 mt-sm-3">
 
             <!-- Card -->
-            <div class="card border-0 order-sm-2 mb-4 mb-sm-0 shadow-lg" (click)=" WalletTokensModalOpen(WalletTokensModal)" >
+            <div style="cursor: pointer;" class="card border-0 order-sm-2 mb-4 mb-sm-0 shadow-lg" (click)=" WalletTokensModalOpen(WalletTokensModal)" >
               <div class="card-body">
                 <svg class="d-block mb-3" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path class="text-warning" d="M31.5412 14.6389C30.9843 23.6874 23.7303 30.927 14.6641 31.4828V35.9999H36.0671V14.6389H31.5412Z" fill="currentColor"></path>
@@ -65,7 +84,7 @@
             </div>
 
             <!-- Card -->
-            <div class="card border-0 bg-primary order-sm-1 mb-sm-4" data-bs-theme="dark" (click)="cex(longContent1)">
+            <div style="cursor: pointer;" class="card border-0 bg-primary order-sm-1 mb-sm-4" data-bs-theme="dark" (click)="cex(longContent1)">
               <div class="card-body">
                 <svg class="d-block mb-3" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M22.4844 22.4814H36.0031V36.0001H22.4844V22.4814Z" fill="white"></path>

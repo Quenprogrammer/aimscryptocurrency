@@ -1,4 +1,4 @@
-import {path} from "../variables";
+import {path} from "../../variables";
 export const tokenStats = [
   { SN: 1, name: 'Bitcoin', logo: path + 'bitcoin.png'},
   { SN: 2, name: 'Ethereum (ETH)', logo: path + 'etherium.webp' },

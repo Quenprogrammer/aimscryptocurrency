@@ -1,5 +1,5 @@
 
-import {exchangersPath} from "../variables";
+import {exchangersPath} from "../../variables";
 export const exchangers=[
 { SN: 10, name: 'NULL', logo: exchangersPath  + '20-12-01-Coinbase_Coin_Primary.png'},
 { SN: 10, name: 'NULL', logo: exchangersPath  + '20-12-04-bybit_spot.png'},
@@ -1506,3 +1506,554 @@ const whitebitInfo = {
     compliance: ["AML", "KYC"]
   }
 };
+const bitgetInfo = {
+  about: {
+    description: "Bitget is a global cryptocurrency exchange and trading platform, widely known for its focus on derivatives trading, especially crypto futures and leveraged products. The platform offers spot trading, futures trading, and copy trading, and is designed for both beginners and experienced traders. Bitget also emphasizes security and regulatory compliance, aiming to provide a seamless and secure trading experience for users worldwide.",
+    founded: "2018",
+    founders: ["Bitget Team"],
+    headquarters: "Singapore",
+    offices: ["Estonia", "Japan", "Turkey", "Brazil"],
+    website: "https://www.bitget.com"
+  },
+  community: {
+    users: 10000000,
+    platforms: ["Twitter", "LinkedIn", "Telegram", "Reddit"],
+    engagement: "A rapidly growing community, with active discussions and engagement in crypto futures and copy trading."
+  },
+  coins: {
+    totalCryptocurrencies: 300,
+    totalFiatCurrencies: 40,
+    popularCoins: [
+      { name: "Bitcoin", symbol: "BTC" },
+      { name: "Ethereum", symbol: "ETH" },
+      { name: "Tether", symbol: "USDT" },
+      { name: "USD Coin", symbol: "USDC" },
+      { name: "Binance Coin", symbol: "BNB" },
+      { name: "Cardano", symbol: "ADA" },
+      { name: "Solana", symbol: "SOL" },
+      { name: "Polkadot", symbol: "DOT" },
+      { name: "Dogecoin", symbol: "DOGE" },
+      { name: "Shiba Inu", symbol: "SHIB" }
+    ],
+    defiCoins: [
+      { name: "Uniswap", symbol: "UNI" },
+      { name: "Aave", symbol: "AAVE" },
+      { name: "SushiSwap", symbol: "SUSHI" },
+      { name: "Curve DAO Token", symbol: "CRV" }
+    ],
+    gamingCoins: [
+      { name: "Axie Infinity", symbol: "AXS" },
+      { name: "The Sandbox", symbol: "SAND" },
+      { name: "Illuvium", symbol: "ILV" },
+      { name: "Gala", symbol: "GALA" }
+    ],
+    otherCoins: [
+      { name: "Litecoin", symbol: "LTC" },
+      { name: "Bitcoin Cash", symbol: "BCH" },
+      { name: "Monero", symbol: "XMR" }
+    ]
+  },
+  trading: {
+    types: ["Spot", "Futures", "Copy Trading"],
+    marginLeverage: {
+      desktop: 100,
+      mobile: 100
+    }
+  },
+  payments: {
+    acceptedMethods: [
+      "Credit/Debit Cards (Visa, Mastercard, etc.)",
+      "Bank Transfers (SWIFT, SEPA)",
+      "Cryptocurrencies",
+      "E-wallets (PayPal, Skrill, Neteller)"
+    ],
+    withdrawal: {
+      minAmount: 10,
+      processingTime: {
+        crypto: "Within 1 hour",
+        fiat: "2-5 business days"
+      },
+      accelerationService: "Available for an additional fee."
+    },
+    fiatDeposit: {
+      supportedCurrencies: ["USD", "EUR", "CNY", "JPY"],
+      methods: ["Credit/Debit Cards", "Bank Transfers"]
+    }
+  },
+  security: {
+    measures: [
+      "Two-Factor Authentication (2FA)",
+      "Cold Storage for Major Assets",
+      "Insurance Fund",
+      "Regular Security Audits"
+    ]
+  },
+  fees: {
+    trading: { maker: 0.02, taker: 0.06 },
+    deposit: "Free for most cryptocurrencies",
+    withdrawal: "Varies by currency"
+  },
+  customerSupport: {
+    availability: "24/7",
+    languages: ["English", "Chinese", "Korean", "Russian"]
+  },
+  specialFeatures: [
+    "Copy Trading",
+    "Futures Trading",
+    "Bitget Token (BGB)"
+  ],
+  mobileApp: {
+    platforms: ["iOS", "Android"],
+    features: ["Trading", "Depositing", "Withdrawing", "Copy Trading"]
+  },
+  history: {
+    keyEvents: [
+      "Founded in 2018 as a global futures trading platform.",
+      "Launched Bitget Token (BGB) and Copy Trading feature in 2020.",
+      "Became one of the leading exchanges for crypto derivatives and futures."
+    ]
+  },
+  regulations: {
+    license: "Singapore",
+    compliance: ["AML", "KYC"]
+  }
+};
+const gateioInfo = {
+  about: {
+    description: "Gate.io is a global cryptocurrency exchange that provides a wide range of services, including spot trading, margin trading, and derivatives trading. Known for its advanced trading features and a large selection of digital assets, Gate.io is popular among crypto traders for its comprehensive tools and security features. The platform emphasizes user experience and accessibility while offering competitive trading fees.",
+    founded: "2013",
+    founders: ["Gate.io Team"],
+    headquarters: "Seychelles",
+    offices: ["Hong Kong", "Singapore", "South Korea"],
+    website: "https://www.gate.io"
+  },
+  community: {
+    users: 10000000,
+    platforms: ["Twitter", "LinkedIn", "Telegram", "Reddit"],
+    engagement: "Gate.io has a highly active user base, particularly known for its educational content, trading competitions, and vibrant community discussions."
+  },
+  coins: {
+    totalCryptocurrencies: 1000,
+    totalFiatCurrencies: 50,
+    popularCoins: [
+      { name: "Bitcoin", symbol: "BTC" },
+      { name: "Ethereum", symbol: "ETH" },
+      { name: "Tether", symbol: "USDT" },
+      { name: "USD Coin", symbol: "USDC" },
+      { name: "Binance Coin", symbol: "BNB" },
+      { name: "Solana", symbol: "SOL" },
+      { name: "Dogecoin", symbol: "DOGE" },
+      { name: "Shiba Inu", symbol: "SHIB" },
+      { name: "Litecoin", symbol: "LTC" },
+      { name: "Polkadot", symbol: "DOT" }
+    ],
+    defiCoins: [
+      { name: "Uniswap", symbol: "UNI" },
+      { name: "Aave", symbol: "AAVE" },
+      { name: "SushiSwap", symbol: "SUSHI" },
+      { name: "Curve DAO Token", symbol: "CRV" }
+    ],
+    gamingCoins: [
+      { name: "Axie Infinity", symbol: "AXS" },
+      { name: "The Sandbox", symbol: "SAND" },
+      { name: "Illuvium", symbol: "ILV" },
+      { name: "Gala", symbol: "GALA" }
+    ],
+    otherCoins: [
+      { name: "Bitcoin Cash", symbol: "BCH" },
+      { name: "Monero", symbol: "XMR" },
+      { name: "TRON", symbol: "TRX" },
+      { name: "EOS", symbol: "EOS" }
+    ]
+  },
+  trading: {
+    types: ["Spot", "Margin", "Futures", "Perpetual Contracts"],
+    marginLeverage: {
+      desktop: 10,
+      mobile: 5
+    }
+  },
+  payments: {
+    acceptedMethods: [
+      "Credit/Debit Cards (Visa, Mastercard, etc.)",
+      "Bank Transfers (SWIFT, SEPA)",
+      "Cryptocurrencies",
+      "E-wallets (PayPal, Skrill, Neteller)"
+    ],
+    withdrawal: {
+      minAmount: 10,
+      processingTime: {
+        crypto: "Within 1 hour",
+        fiat: "3-5 business days"
+      },
+      accelerationService: "Available for an additional fee."
+    },
+    fiatDeposit: {
+      supportedCurrencies: ["USD", "EUR", "CNY", "JPY"],
+      methods: ["Credit/Debit Cards", "Bank Transfers"]
+    }
+  },
+  security: {
+    measures: [
+      "Two-Factor Authentication (2FA)",
+      "Cold Storage for Major Assets",
+      "Anti-Phishing Protection",
+      "Regular Security Audits"
+    ]
+  },
+  fees: {
+    trading: { maker: 0.2, taker: 0.2 },
+    deposit: "Free for most cryptocurrencies",
+    withdrawal: "Varies by currency"
+  },
+  customerSupport: {
+    availability: "24/7",
+    languages: ["English", "Chinese", "Russian", "Korean"]
+  },
+  specialFeatures: [
+    "Gate Token (GT)",
+    "Margin Trading",
+    "Futures Contracts",
+    "Gate.io Launchpad"
+  ],
+  mobileApp: {
+    platforms: ["iOS", "Android"],
+    features: ["Trading", "Depositing", "Withdrawing"]
+  },
+  history: {
+    keyEvents: [
+      "Founded in 2013 as a cryptocurrency exchange.",
+      "Launched Gate Token (GT) for fee discounts and other benefits in 2018.",
+      "Grew to become one of the largest crypto exchanges globally, with a vast range of coins and features."
+    ]
+  },
+  regulations: {
+    license: "Seychelles",
+    compliance: ["AML", "KYC"]
+  }
+};
+const bitunixInfo = {
+  about: {
+    description: "Bitunix is a cryptocurrency exchange focused on providing secure and seamless trading services for both beginners and experienced traders. The platform offers various trading pairs and supports spot, futures, and margin trading. Bitunix is known for its low trading fees, user-friendly interface, and robust security measures.",
+    founded: "2020",
+    founders: ["Bitunix Team"],
+    headquarters: "Singapore",
+    offices: ["South Korea", "Vietnam", "Thailand"],
+    website: "https://www.bitunix.com"
+  },
+  community: {
+    users: 5000000,
+    platforms: ["Twitter", "LinkedIn", "Telegram", "Reddit"],
+    engagement: "The Bitunix community is growing rapidly, with active participation in trading discussions and the exchange's educational programs."
+  },
+  coins: {
+    totalCryptocurrencies: 250,
+    totalFiatCurrencies: 30,
+    popularCoins: [
+      { name: "Bitcoin", symbol: "BTC" },
+      { name: "Ethereum", symbol: "ETH" },
+      { name: "Tether", symbol: "USDT" },
+      { name: "USD Coin", symbol: "USDC" },
+      { name: "Binance Coin", symbol: "BNB" },
+      { name: "Cardano", symbol: "ADA" },
+      { name: "Polkadot", symbol: "DOT" },
+      { name: "Solana", symbol: "SOL" },
+      { name: "Shiba Inu", symbol: "SHIB" },
+      { name: "Dogecoin", symbol: "DOGE" }
+    ],
+    defiCoins: [
+      { name: "Uniswap", symbol: "UNI" },
+      { name: "SushiSwap", symbol: "SUSHI" },
+      { name: "Aave", symbol: "AAVE" }
+    ],
+    gamingCoins: [
+      { name: "Axie Infinity", symbol: "AXS" },
+      { name: "Gala", symbol: "GALA" },
+      { name: "Illuvium", symbol: "ILV" }
+    ],
+    otherCoins: [
+      { name: "Litecoin", symbol: "LTC" },
+      { name: "Bitcoin Cash", symbol: "BCH" },
+      { name: "TRON", symbol: "TRX" }
+    ]
+  },
+  trading: {
+    types: ["Spot", "Futures", "Margin"],
+    marginLeverage: {
+      desktop: 10,
+      mobile: 5
+    }
+  },
+  payments: {
+    acceptedMethods: [
+      "Credit/Debit Cards (Visa, Mastercard, etc.)",
+      "Bank Transfers (SWIFT, SEPA)",
+      "Cryptocurrencies",
+      "E-wallets (PayPal, Skrill, Neteller)"
+    ],
+    withdrawal: {
+      minAmount: 10,
+      processingTime: {
+        crypto: "Within 1 hour",
+        fiat: "3-5 business days"
+      },
+      accelerationService: "Available for an additional fee."
+    },
+    fiatDeposit: {
+      supportedCurrencies: ["USD", "EUR", "CNY", "JPY"],
+      methods: ["Credit/Debit Cards", "Bank Transfers"]
+    }
+  },
+  security: {
+    measures: [
+      "Two-Factor Authentication (2FA)",
+      "Cold Storage",
+      "Regular Audits",
+      "Insurance Fund"
+    ]
+  },
+  fees: {
+    trading: { maker: 0.1, taker: 0.2 },
+    deposit: "Free for most cryptocurrencies",
+    withdrawal: "Varies by currency"
+  },
+  customerSupport: {
+    availability: "24/7",
+    languages: ["English", "Chinese", "Korean", "Vietnamese"]
+  },
+  specialFeatures: [
+    "Bitunix Token (BNX)",
+    "Futures Trading",
+    "Staking",
+    "Margin Trading"
+  ],
+  mobileApp: {
+    platforms: ["iOS", "Android"],
+    features: ["Trading", "Depositing", "Withdrawing"]
+  },
+  history: {
+    keyEvents: [
+      "Founded in 2020, Bitunix aims to provide low-fee and high-security trading.",
+      "Introduced Futures Trading and Margin Trading in 2021.",
+      "Launched Bitunix Token (BNX) for fee discounts and rewards in 2022."
+    ]
+  },
+  regulations: {
+    license: "Singapore",
+    compliance: ["AML", "KYC"]
+  }
+};
+const bingxInfo = {
+  about: {
+    description: "BingX is a global cryptocurrency exchange platform known for its advanced trading features and easy-to-use interface. It offers a variety of services including spot trading, futures trading, and social trading. The platform is designed to cater to both new and experienced traders, and is especially popular for its copy trading feature, which allows users to copy the strategies of successful traders.",
+    founded: "2018",
+    founders: ["BingX Team"],
+    headquarters: "Singapore",
+    offices: ["Vietnam", "Indonesia", "India", "China"],
+    website: "https://www.bingx.com"
+  },
+  community: {
+    users: 3000000,
+    platforms: ["Twitter", "LinkedIn", "Telegram", "Reddit"],
+    engagement: "BingX boasts a growing community, especially in Southeast Asia, with active participation in copy trading and educational content sharing."
+  },
+  coins: {
+    totalCryptocurrencies: 200,
+    totalFiatCurrencies: 20,
+    popularCoins: [
+      { name: "Bitcoin", symbol: "BTC" },
+      { name: "Ethereum", symbol: "ETH" },
+      { name: "Tether", symbol: "USDT" },
+      { name: "USD Coin", symbol: "USDC" },
+      { name: "Binance Coin", symbol: "BNB" },
+      { name: "Solana", symbol: "SOL" },
+      { name: "Dogecoin", symbol: "DOGE" },
+      { name: "Shiba Inu", symbol: "SHIB" },
+      { name: "Polkadot", symbol: "DOT" },
+      { name: "Litecoin", symbol: "LTC" }
+    ],
+    defiCoins: [
+      { name: "Uniswap", symbol: "UNI" },
+      { name: "SushiSwap", symbol: "SUSHI" },
+      { name: "Aave", symbol: "AAVE" }
+    ],
+    gamingCoins: [
+      { name: "Axie Infinity", symbol: "AXS" },
+      { name: "Gala", symbol: "GALA" },
+      { name: "Illuvium", symbol: "ILV" }
+    ],
+    otherCoins: [
+      { name: "Bitcoin Cash", symbol: "BCH" },
+      { name: "TRON", symbol: "TRX" },
+      { name: "EOS", symbol: "EOS" }
+    ]
+  },
+  trading: {
+    types: ["Spot", "Futures", "Copy Trading"],
+    marginLeverage: {
+      desktop: 10,
+      mobile: 5
+    }
+  },
+  payments: {
+    acceptedMethods: [
+      "Credit/Debit Cards (Visa, Mastercard, etc.)",
+      "Bank Transfers (SWIFT, SEPA)",
+      "Cryptocurrencies",
+      "E-wallets (PayPal, Skrill, Neteller)"
+    ],
+    withdrawal: {
+      minAmount: 10,
+      processingTime: {
+        crypto: "Within 1 hour",
+        fiat: "3-5 business days"
+      },
+      accelerationService: "Available for an additional fee."
+    },
+    fiatDeposit: {
+      supportedCurrencies: ["USD", "EUR", "CNY", "INR"],
+      methods: ["Credit/Debit Cards", "Bank Transfers"]
+    }
+  },
+  security: {
+    measures: [
+      "Two-Factor Authentication (2FA)",
+      "Cold Storage",
+      "Regular Security Audits",
+      "Insurance Fund"
+    ]
+  },
+  fees: {
+    trading: { maker: 0.1, taker: 0.1 },
+    deposit: "Free for most cryptocurrencies",
+    withdrawal: "Varies by currency"
+  },
+  customerSupport: {
+    availability: "24/7",
+    languages: ["English", "Chinese", "Indonesian", "Vietnamese"]
+  },
+  specialFeatures: [
+    "Copy Trading",
+    "BingX Token (BXC)",
+    "Margin Trading"
+  ],
+  mobileApp: {
+    platforms: ["iOS", "Android"],
+    features: ["Trading", "Depositing", "Withdrawing"]
+  },
+  history: {
+    keyEvents: [
+      "Founded in 2018 to cater to both experienced and beginner traders.",
+      "Introduced copy trading functionality in 2020, growing its user base significantly.",
+      "Expanded its global reach with offices in multiple countries across Asia."
+    ]
+  },
+  regulations: {
+    license: "Singapore",
+    compliance: ["AML", "KYC"]
+  }
+};
+const bitstampInfo = {
+  about: {
+    description: "Bitstamp is one of the longest-running cryptocurrency exchanges, offering a reliable and secure trading environment for users globally. It provides spot trading and a range of fiat-to-crypto pairs. Known for its low fees and regulatory compliance, Bitstamp is widely respected within the crypto industry and is used by traders of all experience levels.",
+    founded: "2011",
+    founders: ["Nejc Kodrič", "Damijan Merlak"],
+    headquarters: "Luxembourg",
+    offices: ["UK", "USA", "Slovenia"],
+    website: "https://www.bitstamp.net"
+  },
+  community: {
+    users: 4500000,
+    platforms: ["Twitter", "LinkedIn", "Telegram", "Reddit"],
+    engagement: "Bitstamp maintains a loyal user base, particularly known for its long-standing reputation in the crypto industry."
+  },
+  coins: {
+    totalCryptocurrencies: 50,
+    totalFiatCurrencies: 10,
+    popularCoins: [
+      { name: "Bitcoin", symbol: "BTC" },
+      { name: "Ethereum", symbol: "ETH" },
+      { name: "Tether", symbol: "USDT" },
+      { name: "USD Coin", symbol: "USDC" },
+      { name: "Ripple", symbol: "XRP" },
+      { name: "Litecoin", symbol: "LTC" }
+    ],
+    defiCoins: [
+      { name: "Uniswap", symbol: "UNI" },
+      { name: "Aave", symbol: "AAVE" }
+    ],
+    gamingCoins: [
+      { name: "Axie Infinity", symbol: "AXS" },
+      { name: "The Sandbox", symbol: "SAND" }
+    ],
+    otherCoins: [
+      { name: "Bitcoin Cash", symbol: "BCH" },
+      { name: "TRON", symbol: "TRX" },
+      { name: "Monero", symbol: "XMR" }
+    ]
+  },
+  trading: {
+    types: ["Spot", "Fiat-to-Crypto"],
+    marginLeverage: {
+      desktop: 5,
+      mobile: 3
+    }
+  },
+  payments: {
+    acceptedMethods: [
+      "Credit/Debit Cards (Visa, Mastercard, etc.)",
+      "Bank Transfers (SWIFT, SEPA)",
+      "Cryptocurrencies"
+    ],
+    withdrawal: {
+      minAmount: 10,
+      processingTime: {
+        crypto: "Within 24 hours",
+        fiat: "1-3 business days"
+      },
+      accelerationService: "Available for an additional fee."
+    },
+    fiatDeposit: {
+      supportedCurrencies: ["USD", "EUR", "GBP", "CHF"],
+      methods: ["Credit/Debit Cards", "Bank Transfers"]
+    }
+  },
+  security: {
+    measures: [
+      "Two-Factor Authentication (2FA)",
+      "Cold Storage",
+      "Regular Security Audits",
+      "Anti-DDoS Protection"
+    ]
+  },
+  fees: {
+    trading: { maker: 0.5, taker: 0.5 },
+    deposit: "Free for most cryptocurrencies",
+    withdrawal: "Varies by currency"
+  },
+  customerSupport: {
+    availability: "24/7",
+    languages: ["English", "Spanish", "French", "German"]
+  },
+  specialFeatures: [
+    "Bitstamp Trade API",
+    "Regulated in multiple jurisdictions",
+    "Low fees for high-volume traders"
+  ],
+  mobileApp: {
+    platforms: ["iOS", "Android"],
+    features: ["Trading", "Depositing", "Withdrawing"]
+  },
+  history: {
+    keyEvents: [
+      "Founded in 2011 and became one of the first crypto exchanges to allow fiat deposits.",
+      "Expanded its offerings to include a variety of fiat-to-crypto trading pairs.",
+      "Regulated and licensed in the European Union and the United States."
+    ]
+  },
+  regulations: {
+    license: "Luxembourg",
+    compliance: ["AML", "KYC"]
+  }
+};
+

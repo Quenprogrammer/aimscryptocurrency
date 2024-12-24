@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {FormsModule} from "@angular/forms";
-import {CurrencyPipe, DecimalPipe, NgIf} from "@angular/common";
+import {CurrencyPipe, DecimalPipe, NgForOf, NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-debug',
@@ -9,7 +9,8 @@ import {CurrencyPipe, DecimalPipe, NgIf} from "@angular/common";
     FormsModule,
     CurrencyPipe,
     DecimalPipe,
-    NgIf
+    NgIf,
+    NgForOf
   ],
   templateUrl: './debug.component.html',
   styleUrl: './debug.component.scss'
@@ -49,5 +50,30 @@ export class DebugComponent {
   // This method is triggered every time a user updates the input fields
   updateValues() {
     this.calculate();
+  }
+
+
+
+
+  questions = [
+    { text: 'What is 2 + 2?', options: ['3', '4', '5'], correctAnswer: '4' },
+    { text: 'What is the capital of France?', options: ['Paris', 'London', 'Berlin'], correctAnswer: 'Paris' },
+    { text: 'What is 5 x 6?', options: ['30', '31', '32'], correctAnswer: '30' },
+    { text: 'What is the color of the sky?', options: ['Blue', 'Green', 'Red'], correctAnswer: 'Blue' },
+    { text: 'Which planet is known as the Red Planet?', options: ['Earth', 'Mars', 'Jupiter'], correctAnswer: 'Mars' },
+    { text: 'What is the boiling point of water?', options: ['100°C', '90°C', '80°C'], correctAnswer: '100°C' },
+    { text: 'Who wrote "Romeo and Juliet"?', options: ['Shakespeare', 'Dickens', 'Austen'], correctAnswer: 'Shakespeare' },
+    { text: 'What is the largest ocean?', options: ['Atlantic', 'Pacific', 'Indian'], correctAnswer: 'Pacific' },
+    { text: 'What is the square root of 64?', options: ['6', '8', '10'], correctAnswer: '8' },
+    { text: 'Which gas do plants absorb?', options: ['Oxygen', 'Carbon Dioxide', 'Nitrogen'], correctAnswer: 'Carbon Dioxide' },
+  ];
+
+  userAnswers: string[] = new Array(this.questions.length).fill(null);
+  score: number | null = null;
+
+  submitExam() {
+    this.score = this.questions.reduce((score, question, index) => {
+      return score + (this.userAnswers[index] === question.correctAnswer ? 1 : 0);
+    }, 0);
   }
 }

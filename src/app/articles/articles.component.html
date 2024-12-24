@@ -1,0 +1,25 @@
+<div class="container">
+  <div *ngFor="let section of articleSections">
+
+    <!-- Section Title -->
+    <h1 *ngIf="!section.subSections && !section.listItems">{{ section.title }}</h1>
+    <h2 *ngIf="section.subSections && !section.listItems">{{ section.title }}</h2>
+    <h3 *ngIf="section.listItems">{{ section.title }}</h3>
+
+    <!-- Section Content -->
+    <p *ngIf="section.content">{{ section.content }}</p>
+
+    <!-- Render sub-sections (if any) -->
+    <div *ngIf="section.subSections">
+      <div *ngFor="let subSection of section.subSections">
+        <h4>{{ subSection.title }}</h4>
+        <p>{{ subSection.content }}</p>
+      </div>
+    </div>
+
+    <!-- Render list items (if any) -->
+    <ul *ngIf="section.listItems">
+      <li *ngFor="let item of section.listItems">{{ item }}</li>
+    </ul>
+  </div>
+</div>

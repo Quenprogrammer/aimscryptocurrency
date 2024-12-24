@@ -1,0 +1,17 @@
+/* Hover effect for community card */
+.rounded-3:hover {
+  transform: scale(1.05);  /* Slightly scale up the card */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Add shadow on hover */
+  cursor: pointer;  /* Change cursor to pointer */
+}
+
+/* Hover effect for community logo image */
+img[ngSrc] {
+  transition: transform 0.3s ease;  /* Smooth transition for image */
+}
+
+img[ngSrc]:hover {
+  transform: scale(1.1);  /* Slightly enlarge the image on hover */
+}
+
+

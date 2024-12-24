@@ -6,6 +6,7 @@ import {FormsModule} from "@angular/forms";
 import { Pipe, PipeTransform } from '@angular/core';
 import {ColorPipePipe} from "../pipes/color-pipe.pipe";
 import {RouterOutlet} from "@angular/router";
+import {SubHeadComponent} from "../core/sub-head/sub-head.component";
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import {RouterOutlet} from "@angular/router";
     ColorPipePipe,
     RouterOutlet,
     PlatformsComponent,
+    SubHeadComponent,
 
 
   ],

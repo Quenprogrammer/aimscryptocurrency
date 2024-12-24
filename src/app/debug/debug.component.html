@@ -1,5 +1,6 @@
+<!--
 <div>
-  <!-- Form to take inputs from the user -->
+  &lt;!&ndash; Form to take inputs from the user &ndash;&gt;
   <div>
     <label for="purchasedPrice">Purchased Price:</label>
     <input id="purchasedPrice" type="number" [(ngModel)]="purchasedPrice" (input)="calculate()">
@@ -20,11 +21,37 @@
     <input id="volume" type="number" [(ngModel)]="volume" (input)="calculate()">
   </div>
 
-  <!-- Display the calculated values -->
+  &lt;!&ndash; Display the calculated values &ndash;&gt;
   <div *ngIf="percentageGain || percentageLost || gainCurrency || lostCurrency">
     <p id="percentageGain">{{ percentageGain | number:'1.2-2' }}%</p>
     <p id="percentageLost">{{ percentageLost | number:'1.2-2' }}%</p>
     <p id="gainCurrency">{{ gainCurrency | currency }}</p>
     <p id="lostCurrency">{{ lostCurrency | currency }}</p>
+  </div>
+</div>
+-->
+<div class="container mt-5">
+  <h2>CBT Exam</h2>
+  <form (ngSubmit)="submitExam()" #examForm="ngForm">
+    <div *ngFor="let question of questions; let i = index" class="mb-4">
+      <h5>{{ i + 1 }}. {{ question.text }}</h5>
+      <div *ngFor="let option of question.options">
+        <label>
+          <input
+            type="radio"
+            [name]="'question' + i"
+            [value]="option"
+            [(ngModel)]="userAnswers[i]"
+            required
+          />
+          {{ option }}
+        </label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" >Submit</button>
+  </form>
+
+  <div *ngIf="score !== null" class="mt-4">
+    <h3>Your Score: {{ score }}/{{ questions.length }}</h3>
   </div>
 </div>
