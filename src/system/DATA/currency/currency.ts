@@ -1,6 +1,323 @@
 import { currencies} from "../../variables";
 
 
+
+export const testCurrencies = [
+  {
+    SN: 1,
+    name: 'Algeria',
+    logo: currencies + '22-03-59-tn_af-flag.gif',
+    countryCode: '+213',
+    decimalPlace: 2,
+    currencyCode: 'DZD',
+    symbol: 'د.ج',
+    rate: 135.73,
+    continent: 'Africa',
+    capital: 'Algiers'
+  },
+  {
+    SN: 2,
+    name: 'Albania',
+    logo: currencies + '22-04-34-tn_al-flag.gif',
+    countryCode: '+355',
+    decimalPlace: 2,
+    currencyCode: 'ALL',
+    symbol: 'L',
+    rate: 104.25,
+    continent: 'Europe',
+    capital: 'Tirana'
+  },
+  {
+    SN: 3,
+    name: 'Antigua and Barbuda',
+    logo: currencies + '22-04-37-tn_ag-flag.gif',
+    countryCode: '+1-268',
+    decimalPlace: 2,
+    currencyCode: 'XCD',
+    symbol: '$',
+    rate: 2.70,
+    continent: 'North America',
+    capital: "Saint John's"
+  },
+  {
+    SN: 4,
+    name: 'Netherlands Antilles',
+    logo: currencies + '22-04-44-tn_an-flag.gif',
+    countryCode: '+599',
+    decimalPlace: 2,
+    currencyCode: 'ANG',
+    symbol: 'ƒ',
+    rate: 1.80,
+    continent: 'North America',
+    capital: 'Willemstad'
+  },
+  {
+    SN: 5,
+    name: 'Angola',
+    logo: currencies + '22-04-47-tn_ao-flag.gif',
+    countryCode: '+244',
+    decimalPlace: 2,
+    currencyCode: 'AOA',
+    symbol: 'Kz',
+    rate: 857.15,
+    continent: 'Africa',
+    capital: 'Luanda'
+  },
+  {
+    SN: 6,
+    name: 'Ascension Island',
+    logo: currencies + '22-04-50-tn_ac-flag.gif',
+    countryCode: '+247',
+    decimalPlace: 2,
+    currencyCode: 'SHP',
+    symbol: '£',
+    rate: 1.37,
+    continent: 'Africa',
+    capital: 'Georgetown'
+  },
+  {
+    SN: 7,
+    name: 'Argentina',
+    logo: currencies + '22-04-53-tn_ar-flag.gif',
+    countryCode: '+54',
+    decimalPlace: 2,
+    currencyCode: 'ARS',
+    symbol: '$',
+    rate: 365.50,
+    continent: 'South America',
+    capital: 'Buenos Aires'
+  },
+  {
+    SN: 8,
+    name: 'Armenia',
+    logo: currencies + '22-04-58-tn_am-flag.gif',
+    countryCode: '+374',
+    decimalPlace: 2,
+    currencyCode: 'AMD',
+    symbol: '֏',
+    rate: 390.75,
+    continent: 'Asia',
+    capital: 'Yerevan'
+  },
+  {
+    SN: 9,
+    name: 'American Samoa',
+    logo: currencies + '22-05-01-tn_as-flag.gif',
+    countryCode: '+1-684',
+    decimalPlace: 2,
+    currencyCode: 'USD',
+    symbol: '$',
+    rate: 1.00,
+    continent: 'Oceania',
+    capital: 'Pago Pago'
+  },
+  {
+    SN: 10,
+    name: 'Australia',
+    logo: currencies + '22-05-03-tn_au-flag.gif',
+    countryCode: '+61',
+    decimalPlace: 2,
+    currencyCode: 'AUD',
+    symbol: '$',
+    rate: 1.50,
+    continent: 'Oceania',
+    capital: 'Canberra'
+  },
+  {
+    SN: 11,
+    name: 'Azerbaijan',
+    logo: currencies + '22-05-06-tn_aj-flag.gif',
+    countryCode: '+994',
+    decimalPlace: 2,
+    currencyCode: 'AZN',
+    symbol: '₼',
+    rate: 1.70,
+    continent: 'Asia',
+    capital: 'Baku'
+  },
+  {
+    SN: 12,
+    name: 'Burkina Faso',
+    logo: currencies + '22-05-08-tn_bf-flag.gif',
+    countryCode: '+226',
+    decimalPlace: 2,
+    currencyCode: 'XOF',
+    symbol: 'CFA',
+    rate: 595.45,
+    continent: 'Africa',
+    capital: 'Ouagadougou'
+  },
+  {
+    SN: 13,
+    name: 'Bosnia and Herzegovina',
+    logo: currencies + '22-05-11-tn_ba-flag.gif',
+    countryCode: '+387',
+    decimalPlace: 2,
+    currencyCode: 'BAM',
+    symbol: 'KM',
+    rate: 1.80,
+    continent: 'Europe',
+    capital: 'Sarajevo'
+  },
+  {
+    SN: 14,
+    name: 'Barbados',
+    logo: currencies + '22-05-14-tn_bb-flag.gif',
+    countryCode: '+1-246',
+    decimalPlace: 2,
+    currencyCode: 'BBD',
+    symbol: '$',
+    rate: 2.00,
+    continent: 'North America',
+    capital: 'Bridgetown'
+  },
+  {
+    SN: 15,
+    name: 'Bolivia',
+    logo: currencies + '22-05-17-tn_bo-flag.gif',
+    countryCode: '+591',
+    decimalPlace: 2,
+    currencyCode: 'BOB',
+    symbol: 'Bs',
+    rate: 6.91,
+    continent: 'South America',
+    capital: 'Sucre (constitutional), La Paz (administrative)'
+  },
+  {
+    SN: 16,
+    name: 'Belgium',
+    logo: currencies + '22-05-20-tn_be-flag.gif',
+    countryCode: '+32',
+    decimalPlace: 2,
+    currencyCode: 'EUR',
+    symbol: '€',
+    rate: 1.10,
+    continent: 'Europe',
+    capital: 'Brussels'
+  },
+  {
+    SN: 17,
+    name: 'Bahrain',
+    logo: currencies + '22-05-22-tn_bh-flag.gif',
+    countryCode: '+973',
+    decimalPlace: 3,
+    currencyCode: 'BHD',
+    symbol: 'د.ب',
+    rate: 0.38,
+    continent: 'Asia',
+    capital: 'Manama'
+  },
+  {
+    SN: 18,
+    name: 'Brunei',
+    logo: currencies + '22-05-25-tn_bn-flag.gif',
+    countryCode: '+673',
+    decimalPlace: 2,
+    currencyCode: 'BND',
+    symbol: '$',
+    rate: 1.35,
+    continent: 'Asia',
+    capital: 'Bandar Seri Begawan'
+  },
+  {
+    SN: 19,
+    name: 'Bhutan',
+    logo: currencies + '22-05-31-tn_bt-flag.gif',
+    countryCode: '+975',
+    decimalPlace: 2,
+    currencyCode: 'INR',
+    symbol: '₹',
+    rate: 82.00,
+    continent: 'Asia',
+    capital: 'Thimphu'
+  },
+  {
+    SN: 20,
+    name: 'Saint Barthélemy',
+    logo: currencies + '22-05-33-tn_bl-flag.gif',
+    countryCode: '+590',
+    decimalPlace: 2,
+    currencyCode: 'EUR',
+    symbol: '€',
+    rate: 1.10,
+    continent: 'North America',
+    capital: 'Gustavia'
+  },
+  {
+    SN: 21,
+    name: 'Saint Kitts and Nevis',
+    logo: currencies + '22-05-36-tn_bk-flag.gif',
+    countryCode: '+1-869',
+    decimalPlace: 2,
+    currencyCode: 'XCD',
+    symbol: '$',
+    rate: 2.70,
+    continent: 'North America',
+    capital: 'Basseterre'
+  },
+  {
+    SN: 22,
+    name: 'Saint Lucia',
+    logo: currencies + '22-05-38-tn_bc-flag.gif',
+    countryCode: '+1-758',
+    decimalPlace: 2,
+    currencyCode: 'XCD',
+    symbol: '$',
+    rate: 2.70,
+    continent: 'North America',
+    capital: 'Castries'
+  },
+  {
+    SN: 23,
+    name: 'Brazil',
+    logo: currencies + '22-05-42-tn_br-flag.gif',
+    countryCode: '+55',
+    decimalPlace: 2,
+    currencyCode: 'BRL',
+    symbol: 'R$',
+    rate: 5.20,
+    continent: 'South America',
+    capital: 'Brasília'
+  },
+  {
+    SN: 24,
+    name: 'Saint Martin',
+    logo: currencies + '22-05-44-tn_bx-flag.gif',
+    countryCode: '+590',
+    decimalPlace: 2,
+    currencyCode: 'EUR',
+    symbol: '€',
+    rate: 1.10,
+    continent: 'North America',
+    capital: 'Marigot'
+  },
+  {
+    SN: 25,
+    name: 'Burundi',
+    logo: currencies + '22-05-47-tn_bu-flag.gif',
+    countryCode: '+257',
+    decimalPlace: 2,
+    currencyCode: 'BIF',
+    symbol: 'Fr',
+    rate: 2050.00,
+    continent: 'Africa',
+    capital: 'Gitega'
+  },
+  {
+    SN: 26,
+    name: 'Vanuatu',
+    logo: currencies + '22-05-49-tn_uv-flag.gif',
+    countryCode: '+678',
+    decimalPlace: 2,
+    currencyCode: 'VUV',
+    symbol: 'Vt',
+    rate: 116.50,
+    continent: 'Oceania',
+    capital: 'Port Vila'
+  }
+];
+
+
 export const countriesCurrencies=[
 
 { SN: 10, name: 'NULL', logo: currencies  + '22-03-59-tn_af-flag.gif'},
@@ -19,6 +336,7 @@ export const countriesCurrencies=[
 { SN: 10, name: 'NULL', logo: currencies  + '22-05-14-tn_bb-flag.gif'},
 { SN: 10, name: 'NULL', logo: currencies  + '22-05-17-tn_bo-flag.gif'},
 { SN: 10, name: 'NULL', logo: currencies  + '22-05-20-tn_be-flag.gif'},
+  //DONE> VERIFY NEXT
     { SN: 10, name: 'NULL', logo: currencies  + '22-05-22-tn_bh-flag.gif'},
   { SN: 10, name: 'NULL', logo: currencies  + '22-05-25-tn_bn-flag.gif'},
   { SN: 10, name: 'NULL', logo: currencies  + '22-05-31-tn_bt-flag.gif'},
@@ -29,6 +347,8 @@ export const countriesCurrencies=[
   { SN: 10, name: 'NULL', logo: currencies  + '22-05-44-tn_bx-flag.gif'},
   { SN: 10, name: 'NULL', logo: currencies  + '22-05-47-tn_bu-flag.gif'},
   { SN: 10, name: 'NULL', logo: currencies  + '22-05-49-tn_uv-flag.gif'},
+  //DONE> VERIFY NEXT
+
   { SN: 10, name: 'NULL', logo: currencies  + '22-05-53-tn_by-flag.gif'},
   { SN: 10, name: 'NULL', logo: currencies  + '22-05-55-tn_iv-flag.gif'},
   { SN: 10, name: 'NULL', logo: currencies  + '22-05-58-tn_cv-flag.gif'},
@@ -50,6 +370,8 @@ export const countriesCurrencies=[
   { SN: 10, name: 'NULL', logo: currencies  + '22-06-52-tn_dj-flag.gif'},
   { SN: 10, name: 'NULL', logo: currencies  + '22-06-56-tn_do-flag.gif'},
   { SN: 10, name: 'NULL', logo: currencies  + '22-06-59-tn_dr-flag.gif'},
+  //DONE> VERIFY NEXT
+
   { SN: 10, name: 'NULL', logo: currencies  + '22-07-01-tn_kn-flag.gif'},
   { SN: 10, name: 'NULL', logo: currencies  + '22-07-04-tn_congo-flag.gif'},
   { SN: 10, name: 'NULL', logo: currencies  + '22-07-07-tn_ec-flag.gif'},

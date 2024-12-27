@@ -1,1 +1,79 @@
-<p>currency-converter works!</p>
+<div class="container overflow-hidden">
+  <div class="card shadow-lg">
+  <h1>Currency Converter</h1>
+  <form [formGroup]="conversionForm">
+    <div>
+      <label>From:</label>
+      <select formControlName="fromCurrency">
+        <option *ngFor="let currency of currencies" [value]="currency.code">
+          {{ currency.name }} ({{ currency.code }})
+        </option>
+      </select>
+    </div>
+    <div>
+      <label>To:</label>
+      <select formControlName="toCurrency">
+        <option *ngFor="let currency of currencies" [value]="currency.code">
+          {{ currency.name }} ({{ currency.code }})
+        </option>
+      </select>
+    </div>
+    <div>
+      <label>Amount:</label>
+      <input class="form-control" formControlName="amount" type="number">
+    </div>
+    <button (click)="convert()">Convert</button>
+  </form>
+  <p *ngIf="result">Result: {{ result }}</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+  <table class="table caption-top ">
+    <thead class="">
+    <tr style="width: 100%">
+      <th scope="col">SN</th>
+      <th scope="col"></th>
+      <th scope="col">Country Name</th>
+      <th scope="col">Country Code</th>
+      <th scope="col">Rate</th>
+      <th scope="col">Decimal Place</th>
+      <th scope="col">Currency Code</th>
+      <th scope="col">Continent</th>
+      <th scope="col">Capital</th>
+
+    </tr>
+    </thead>
+    <tbody>
+      @for(items of testCurrencies; track items.name){
+        <tr >
+          <!-- <th scope="row">{{ (currentPage - 1) * itemsPerPage + (i + 1) }}</th>-->
+          <td>{{items.SN}}</td>
+          <td><img [src]=items.logo alt="" style="width: 50px;"></td>
+          <td>{{items.name}}</td>
+          <td>{{items.countryCode}}</td>
+          <td>{{items.rate}}</td>
+          <td>{{items.decimalPlace}}</td>
+          <td>{{items.currencyCode}}</td>
+
+          <td>{{items.continent}}</td>
+          <td>{{items.capital}}</td>
+
+
+          <td>
+
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+</div>
+

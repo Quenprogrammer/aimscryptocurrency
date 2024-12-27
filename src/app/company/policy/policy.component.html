@@ -1,0 +1,14 @@
+<div ngbAccordion [closeOthers]="true" #accordion="ngbAccordion">
+  <div *ngFor="let section of privacyPolicySections; let i = index" ngbAccordionItem [collapsed]="i !== 0">
+    <h2 ngbAccordionHeader>
+      <button ngbAccordionButton>{{ section.title }}</button>
+    </h2>
+    <div ngbAccordionCollapse>
+      <div ngbAccordionBody>
+        <ng-template>
+          <p *ngFor="let paragraph of section.content">{{ paragraph }}</p>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

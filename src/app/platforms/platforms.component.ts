@@ -14,6 +14,7 @@ import {CommunitiesComponent} from "./communities/communities.component";
 import {FormsModule} from "@angular/forms";
 import {query} from "@angular/animations";
 import {DebugComponent} from "../debug/debug.component";
+import {CurrencyConverterComponent} from "../currency-converter/currency-converter.component";
 
 
 
@@ -23,56 +24,23 @@ import {DebugComponent} from "../debug/debug.component";
   imports: [
     ConverterComponent,
     DataStatsComponent,
-    RouterLink,
+
     CurrencyComponent,
     CommunitiesComponent,
     FormsModule,
-    DebugComponent,
+    CurrencyConverterComponent,
+    RouterLink,
+
 
   ],
   templateUrl: './platforms.component.html',
   styleUrl: './platforms.component.scss'
 })
 export class PlatformsComponent {
-  query1: string = '';  // Holds the search query
-  selectedSearchEngine: string = 'google';  // Default search engine
+
 
   // Function to handle search logic
-  search() {
-    if (this.query1.trim() !== '') {
-      let searchUrl = '';
 
-      // Construct the search URL based on the selected search engine
-      switch (this.selectedSearchEngine) {
-        case 'google':
-          searchUrl = `https://www.google.com/search?q=${encodeURIComponent(this.query1)}`;
-          break;
-        case 'bing':
-          searchUrl = `https://www.bing.com/search?q=${encodeURIComponent(this.query1)}`;
-          break;
-        case 'yahoo':
-          searchUrl = `https://search.yahoo.com/search?p=${encodeURIComponent(this.query1)}`;
-          break;
-        case 'baidu':
-          searchUrl = `https://www.baidu.com/s?wd=${encodeURIComponent(this.query1)}`;
-          break;
-        case 'yandex':
-          searchUrl = `https://yandex.com/search/?text=${encodeURIComponent(this.query1)}`;
-          break;
-        case 'duckduckgo':
-          searchUrl = `https://duckduckgo.com/?q=${encodeURIComponent(this.query1)}`;
-          break;
-        default:
-          searchUrl = `https://www.google.com/search?q=${encodeURIComponent(this.query1)}`;  // Default to Google
-          break;
-      }
-
-      // Redirect the user to the selected search engine's results page
-      window.location.href = searchUrl;
-    } else {
-      alert('Please enter a search term.');
-    }
-  }
   protected readonly tokenStats = tokenStats;
   protected readonly blockchains = blockchains;
   protected readonly exchangers = exchangers;
@@ -95,9 +63,14 @@ export class PlatformsComponent {
     this.modalService.open(countriesCurrency, { scrollable: true, size: 'lg' } );
   }
 
-  WalletTokensModalOpen(WalletTokensModal:any) {
-    this.modalService.open(WalletTokensModal, { scrollable: true, size: 'lg' } );
+  WalletTokensModalOpen(WalletTokensModal1:any) {
+    this.modalService.open(WalletTokensModal1, { scrollable: true, size: 'lg' } );
   }
+
+  communitiesDataModal(WalletTokensModal1:any) {
+    this.modalService.open(WalletTokensModal1, { scrollable: true, size: 'lg' } );
+  }
+
   cryConvert(converter:any) {
     this.modalService.open(converter, { scrollable: true, size: 'lg' } );
   }
