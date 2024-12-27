@@ -13,19 +13,9 @@ import { RandomImageService } from '../../../service/randomImage/random-image.se
   styleUrls: ['./../../../system/css/customeCSS.scss'],
   template: `
     <section class="container mt-3">
-      <div class="row mt-5 overflow-hidden shadow-lg" style="padding: 5px">
-        <div class="col-5">
-          <div class="col mb-2">
-            <img
-              [ngSrc]="randomImageUrl"
-              alt="Community"
-              width="400"
-              height="400"
-              style="border-radius: 5px; object-fit: cover"
-            />
-          </div>
-        </div>
-        <div class="col-md-7">
+      <div class="row mt-5 overflow-hidden " style="padding: 5px">
+
+        <div class="col-md-12">
           <div class="row">
             @for(items of communitiesData; track items.name){
               <div class="col-4 col-lg-2 mt-2">

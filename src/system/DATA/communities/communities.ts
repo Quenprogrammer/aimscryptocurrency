@@ -16,27 +16,7 @@ interface SocialMediaPlatform {
 }
 export const communitiesData: SocialMediaPlatform[]=[
 
-    {
-      "SN": 1,
-      "name": "Twitter",
-      logo: communities + 'twitter.png',
-      "code": "Twitter",
-      "description": "A popular platform for real-time information sharing, news, and discussions.",
-      "global_dominance": 15.5,
-      "general_usage": "Social networking, news, crypto discussions, influencer marketing",
-      "monthly_active_users": 450,
-      "average_daily_posts": 500000,
-      "age_demographic": "18-34",
-      "market_share_in_social_media": 3.3,
-      "platform_growth_rate": 5.8,
-      "pages_groups": [
-        "#Crypto",
-        "#Blockchain",
-        "#Bitcoin",
-        "#DeFi",
-        "#NFT"
-      ]
-    },
+
     {
       "SN": 2,
       "name": "Reddit",
@@ -81,7 +61,7 @@ export const communitiesData: SocialMediaPlatform[]=[
     {
       "SN": 4,
       "name": "Discord",
-      logo: communities + 'discord.png',
+      logo: communities + 'discord.webp',
       "code": "Discord",
       "description": "A communication app that is widely used for gaming, but has a growing number of crypto and NFT communities.",
       "global_dominance": 5.2,
@@ -121,7 +101,7 @@ export const communitiesData: SocialMediaPlatform[]=[
     {
       "SN": 6,
       "name": "X (formerly Twitter)",
-      logo: communities + 'xLogo.png',
+      logo: communities + 'x.png',
       "code": "X",
       "description": "A platform for real-time interactions, rebranded from Twitter, with increasing focus on decentralized technologies and Web3.",
       "global_dominance": 13.1,
@@ -141,7 +121,7 @@ export const communitiesData: SocialMediaPlatform[]=[
     {
       "SN": 7,
       "name": "LinkedIn",
-      logo: communities + 'linkedin.png',
+      logo: communities + 'linkein.png',
       "code": "LinkedIn",
       "description": "A professional networking platform, also used for blockchain and crypto business networking and thought leadership.",
       "global_dominance": 7.2,
@@ -158,25 +138,7 @@ export const communitiesData: SocialMediaPlatform[]=[
         "Decentralized Finance Groups"
       ]
     },
-    {
-      "SN": 8,
-      "name": "Mastodon",
-      logo: communities + 'mastodon.png',
-      "code": "Mastodon",
-      "description": "A decentralized social network with a focus on privacy and open-source values, growing within crypto circles.",
-      "global_dominance": 0.4,
-      "general_usage": "Decentralized social networking, privacy-focused crypto discussions",
-      "monthly_active_users": 8,
-      "average_daily_posts": 5000,
-      "age_demographic": "18-40",
-      "market_share_in_social_media": 0.02,
-      "platform_growth_rate": 18.0,
-      "pages_groups": [
-        "Crypto Discussions",
-        "Web3 Developers",
-        "Decentralized Platforms"
-      ]
-    },
+
     {
       "SN": 9,
       "name": "GitHub",
@@ -199,7 +161,7 @@ export const communitiesData: SocialMediaPlatform[]=[
     {
       "SN": 10,
       "name": "Signal",
-      logo: communities + 'signal.png',
+      logo: communities + 'windows.png',
       "code": "Signal",
       "description": "A secure messaging app used by crypto communities for private communication and sharing trading signals.",
       "global_dominance": 0.6,
@@ -295,7 +257,7 @@ export const communitiesData: SocialMediaPlatform[]=[
   {
     "SN": 15,
     "name": "Snapchat",
-    logo: communities + 'snapchat.png',
+    logo: communities + 'snap.webp',
     "code": "Snapchat",
     "description": "A multimedia messaging app gaining traction among younger crypto enthusiasts who share crypto-related stories and updates.",
     "global_dominance": 6.5,
@@ -350,30 +312,11 @@ export const communitiesData: SocialMediaPlatform[]=[
       "Decentralized Platforms"
     ]
   },
-  {
-    "SN": 18,
-    "name": "LinkedIn",
-    logo: communities + 'linkedin.png',
-    "code": "LinkedIn",
-    "description": "A professional networking platform, also used for blockchain and crypto business networking and thought leadership.",
-    "global_dominance": 7.2,
-    "general_usage": "Professional networking, industry news, job searching, blockchain business",
-    "monthly_active_users": 900,
-    "average_daily_posts": 300000,
-    "age_demographic": "25-45",
-    "market_share_in_social_media": 3.5,
-    "platform_growth_rate": 4.1,
-    "pages_groups": [
-      "Crypto Entrepreneurs",
-      "Blockchain Developers",
-      "Crypto Startups",
-      "Decentralized Finance Groups"
-    ]
-  },
+
   {
     "SN": 19,
     "name": "Pinterest",
-    logo: communities + 'pinterest.png',
+    logo: communities + 'printrest.webp',
     "code": "Pinterest",
     "description": "A visual discovery engine used by crypto enthusiasts to share infographics, charts, and crypto-related imagery.",
     "global_dominance": 3.8,
@@ -392,7 +335,7 @@ export const communitiesData: SocialMediaPlatform[]=[
   {
     "SN": 20,
     "name": "TikTok",
-    logo: communities + 'tiktok.png',
+    logo: communities + 'tiktok.webp',
     "code": "TikTok",
     "description": "A video-sharing app where crypto influencers, traders, and enthusiasts share short-form content, news, and viral crypto challenges.",
     "global_dominance": 46.0,
@@ -407,7 +350,83 @@ export const communitiesData: SocialMediaPlatform[]=[
       "Crypto Trading Tips",
       "NFT Showcases"
     ]
-  }
+  },
+  {
+    "SN": 20,
+    "name": "Web",
+    logo: communities + 'wb.webp',
+    "code": "TikTok",
+    "description": "A video-sharing app where crypto influencers, traders, and enthusiasts share short-form content, news, and viral crypto challenges.",
+    "global_dominance": 46.0,
+    "general_usage": "Short videos, viral crypto content, crypto challenges",
+    "monthly_active_users": 1500,
+    "average_daily_posts": 1000000,
+    "age_demographic": "16-30",
+    "market_share_in_social_media": 12.7,
+    "platform_growth_rate": 22.3,
+    "pages_groups": [
+      "Crypto Education",
+      "Crypto Trading Tips",
+      "NFT Showcases"
+    ]
+  },
+  {
+    "SN": 20,
+    "name": "Google",
+    logo: communities + 'google.webp',
+    "code": "TikTok",
+    "description": "A video-sharing app where crypto influencers, traders, and enthusiasts share short-form content, news, and viral crypto challenges.",
+    "global_dominance": 46.0,
+    "general_usage": "Short videos, viral crypto content, crypto challenges",
+    "monthly_active_users": 1500,
+    "average_daily_posts": 1000000,
+    "age_demographic": "16-30",
+    "market_share_in_social_media": 12.7,
+    "platform_growth_rate": 22.3,
+    "pages_groups": [
+      "Crypto Education",
+      "Crypto Trading Tips",
+      "NFT Showcases"
+    ]
+  },
+  {
+    "SN": 20,
+    "name": "Programmers Com",
+    logo: communities + 'codinstudio.jpg',
+    "code": "TikTok",
+    "description": "A video-sharing app where crypto influencers, traders, and enthusiasts share short-form content, news, and viral crypto challenges.",
+    "global_dominance": 46.0,
+    "general_usage": "Short videos, viral crypto content, crypto challenges",
+    "monthly_active_users": 1500,
+    "average_daily_posts": 1000000,
+    "age_demographic": "16-30",
+    "market_share_in_social_media": 12.7,
+    "platform_growth_rate": 22.3,
+    "pages_groups": [
+      "Crypto Education",
+      "Crypto Trading Tips",
+      "NFT Showcases"
+    ]
+  },
+  {
+    "SN": 20,
+    "name": "Android Apps",
+    logo: communities + 'andriod.png',
+    "code": "TikTok",
+    "description": "A video-sharing app where crypto influencers, traders, and enthusiasts share short-form content, news, and viral crypto challenges.",
+    "global_dominance": 46.0,
+    "general_usage": "Short videos, viral crypto content, crypto challenges",
+    "monthly_active_users": 1500,
+    "average_daily_posts": 1000000,
+    "age_demographic": "16-30",
+    "market_share_in_social_media": 12.7,
+    "platform_growth_rate": 22.3,
+    "pages_groups": [
+      "Crypto Education",
+      "Crypto Trading Tips",
+      "NFT Showcases"
+    ]
+  },
 
 
 

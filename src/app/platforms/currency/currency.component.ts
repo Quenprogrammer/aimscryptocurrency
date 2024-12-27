@@ -7,7 +7,7 @@ import {countriesCurrencies} from "../../../system/DATA/currency/currency";
   imports: [],
 
   template: `<div class="col d-flex justify-content-center">
-    <div class="col-12  d-flex justify-content-center">
+    <div class="col-12  d-flex justify-content-center ">
       <div class="col-9"  >
         <div class="row">
           @for(items of countriesCurrencies; track items.name){
