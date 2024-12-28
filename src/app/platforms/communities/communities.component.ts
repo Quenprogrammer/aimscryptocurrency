@@ -3,15 +3,38 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { BehaviorSubject, Subscription } from 'rxjs';
 import { communitiesData } from "../../../system/DATA/communities/communities";
 import { TemplateRef } from '@angular/core';
-import { NgOptimizedImage } from "@angular/common";
+import {NgForOf, NgIf, NgOptimizedImage} from "@angular/common";
 import { RandomImageService } from '../../../service/randomImage/random-image.service';
 
 @Component({
   selector: 'app-communities',
   standalone: true,
-  imports: [NgOptimizedImage],
+  imports: [NgOptimizedImage, NgForOf, NgIf],
   styleUrls: ['./../../../system/css/customeCSS.scss'],
   template: `
+    <style>
+      .page-logo {
+        border-radius: 10%;
+        width: 100%;
+        height: 120px; /* Default height */
+        object-fit: cover;
+      }
+
+      @media (max-width: 768px) {
+        .page-logo {
+          border-radius: 10%;
+          height: 120px; /* Smaller height for medium screens */
+        }
+      }
+
+      @media (max-width: 576px) {
+        .page-logo {
+          border-radius: 20%;
+          height: 100px; /* Even smaller height for small screens */
+        }
+      }
+
+    </style>
     <section class="container mt-3">
       <div class="row mt-5 overflow-hidden " style="padding: 5px">
 
@@ -23,9 +46,9 @@ import { RandomImageService } from '../../../service/randomImage/random-image.se
                      data-aos-delay="300">
                   <div class="col">
                     <img
-                      [ngSrc]="items.logo" width="50" height="50"
+                      [ngSrc]="items.backComImage" width="50" height="50"
                       alt="{{ items.name }}"
-                      style="max-width: 50px; border-radius: 5px; cursor: pointer"
+                      style="max-width: 50px; border-radius: 5px; cursor: pointer; "
                       (click)="selectCommunity(items)"
                     />
                   </div>
@@ -45,14 +68,50 @@ import { RandomImageService } from '../../../service/randomImage/random-image.se
         <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
       </div>
       <div class="modal-body">
+        <!-- Display the description -->
         <p><strong>Description:</strong> {{ selectedCommunity?.description }}</p>
+
+        <!-- Display the global dominance -->
         <p><strong>Global Dominance:</strong> {{ selectedCommunity?.global_dominance }}%</p>
+
+        <!-- Display the general usage -->
         <p><strong>General Usage:</strong> {{ selectedCommunity?.general_usage }}</p>
+
+        <!-- Display monthly active users -->
         <p><strong>Monthly Active Users:</strong> {{ selectedCommunity?.monthly_active_users }} million</p>
+
+        <!-- Display the age demographic -->
         <p><strong>Age Demographic:</strong> {{ selectedCommunity?.age_demographic }}</p>
+
+        <!-- Display the market share -->
         <p><strong>Market Share:</strong> {{ selectedCommunity?.market_share_in_social_media }}%</p>
+
+        <!-- Display the platform growth rate -->
         <p><strong>Growth Rate:</strong> {{ selectedCommunity?.platform_growth_rate }}%</p>
+
+        <!-- Display pages and groups -->
+        <div *ngIf="selectedCommunity?.pages_groups?.length > 0">
+          <h4>Pages and Groups:</h4>
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let pageGroup of selectedCommunity.pages_groups">
+              <a [href]="pageGroup.link" target="_blank">
+                <img [src]="pageGroup.logo" alt="{{ pageGroup.name }} logo" class="page-logo img-fluid" />
+                <span>{{ pageGroup.name }}</span>
+              </a>
+            </div>
+          </div>
+
+
+          <!--  <li *ngFor="let pageGroup of selectedCommunity.pages_groups">
+              <a [href]="pageGroup.link" target="_blank">
+                <img [src]="pageGroup.logo" alt="{{ pageGroup.name }} logo" class="page-logo" />
+                <span>{{ pageGroup.name }}</span>
+              </a>
+            </li>-->
+
+        </div>
       </div>
+
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
       </div>

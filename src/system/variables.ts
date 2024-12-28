@@ -5,3 +5,4 @@ export const cryptoWalletTokens:string='/assets/cryptoWalletTokens/';
 export const currencies:string='/assets/Currency/';
 export const communities:string='/assets/socialIcons/';
 export const tools:string='/assets/socialIcons/';
+export const platformsLogos:string='/assets/Platforms/';
