@@ -41,10 +41,10 @@ import { RandomImageService } from '../../../service/randomImage/random-image.se
         <div class="col-md-12">
           <div class="row">
             @for(items of communitiesData; track items.name){
-              <div class="col-4 col-lg-2 mt-2">
+              <div class="col-4 col-lg-2 mt-2  ">
                 <div class="rounded-3 aos-init aos-animate text-center" data-aos="zoom-in" data-aos-easing="ease-out-back"
                      data-aos-delay="300">
-                  <div class="col">
+                  <div class="col ">
                     <img
                       [ngSrc]="items.backComImage" width="50" height="50"
                       alt="{{ items.name }}"
@@ -93,7 +93,7 @@ import { RandomImageService } from '../../../service/randomImage/random-image.se
         <div *ngIf="selectedCommunity?.pages_groups?.length > 0">
           <h4>Pages and Groups:</h4>
           <div class="row">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let pageGroup of selectedCommunity.pages_groups">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-3" *ngFor="let pageGroup of selectedCommunity.pages_groups">
               <a [href]="pageGroup.link" target="_blank">
                 <img [src]="pageGroup.logo" alt="{{ pageGroup.name }} logo" class="page-logo img-fluid" />
                 <span>{{ pageGroup.name }}</span>
@@ -136,7 +136,7 @@ export class CommunitiesComponent implements AfterViewInit, OnDestroy {
 
   constructor(private randomImageService: RandomImageService) {}
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     // Pass the specific image URLs for this component to the RandomImageService
     this.randomImageService.setRandomImages(this.imageUrls);
 
@@ -155,9 +155,6 @@ export class CommunitiesComponent implements AfterViewInit, OnDestroy {
     );
   }
 
-  ngAfterViewInit() {
-    console.log(this.communityModal);  // You can remove this in production
-  }
 
   selectCommunity(community: any): void {
     this.selectedCommunitySubject.next(community);
