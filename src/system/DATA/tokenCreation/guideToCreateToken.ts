@@ -987,6 +987,315 @@ export const cryptoTokenSolidity = [
       code: null
     }
   ];
+const cryptoTokenStepsjava = [
+  {
+    number: 1,
+    title: 'Install Dependencies',
+    description:
+      `To create a cryptocurrency token using Java on the Ethereum blockchain, you’ll need several dependencies:
+      - **Web3j**: A Java library for interacting with Ethereum nodes.
+      - **Solidity Compiler**: You need to compile Solidity code into bytecode, which can then be deployed on the Ethereum blockchain.
+      - **Maven**: A build automation tool for managing dependencies and building Java projects.
+
+      You can install Web3j and other necessary tools via Maven. Start by setting up your project:
+      1. Install Maven on your local system.
+      2. Create a new Maven project.
+      3. Add Web3j and other required dependencies in your "pom.xml".
+
+      Here’s how to add the Web3j dependency in the "pom.xml".
+
+      \`\`\`xml
+      <dependencies>
+        <dependency>
+            <groupId>org.web3j</groupId>
+            <artifactId>core</artifactId>
+            <version>4.8.7</version>
+        </dependency>
+      </dependencies>
+      \`\`\`
+      After configuring Maven, ensure that your Java environment is correctly set up.`,
+    code: `
+# Install Web3j library using Maven in your pom.xml
+<dependency>
+    <groupId>org.web3j</groupId>
+    <artifactId>core</artifactId>
+    <version>4.8.7</version>
+</dependency>
+`
+  },
+  {
+    number: 2,
+    title: 'Set Up the Environment',
+    description:
+      `Next, configure your environment. You will need:
+      - **Java JDK**: Ensure you have Java 8 or higher installed.
+      - **Infura**: An Ethereum node service that you can use to interact with the Ethereum network.
+      - **Keystore file**: A secure file that stores your Ethereum private key.
+
+      Set up Infura by creating a free account and obtaining your API key for Ethereum Mainnet or Rinkeby testnet. Configure Web3j to connect to your Ethereum node as shown below:
+
+      \`\`\`java
+      import org.web3j.protocol.Web3j;
+      import org.web3j.protocol.http.HttpService;
+
+      public class EthereumSetup {
+          public static void main(String[] args) {
+              String infuraUrl = "https://mainnet.infura.io/v3/YOUR_INFURA_API_KEY";
+              Web3j web3j = Web3j.build(new HttpService(infuraUrl));
+              System.out.println("Connected to Ethereum network: " + web3j.web3ClientVersion().send().getWeb3ClientVersion());
+          }
+      }
+      \`\`\`
+
+      Make sure your wallet is properly funded with Ether for deploying and interacting with contracts.`,
+    code: `
+# Set up Web3j connection in Java
+import org.web3j.protocol.Web3j;
+import org.web3j.protocol.http.HttpService;
+
+public class EthereumSetup {
+    public static void main(String[] args) {
+        String infuraUrl = "https://mainnet.infura.io/v3/YOUR_INFURA_API_KEY";
+        Web3j web3j = Web3j.build(new HttpService(infuraUrl));
+        System.out.println("Connected to Ethereum network: " + web3j.web3ClientVersion().send().getWeb3ClientVersion());
+    }
+}
+`
+  },
+  {
+    number: 3,
+    title: 'Write the Solidity Contract',
+    description:
+      `A smart contract defines your token's behavior. You’ll write a basic ERC-20 token in Solidity, which is the standard for creating tokens on Ethereum. This contract will handle basic operations like transferring tokens and querying balances.
+
+      Save the following Solidity code in a file named MyToken.sol
+
+      \`\`\`solidity
+      pragma solidity ^0.8.0;
+
+      contract MyToken {
+          string public name = "MyToken";
+          string public symbol = "MTK";
+          uint8 public decimals = 18;
+          uint256 public totalSupply;
+
+          mapping(address => uint256) public balanceOf;
+
+          event Transfer(address indexed from, address indexed to, uint256 value);
+
+          constructor(uint256 _initialSupply) {
+              totalSupply = _initialSupply * 10 ** uint256(decimals);
+              balanceOf[msg.sender] = totalSupply;
+          }
+
+          function transfer(address _to, uint256 _value) public returns (bool success) {
+              require(balanceOf[msg.sender] >= _value, "Insufficient balance");
+              balanceOf[msg.sender] -= _value;
+              balanceOf[_to] += _value;
+              emit Transfer(msg.sender, _to, _value);
+              return true;
+          }
+      }
+      \`\`\`
+
+      This contract defines the token's name, symbol, decimals, total supply, and transfer functionality. The contract is simple but can be extended with more features.`,
+    code: `
+# Solidity contract for ERC-20 Token
+pragma solidity ^0.8.0;
+
+contract MyToken {
+    string public name = "MyToken";
+    string public symbol = "MTK";
+    uint8 public decimals = 18;
+    uint256 public totalSupply;
+
+    mapping(address => uint256) public balanceOf;
+
+    event Transfer(address indexed from, address indexed to, uint256 value);
+
+    constructor(uint256 _initialSupply) {
+        totalSupply = _initialSupply * 10 ** uint256(decimals);
+        balanceOf[msg.sender] = totalSupply;
+    }
+
+    function transfer(address _to, uint256 _value) public returns (bool success) {
+        require(balanceOf[msg.sender] >= _value, "Insufficient balance");
+        balanceOf[msg.sender] -= _value;
+        balanceOf[_to] += _value;
+        emit Transfer(msg.sender, _to, _value);
+        return true;
+    }
+}
+`
+  },
+  {
+    number: 4,
+    title: 'Compile the Solidity Contract',
+    description:
+      `After writing the contract, you need to compile it to obtain the ABI (Application Binary Interface) and bytecode. You can do this using a Solidity compiler.
+
+      Install the Solidity compiler via npm or use an online compiler. Here’s how to compile the contract using the Solc library:
+
+      \`\`\`bash
+      npm install -g solc
+      solc --abi --bin MyToken.sol
+      \`\`\`
+
+      This generates the ABI and bytecode that are required to interact with the contract from Java.`,
+    code: `
+# Compile Solidity contract using Solc
+!solc --abi --bin MyToken.sol
+`
+  },
+  {
+    number: 5,
+    title: 'Deploy the Contract Using Java',
+    description:
+      `Now you are ready to deploy the contract on Ethereum. You can deploy the contract using Web3j’s Java bindings. Below is a Java code example to deploy the contract:
+
+      \`\`\`java
+      import org.web3j.protocol.Web3j;
+      import org.web3j.protocol.http.HttpService;
+      import org.web3j.tx.gas.DefaultGasProvider;
+      import org.web3j.crypto.Credentials;
+      import org.web3j.utils.Convert;
+      import org.web3j.contracts.Token;
+
+      public class DeployToken {
+          public static void main(String[] args) throws Exception {
+              Web3j web3j = Web3j.build(new HttpService("https://mainnet.infura.io/v3/YOUR_INFURA_API_KEY"));
+              Credentials credentials = Credentials.create("YOUR_PRIVATE_KEY");
+
+              String contractAddress = "0xYOUR_DEPLOYED_CONTRACT_ADDRESS";
+              Token contract = Token.load(contractAddress, web3j, credentials, new DefaultGasProvider());
+
+              // Deploy contract
+              Token deployedToken = Token.deploy(web3j, credentials, new DefaultGasProvider(), new BigInteger("1000000"));
+              System.out.println("Contract deployed at: " + deployedToken.getContractAddress());
+          }
+      }
+      \`\`\`
+
+      This code connects to the Ethereum network, loads your credentials, and deploys the contract on the network. The token contract will be deployed to a unique address, and you will be able to interact with it using Web3j methods.`,
+    code: `
+# Java code to deploy ERC-20 contract
+import org.web3j.protocol.Web3j;
+import org.web3j.protocol.http.HttpService;
+import org.web3j.tx.gas.DefaultGasProvider;
+import org.web3j.crypto.Credentials;
+import org.web3j.utils.Convert;
+import org.web3j.contracts.Token;
+
+public class DeployToken {
+    public static void main(String[] args) throws Exception {
+        Web3j web3j = Web3j.build(new HttpService("https://mainnet.infura.io/v3/YOUR_INFURA_API_KEY"));
+        Credentials credentials = Credentials.create("YOUR_PRIVATE_KEY");
+
+        String contractAddress = "0xYOUR_DEPLOYED_CONTRACT_ADDRESS";
+        Token contract = Token.load(contractAddress, web3j, credentials, new DefaultGasProvider());
+
+        // Deploy contract
+        Token deployedToken = Token.deploy(web3j, credentials, new DefaultGasProvider(), new BigInteger("1000000"));
+        System.out.println("Contract deployed at: " + deployedToken.getContractAddress());
+    }
+}
+`
+  },
+  {
+    number: 6,
+    title: 'Interact with the Token',
+    description:
+      `Once the contract is deployed, you can interact with your token. You can transfer tokens to other accounts, check balances, and even mint new tokens if your contract supports it.
+
+      Example of transferring tokens:
+      \`\`\`java
+      public static void main(String[] args) throws Exception {
+          Web3j web3j = Web3j.build(new HttpService("https://mainnet.infura.io/v3/YOUR_INFURA_API_KEY"));
+          Credentials credentials = Credentials.create("YOUR_PRIVATE_KEY");
+
+          String contractAddress = "0xYOUR_DEPLOYED_CONTRACT_ADDRESS";
+          Token contract = Token.load(contractAddress, web3j, credentials, new DefaultGasProvider());
+
+          // Transfer tokens
+          TransactionReceipt receipt = contract.transfer("0xRECIPIENT_ADDRESS", BigInteger.valueOf(100)).send();
+          System.out.println("Transaction successful: " + receipt.getTransactionHash());
+      }
+      \`\`\`
+
+      This code demonstrates how to transfer tokens between two Ethereum addresses using Web3j.`,
+    code: `
+# Transfer tokens using Java and Web3j
+public static void main(String[] args) throws Exception {
+    Web3j web3j = Web3j.build(new HttpService("https://mainnet.infura.io/v3/YOUR_INFURA_API_KEY"));
+    Credentials credentials = Credentials.create("YOUR_PRIVATE_KEY");
+
+    String contractAddress = "0xYOUR_DEPLOYED_CONTRACT_ADDRESS";
+    Token contract = Token.load(contractAddress, web3j, credentials, new DefaultGasProvider());
+
+    // Transfer tokens
+    TransactionReceipt receipt = contract.transfer("0xRECIPIENT_ADDRESS", BigInteger.valueOf(100)).send();
+    System.out.println("Transaction successful: " + receipt.getTransactionHash());
+}
+`
+  },
+  {
+    number: 7,
+    title: 'Test the Contract',
+    description:
+      `Before going live with your contract, test it on an Ethereum testnet (Rinkeby or Kovan). Testing will ensure that your contract works as expected without spending real Ether. Deploy the contract on the testnet using the same process as in step 5, but use a testnet endpoint.
+
+      Once deployed, use Web3j to interact with the contract as you would on the mainnet.`,
+    code: `
+# Test contract deployment on Rinkeby testnet
+!solana program deploy target/deploy/token_contract.so
+`
+  },
+  {
+    number: 8,
+    title: 'Deploy to Mainnet',
+    description:
+      `After thorough testing, you are ready to deploy your token contract to the Ethereum mainnet. Ensure your wallet has sufficient Ether to cover the gas fees for deployment and transactions.
+
+      Use Web3j to deploy your contract to the Ethereum mainnet, and interact with your token as needed for minting, transferring, and querying balances.`,
+    code: `
+# Deploy contract to Ethereum Mainnet
+!solana program deploy target/deploy/token_contract.so
+`
+  }
+];
+const cryptoTokenStepsC2 = [
+  {
+    number: 1,
+    title: 'Install Dependencies',
+    description: `In this first step, we’ll set up the required dependencies for interacting with Ethereum using C. Since C doesn't have native libraries for Ethereum like other languages (e.g., JavaScript’s Web3.js), we will rely on HTTP requests via libcurl to communicate with Ethereum nodes.\n\n**libcurl** is a powerful C library used for making HTTP requests, which is essential for sending JSON-RPC requests to Ethereum nodes (e.g., Infura). Here's how to install it:\n\n##### For Linux (e.g., Ubuntu):\n\`\`\`bash\nsudo apt-get update\nsudo apt-get install libcurl4-openssl-dev\n\`\`\`\n##### For macOS (using Homebrew):\n\`\`\`bash\nbrew install curl\n\`\`\`\n\nOnce libcurl is installed, you can use it to send HTTP requests to the Ethereum network.\n\n#### 1.2: Set Up an Ethereum Node\nTo interact with the Ethereum blockchain, you’ll need access to an Ethereum node. You can use services like **Infura** or **Alchemy**. For this example, we will use **Infura**.\n\n1. Sign up at [Infura](https://infura.io/).\n2. Create a new project to get your **Infura Project ID**.\n3. Use the project ID in your C code to send JSON-RPC requests to interact with the Ethereum network.`,
+    code: `# Install libcurl (Linux)\nsudo apt-get install libcurl4-openssl-dev`
+  },
+  {
+    number: 2,
+    title: 'Write the Solidity Smart Contract',
+    description: `Now that we have our dependencies set up, we need to write the actual smart contract for the token. We'll be creating an **ERC-20** token contract. **ERC-20** is the standard interface for creating tokens on Ethereum.\n\nSave the following Solidity code as \`MyToken.sol\`:\n\n\`\`\`solidity\npragma solidity ^0.8.0;\n\ncontract MyToken {\n    string public name = "MyToken";\n    string public symbol = "MTK";\n    uint8 public decimals = 18;\n    uint256 public totalSupply;\n\n    mapping(address => uint256) public balanceOf;\n    event Transfer(address indexed from, address indexed to, uint256 value);\n\n    constructor(uint256 _initialSupply) {\n        totalSupply = _initialSupply * 10 ** uint256(decimals);\n        balanceOf[msg.sender] = totalSupply;\n    }\n\n    function transfer(address _to, uint256 _value) public returns (bool success) {\n        require(balanceOf[msg.sender] >= _value, "Insufficient balance");\n        balanceOf[msg.sender] -= _value;\n        balanceOf[_to] += _value;\n        emit Transfer(msg.sender, _to, _value);\n        return true;\n    }\n}\n\`\`\``,
+    code: `pragma solidity ^0.8.0;\n\ncontract MyToken {\n    string public name = "MyToken";\n    string public symbol = "MTK";\n    uint8 public decimals = 18;\n    uint256 public totalSupply;\n\n    mapping(address => uint256) public balanceOf;\n\n    event Transfer(address indexed from, address indexed to, uint256 value);\n\n    constructor(uint256 _initialSupply) {\n        totalSupply = _initialSupply * 10 ** uint256(decimals);\n        balanceOf[msg.sender] = totalSupply;\n    }\n\n    function transfer(address _to, uint256 _value) public returns (bool success) {\n        require(balanceOf[msg.sender] >= _value, "Insufficient balance");\n        balanceOf[msg.sender] -= _value;\n        balanceOf[_to] += _value;\n        emit Transfer(msg.sender, _to, _value);\n        return true;\n    }\n}`
+  },
+  {
+    number: 3,
+    title: 'Compile the Solidity Contract',
+    description: `Before deploying the smart contract, you need to compile it to generate the **bytecode** and **ABI** (Application Binary Interface). The **bytecode** will be deployed to the Ethereum network, and the **ABI** will be used to interact with the contract once deployed.\n\n1. Install **Solc** (Solidity compiler) via npm:\n\`\`\`bash\nnpm install -g solc\n\`\`\`\n2. Compile the contract:\n\`\`\`bash\nsolc --abi --bin MyToken.sol\n\`\`\`\nThis will output two files:\n- \`MyToken.abi\` (ABI of the contract)\n- \`MyToken.bin\` (bytecode of the contract)`,
+    code: `npm install -g solc\n\nsolc --abi --bin MyToken.sol`
+  },
+  {
+    number: 4,
+    title: 'Deploy the Contract Using C',
+    description: `Now we will use **libcurl** to send a JSON-RPC request to the Ethereum network to deploy the contract. Here’s the C code for deploying the smart contract to the Ethereum network using **Infura**.\n\n#### 4.1: C Code to Deploy the Token Contract\nThis code will send a transaction to the Ethereum network to deploy the contract using the ABI and bytecode from the previous step.\n\n\`\`\`c\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#include <curl/curl.h>\n\n#define INFURA_URL \"https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID\"\n#define ABI \"YOUR_ABI\"\n#define BYTECODE \"YOUR_BYTECODE\"\n\nsize_t write_callback(void *ptr, size_t size, size_t nmemb, char *data) {\n    strcat(data, ptr);\n    return size * nmemb;\n}\n\nvoid send_transaction(const char* data) {\n    CURL *curl;\n    CURLcode res;\n    struct curl_slist *headers = NULL;\n    char response[4096] = {0};\n\n    curl_global_init(CURL_GLOBAL_DEFAULT);\n    curl = curl_easy_init();\n\n    if (curl) {\n        curl_easy_setopt(curl, CURLOPT_URL, INFURA_URL);\n        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);\n        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, data);\n        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_callback);\n        curl_easy_setopt(curl, CURLOPT_WRITEDATA, response);\n\n        res = curl_easy_perform(curl);\n\n        if (res != CURLE_OK) {\n            fprintf(stderr, \"curl_easy_perform() failed: %s\\n\", curl_easy_strerror(res));\n        }\n\n        printf(\"Response: %s\\n\", response);\n\n        curl_easy_cleanup(curl);\n    }\n    curl_global_cleanup();\n}\n\nint main() {\n    const char* data = \"{\\\"jsonrpc\\\":\\\"2.0\\\",\\\"method\\\":\\\"eth_sendTransaction\\\",\\\"params\\\":[{\\\"from\\\":\\\"0xYOUR_WALLET_ADDRESS\\\",\\\"data\\\":\\\"0xYOUR_CONTRACT_BYTECODE\\\",\\\"gas\\\":\\\"0x76c0\\\",\\\"gasPrice\\\":\\\"0x9184e72a000\\\",\\\"nonce\\\":\\\"0x0\\\"}],\\\"id\\\":1}\";\n\n    send_transaction(data);\n\n    return 0;\n}\n\`\`\``,
+    code: `# C code for deploying contract\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#include <curl/curl.h>\n\n#define INFURA_URL "https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID"\n#define ABI "YOUR_ABI"\n#define BYTECODE "YOUR_BYTECODE"\n\nsize_t write_callback(void *ptr, size_t size, size_t nmemb, char *data) {\n    strcat(data, ptr);\n    return size * nmemb;\n}\n\nvoid send_transaction(const char* data) {\n    CURL *curl;\n    CURLcode res;\n    struct curl_slist *headers = NULL;\n    char response[4096] = {0};\n\n    curl_global_init(CURL_GLOBAL_DEFAULT);\n    curl = curl_easy_init();\n\n    if (curl) {\n        curl_easy_setopt(curl, CURLOPT_URL, INFURA_URL);\n        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);\n        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, data);\n        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_callback);\n        curl_easy_setopt(curl, CURLOPT_WRITEDATA, response);\n\n        res = curl_easy_perform(curl);\n\n        if (res != CURLE_OK) {\n            fprintf(stderr, "curl_easy_perform() failed: %s\\n", curl_easy_strerror(res));\n        }\n\n        printf("Response: %s\\n", response);\n\n        curl_easy_cleanup(curl);\n    }\n    curl_global_cleanup();\n}\n\nint main() {\n    const char* data = \"{\\\"jsonrpc\\\":\\\"2.0\\\",\\\"method\\\":\\\"eth_sendTransaction\\\",\\\"params\\\":[{\\\"from\\\":\\\"0xYOUR_WALLET_ADDRESS\\\",\\\"data\\\":\\\"0xYOUR_CONTRACT_BYTECODE\\\",\\\"gas\\\":\\\"0x76c0\\\",\\\"gasPrice\\\":\\\"0x9184e72a000\\\",\\\"nonce\\\":\\\"0x0\\\"}],\\\"id\\\":1}\";\n\n    send_transaction(data);\n\n    return 0;\n}\n`
+  },
+  {
+    number: 5,
+    title: 'Interact with the Token Using C',
+    description: `Once the contract is deployed, you can interact with it using C to transfer tokens or check balances. Below is an example of how to send a transaction to transfer tokens.\n\n#### 5.1: Example C Code to Transfer Tokens\nThis code sends a transaction to transfer tokens from one address to another.\n\n\`\`\`c\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#include <curl/curl.h>\n\n#define INFURA_URL \"https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID\"\n\nsize_t write_callback(void *ptr, size_t size, size_t nmemb, char *data) {\n    strcat(data, ptr);\n    return size * nmemb;\n}\n\nvoid send_transaction(const char* data) {\n    CURL *curl;\n    CURLcode res;\n    struct curl_slist *headers = NULL;\n    char response[4096] = {0};\n\n    curl_global_init(CURL_GLOBAL_DEFAULT);\n    curl = curl_easy_init();\n\n    if (curl) {\n        curl_easy_setopt(curl, CURLOPT_URL, INFURA_URL);\n        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);\n        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, data);\n        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_callback);\n        curl_easy_setopt(curl, CURLOPT_WRITEDATA, response);\n\n        res = curl_easy_perform(curl);\n\n        if (res != CURLE_OK) {\n            fprintf(stderr, \"curl_easy_perform() failed: %s\\n\", curl_easy_strerror(res));\n        }\n\n        printf(\"Response: %s\\n\", response);\n\n        curl_easy_cleanup(curl);\n    }\n    curl_global_cleanup();\n}\n\nint main() {\n    const char* data = \"{\\\"jsonrpc\\\":\\\"2.0\\\",\\\"method\\\":\\\"eth_sendTransaction\\\",\\\"params\\\":[{\\\"from\\\":\\\"0xYOUR_WALLET_ADDRESS\\\",\\\"to\\\":\\\"0xRECIPIENT_ADDRESS\\\",\\\"data\\\":\\\"0xa9059cbb000000000000000000000000RECIPIENT_ADDRESS0000000000000000000000000000000000000000000000000000000000000000\\\",\\\"gas\\\":\\\"0x76c0\\\",\\\"gasPrice\\\":\\\"0x9184e72a000\\\",\\\"nonce\\\":\\\"0x0\\\"}],\\\"id\\\":1}\";\n\n    send_transaction(data);\n\n    return 0;\n}\n\`\`\``,
+    code: `# C code for token transfer\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#include <curl/curl.h>\n\n#define INFURA_URL "https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID"\n\nsize_t write_callback(void *ptr, size_t size, size_t nmemb, char *data) {\n    strcat(data, ptr);\n    return size * nmemb;\n}\n\nvoid send_transaction(const char* data) {\n    CURL *curl;\n    CURLcode res;\n    struct curl_slist *headers = NULL;\n    char response[4096] = {0};\n\n    curl_global_init(CURL_GLOBAL_DEFAULT);\n    curl = curl_easy_init();\n\n    if (curl) {\n        curl_easy_setopt(curl, CURLOPT_URL, INFURA_URL);\n        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);\n        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, data);\n        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_callback);\n        curl_easy_setopt(curl, CURLOPT_WRITEDATA, response);\n\n        res = curl_easy_perform(curl);\n\n        if (res != CURLE_OK) {\n            fprintf(stderr, "curl_easy_perform() failed: %s\\n", curl_easy_strerror(res));\n        }\n\n        printf("Response: %s\\n", response);\n\n        curl_easy_cleanup(curl);\n    }\n    curl_global_cleanup();\n}\n\nint main() {\n    const char* data = \"{\\\"jsonrpc\\\":\\\"2.0\\\",\\\"method\\\":\\\"eth_sendTransaction\\\",\\\"params\\\":[{\\\"from\\\":\\\"0xYOUR_WALLET_ADDRESS\\\",\\\"to\\\":\\\"0xRECIPIENT_ADDRESS\\\",\\\"data\\\":\\\"0xa9059cbb000000000000000000000000RECIPIENT_ADDRESS0000000000000000000000000000000000000000000000000000000000000000\\\",\\\"gas\\\":\\\"0x76c0\\\",\\\"gasPrice\\\":\\\"0x9184e72a000\\\",\\\"nonce\\\":\\\"0x0\\\"}],\\\"id\\\":1}\";\n\n    send_transaction(data);\n\n    return 0;\n}\n`
+  }
+];
+
 
 
 
