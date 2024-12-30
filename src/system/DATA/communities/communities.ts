@@ -13,7 +13,7 @@ interface SocialMediaPlatform {
   age_demographic: string; // Age group of primary users
   market_share_in_social_media: number; // Platform's market share in social media space
   platform_growth_rate: number; // Growth rate in percentage
-  pages_groups: Array<{ name: string; logo: string; link: string }>; // Relevant pages, groups, or hashtags related to crypto
+  pages_groups: Array<{ name: string; logo: string; link: string; SN?:number }>; // Relevant pages, groups, or hashtags related to crypto
 }
 
 export const communitiesData: SocialMediaPlatform[] = [
@@ -32,26 +32,37 @@ export const communitiesData: SocialMediaPlatform[] = [
     "market_share_in_social_media": 1.7,
     "platform_growth_rate": 7.2,
     "pages_groups": [
-      {"name": "", "logo": platformsLogos + "p65.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "p111.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "p14.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "p28.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "p132.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "p59.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "p20.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "p53.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "p44.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "p78.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "p19.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "p12.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "p118.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "p9.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "p136.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "p41.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "p40.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "p123.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "p76.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "p113.webp", "link": ""},
+      { "name": "CryptoCurrency", "logo": platformsLogos + 'p65.webp', "link": "https://www.reddit.com/r/CryptoCurrency/" },
+      { "name": "Bitcoin", "logo": platformsLogos + 'p111.webp', "link": "https://www.reddit.com/r/Bitcoin/" },
+      { "name": "cryptomoonshots", "logo": platformsLogos + 'p14.webp', "link": "https://www.reddit.com/r/cryptomoonshots/" },
+      { "name": "ethereum", "logo": platformsLogos + 'p28.webp', "link": "https://www.reddit.com/r/ethereum/" },
+      { "name": "cryptotrading", "logo": platformsLogos + 'p132.webp', "link": "https://www.reddit.com/r/cryptotrading/" },
+      { "name": "defi", "logo": platformsLogos + 'p59.webp', "link": "https://www.reddit.com/r/defi/" },
+      { "name": "cryptomemes", "logo": platformsLogos + 'p20.webp', "link": "https://www.reddit.com/r/cryptomemes/" },
+      { "name": "altcoin", "logo": platformsLogos + 'p53.webp', "link": "https://www.reddit.com/r/altcoin/" },
+      { "name": "BitcoinCash", "logo": platformsLogos + 'p44.webp', "link": "https://www.reddit.com/r/BitcoinCash/" },
+      { "name": "cryptocurrencies", "logo": platformsLogos + 'p78.webp', "link": "https://www.reddit.com/r/cryptocurrencies/" },
+      { "name": "cryptobull", "logo": platformsLogos + 'p19.webp', "link": "https://www.reddit.com/r/cryptobull/" },
+      { "name": "CryptoMarkets", "logo": platformsLogos + 'p12.webp', "link": "https://www.reddit.com/r/CryptoMarkets/" },
+      { "name": "Blockchain", "logo": platformsLogos + 'p118.webp', "link": "https://www.reddit.com/r/Blockchain/" },
+      { "name": "cryptoinvesting", "logo": platformsLogos + 'p9.webp', "link": "https://www.reddit.com/r/cryptoinvesting/" },
+      { "name": "cryptotechnology", "logo": platformsLogos + 'p136.webp', "link": "https://www.reddit.com/r/cryptotechnology/" },
+      { "name": "cryptocoins", "logo": platformsLogos + 'p41.webp', "link": "https://www.reddit.com/r/cryptocoins/" },
+      { "name": "NFT", "logo": platformsLogos + 'p40.webp', "link": "https://www.reddit.com/r/NFT/" },
+      { "name": "ethtrader", "logo": platformsLogos + 'p123.webp', "link": "https://www.reddit.com/r/ethtrader/" },
+      { "name": "cryptowallet", "logo": platformsLogos + 'p76.webp', "link": "https://www.reddit.com/r/cryptowallet/" },
+      { "name": "cryptotokens", "logo": platformsLogos + 'p113.webp', "link": "https://www.reddit.com/r/cryptotokens/" },
+      { "name": "cryptonews", "logo": platformsLogos + 'b209.webp', "link": "https://www.reddit.com/r/cryptonews/" },
+      { "name": "cryptobusiness", "logo": platformsLogos + 'b156.webp', "link": "https://www.reddit.com/r/cryptobusiness/" },
+      { "name": "cryptoeconomics", "logo": platformsLogos + 'b133.webp', "link": "https://www.reddit.com/r/cryptoeconomics/" },
+      { "name": "crypto", "logo": platformsLogos + 'b36.webp', "link": "https://www.reddit.com/r/crypto/" },
+      { "name": "cryptoadvice", "logo": platformsLogos + 'b83.webp', "link": "https://www.reddit.com/r/cryptoadvice/" },
+      { "name": "cryptopumps", "logo": platformsLogos + 'b4.webp', "link": "https://www.reddit.com/r/cryptopumps/" },
+      { "name": "CryptoMining", "logo": platformsLogos + 'b123.webp', "link": "https://www.reddit.com/r/CryptoMining/" },
+      { "name": "CryptoCurrencyTrading", "logo": platformsLogos + 'b184.webp', "link": "https://www.reddit.com/r/CryptoCurrencyTrading/" },
+      { "name": "cryptofund", "logo": platformsLogos + 'b88.webp', "link": "https://www.reddit.com/r/cryptofund/" },
+      { "name": "cryptogains", "logo": platformsLogos + 'b210.webp', "link": "https://www.reddit.com/r/cryptogains/" }
+
 
 
     ]
@@ -130,7 +141,7 @@ export const communitiesData: SocialMediaPlatform[] = [
     "name": "YouTube",
     backComImage: communities + 'youTube.png',
     "code": "YouTube",
-    "description": "The world’s largest video-sharing platform, often used for crypto education, news, and influencer-driven content.",
+    "description": "The world's largest video-sharing platform, often used for crypto education, news, and influencer-driven content.",
     "global_dominance": 79.2,
     "general_usage": "Video sharing, crypto education, tutorials, influencer content",
     "monthly_active_users": 2500,
@@ -139,29 +150,39 @@ export const communitiesData: SocialMediaPlatform[] = [
     "market_share_in_social_media": 29.4,
     "platform_growth_rate": 7.0,
     "pages_groups": [
-
-      {"name": "", "logo": platformsLogos + "b112.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b90.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b35.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b203.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b21.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b41.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b149.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b167.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b49.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b4.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b97.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b72.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b108.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b61.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b85.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b198.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b126.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b166.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b127.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b17.webp", "link": ""},
-
+      { "name": "Coin Bureau", "link": "https://www.youtube.com/c/CoinBureau", "logo": platformsLogos + 'b112.webp', "SN": 1 },
+      { "name": "Altcoin Daily", "link": "https://www.youtube.com/c/AltcoinDaily", "logo": platformsLogos + 'b90.webp', "SN": 2 },
+      { "name": "Benjamin Cowen", "link": "https://www.youtube.com/c/BenjaminCowen", "logo": platformsLogos + 'b21.webp', "SN": 5 },
+      { "name": "Sheldon Evans", "link": "https://www.youtube.com/c/SheldonEvans", "logo": platformsLogos + 'b41.webp', "SN": 6 },
+      { "name": "99Bitcoins", "link": "https://www.youtube.com/c/99Bitcoins", "logo": platformsLogos + 'b149.webp', "SN": 7 },
+      { "name": "Crypto Banter", "link": "https://www.youtube.com/c/CryptoBanter", "logo": platformsLogos + 'b167.webp', "SN": 8 },
+      { "name": "The Moon", "link": "https://www.youtube.com/c/TheMoonCarl", "logo": platformsLogos + 'b49.webp', "SN": 9 },
+      { "name": "Kitco NEWS", "link": "https://www.youtube.com/c/KitcoNews", "logo": platformsLogos + 'b4.webp', "SN": 10 },
+      { "name": "DataDash", "link": "https://www.youtube.com/c/DataDash", "logo": platformsLogos + 'b97.webp', "SN": 11 },
+      { "name": "Ivan On Tech", "link": "https://www.youtube.com/c/IvanOnTech", "logo": platformsLogos + 'b72.webp', "SN": 12 },
+      { "name": "Lark Davis", "link": "https://www.youtube.com/c/LarkDavis", "logo": platformsLogos + 'b108.webp', "SN": 13 },
+      { "name": "Crypto Casey", "link": "https://www.youtube.com/c/CryptoCasey", "logo": platformsLogos + 'b61.webp', "SN": 14 },
+      { "name": "CoinMarketCap", "link": "https://www.youtube.com/c/CoinMarketCap", "logo": platformsLogos + 'b85.webp', "SN": 15 },
+      { "name": "Joe Parys Crypto", "link": "https://www.youtube.com/c/JoeParys", "logo": platformsLogos + 'b198.webp', "SN": 16 },
+      { "name": "BitBoy X", "link": "https://www.youtube.com/c/BitBoyX", "logo": platformsLogos + 'b126.webp', "SN": 17 },
+      { "name": "aantonop", "link": "https://www.youtube.com/c/aantonop", "logo": platformsLogos + 'b166.webp', "SN": 18 },
+      { "name": "Crypto Zombie", "link": "https://www.youtube.com/c/CryptoZombie", "logo": platformsLogos + 'b127.webp', "SN": 19 },
+      { "name": "Altcoin Today", "link": "https://www.youtube.com/c/AltcoinToday", "logo": platformsLogos + 'b17.webp', "SN": 20 },
+      { "name": "The Cryptoverse", "link": "https://www.youtube.com/c/TheCryptoverse", "logo": platformsLogos + 'b182.webp', "SN": 21 },
+      { "name": "Crypto Lark", "link": "https://www.youtube.com/c/CryptoLark", "logo": platformsLogos + 'b74.webp', "SN": 22 },
+      { "name": "Tommy Crypto", "link": "https://www.youtube.com/c/TommyCrypto", "logo": platformsLogos + 'b28.webp', "SN": 23 },
+      { "name": "CryptosRUs", "link": "https://www.youtube.com/c/CryptosRUs", "logo": platformsLogos + 'b164.webp', "SN": 24 },
+      { "name": "Crypto Crew University", "link": "https://www.youtube.com/c/CryptoCrewUniversity", "logo": platformsLogos + 'b179.webp', "SN": 25 },
+      { "name": "Crypto Empire", "link": "https://www.youtube.com/c/CryptoEmpire", "logo": platformsLogos + 'b114.webp', "SN": 26 },
+      { "name": "The Modern Investor", "link": "https://www.youtube.com/c/TheModernInvestor", "logo": platformsLogos + 'b69.webp', "SN": 27 },
+      { "name": "Crypto Wires", "link": "https://www.youtube.com/c/CryptoWires", "logo": platformsLogos + 'b136.webp', "SN": 28 },
+      { "name": "Crypto News", "link": "https://www.youtube.com/c/CryptoNews", "logo": platformsLogos + 'b199.webp', "SN": 29 },
+      { "name": "Crypto Daily", "link": "https://www.youtube.com/c/CryptoDaily", "logo": platformsLogos + 'b112.webp', "SN": 30 }
     ]
+
+
+
+
   },
   {
     "SN": 6,
@@ -178,15 +199,7 @@ export const communitiesData: SocialMediaPlatform[] = [
     "platform_growth_rate": 6.5,
     "pages_groups": [
       {"name": "", "logo": platformsLogos + "b93.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b182.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b74.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b28.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b164.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b179.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b114.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b69.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b136.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b199.webp", "link": ""},
+
 
     ]
   },
@@ -204,18 +217,39 @@ export const communitiesData: SocialMediaPlatform[] = [
     "market_share_in_social_media": 3.5,
     "platform_growth_rate": 4.1,
     "pages_groups": [
-      {"name": "", "logo": platformsLogos + "b141.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b196.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b220.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b122.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b25.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b142.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b143.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b17.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b129.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b143.webp", "link": ""},
-
+      { "name": "Coinbase", "link": "https://www.linkedin.com/company/coinbase", "logo": platformsLogos + 'b141.webp', "SN": 1 },
+      { "name": "Binance", "link": "https://www.linkedin.com/company/binance", "logo": platformsLogos + 'b196.webp', "SN": 2 },
+      { "name": "Kraken", "link": "https://www.linkedin.com/company/krakenfx", "logo": platformsLogos + 'b220.webp', "SN": 3 },
+      { "name": "Gemini", "link": "https://www.linkedin.com/company/gemini", "logo": platformsLogos + 'b122.webp', "SN": 4 },
+      { "name": "Bitfinex", "link": "https://www.linkedin.com/company/bitfinex", "logo": platformsLogos + 'b25.webp', "SN": 5 },
+      { "name": "Bitstamp", "link": "https://www.linkedin.com/company/bitstamp", "logo": platformsLogos + 'b142.webp', "SN": 6 },
+      { "name": "eToro", "link": "https://www.linkedin.com/company/etoro", "logo": platformsLogos + 'b143.webp', "SN": 7 },
+      { "name": "Blockchain.com", "link": "https://www.linkedin.com/company/blockchain", "logo": platformsLogos + 'b17.webp', "SN": 8 },
+      { "name": "Ledger", "link": "https://www.linkedin.com/company/ledgerhq", "logo": platformsLogos + 'b129.webp', "SN": 9 },
+      { "name": "Circle", "link": "https://www.linkedin.com/company/circle", "logo": platformsLogos + 'b143.webp', "SN": 10 },
+      { "name": "CoinMarketCap", "link": "https://www.linkedin.com/company/coinmarketcap", "logo": platformsLogos + 'b118.webp', "SN": 11 },
+      { "name": "CoinGecko", "link": "https://www.linkedin.com/company/coingecko", "logo": platformsLogos + 'b175.webp', "SN": 12 },
+      { "name": "Chainalysis", "link": "https://www.linkedin.com/company/chainalysis", "logo": platformsLogos + 'b163.webp', "SN": 13 },
+      { "name": "Ripple", "link": "https://www.linkedin.com/company/ripple-labs", "logo": platformsLogos + 'b65.webp', "SN": 14 },
+      { "name": "BlockFi", "link": "https://www.linkedin.com/company/blockfi", "logo": platformsLogos + 'b100.webp', "SN": 15 },
+      { "name": "BitPay", "link": "https://www.linkedin.com/company/bitpay", "logo": platformsLogos + 'b14.webp', "SN": 16 },
+      { "name": "CoinDesk", "link": "https://www.linkedin.com/company/coindesk", "logo": platformsLogos + 'b37.webp', "SN": 17 },
+      { "name": "KuCoin", "link": "https://www.linkedin.com/company/kucoin", "logo": platformsLogos + 'b173.webp', "SN": 18 },
+      { "name": "Huobi", "link": "https://www.linkedin.com/company/huobi", "logo": platformsLogos + 'b105.webp', "SN": 19 },
+      { "name": "OKX", "link": "https://www.linkedin.com/company/okx", "logo": platformsLogos + 'b67.webp', "SN": 20 },
+      { "name": "Paxos", "link": "https://www.linkedin.com/company/paxos", "logo": platformsLogos + 'b103.webp', "SN": 21 },
+      { "name": "Trust Wallet", "link": "https://www.linkedin.com/company/trust-wallet", "logo": platformsLogos + 'b167.webp', "SN": 22 },
+      { "name": "Tether", "link": "https://www.linkedin.com/company/tether", "logo": platformsLogos + 'b213.webp', "SN": 23 },
+      { "name": "Zcash", "link": "https://www.linkedin.com/company/zcash", "logo": platformsLogos + 'b2.webp', "SN": 24 },
+      { "name": "Polygon", "link": "https://www.linkedin.com/company/polygon", "logo": platformsLogos + 'b45.webp', "SN": 25 },
+      { "name": "Chainlink", "link": "https://www.linkedin.com/company/chainlink", "logo": platformsLogos + 'b16.webp', "SN": 26 },
+      { "name": "SushiSwap", "link": "https://www.linkedin.com/company/sushiswap", "logo": platformsLogos + 'b180.webp', "SN": 27 },
+      { "name": "Uniswap", "link": "https://www.linkedin.com/company/uniswap", "logo": platformsLogos + 'b9.webp', "SN": 28 },
+      { "name": "Gemini Trust Company", "link": "https://www.linkedin.com/company/gemini-trust-company", "logo": platformsLogos + 'b12.webp', "SN": 29 },
+      { "name": "Celsius Network", "link": "https://www.linkedin.com/company/celsius-network", "logo": platformsLogos + 'b109.webp', "SN": 30 }
     ]
+
+
   },
 
   {
@@ -232,16 +266,7 @@ export const communitiesData: SocialMediaPlatform[] = [
     "market_share_in_social_media": 1.5,
     "platform_growth_rate": 10.0,
     "pages_groups": [
-      {"name": "", "logo": platformsLogos + "b209.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b156.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b133.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b36.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b83.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b4.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b123.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b184.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b88.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b210.webp", "link": ""},
+
 
     ]
   },
@@ -274,16 +299,7 @@ export const communitiesData: SocialMediaPlatform[] = [
     "market_share_in_social_media": 24.4,
     "platform_growth_rate": 2.3,
     "pages_groups": [
-      {"name": "", "logo": platformsLogos + "b103.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b167.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b213.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b2.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b45.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b16.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b180.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b9.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b12.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b109.webp", "link": ""},
+
 
       {"name": "", "logo": platformsLogos + "b19.webp", "link": ""},
       {"name": "", "logo": platformsLogos + "b85.webp", "link": ""},
@@ -312,16 +328,7 @@ export const communitiesData: SocialMediaPlatform[] = [
     "market_share_in_social_media": 21.3,
     "platform_growth_rate": 4.2,
     "pages_groups": [
-      {"name": "", "logo": platformsLogos + "b118.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b175.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b163.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b65.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b100.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b14.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b37.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b173.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b105.webp", "link": ""},
-      {"name": "", "logo": platformsLogos + "b67.webp", "link": ""},
+
 
     ]
   },
@@ -370,7 +377,7 @@ export const communitiesData: SocialMediaPlatform[] = [
   {
     "SN": 15,
     "name": "Snapchat",
-    backComImage: communities + 'snap.webp',
+    backComImage: communities + 'SNap.webp',
     "code": "Snapchat",
     "description": "A multimedia messaging app gaining traction among younger crypto enthusiasts who share crypto-related stories and updates.",
     "global_dominance": 6.5,
