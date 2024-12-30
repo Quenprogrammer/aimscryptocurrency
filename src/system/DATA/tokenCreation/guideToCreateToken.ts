@@ -1,5 +1,5 @@
 
-const cryptoTokenSteps1 = [
+export const cryptoTokenSteps1 = [
     {
       number: 1,
       title: 'Install Dependencies',
@@ -205,7 +205,7 @@ print("Contract deployed at:", tx_receipt.contractAddress)
 `
     }
   ];
-const cryptoTokenSteps = [
+export const cryptoTokenSteps = [
       {
         number: 1,
         title: 'Understand the Basics of Blockchain and Tokens',
@@ -406,7 +406,7 @@ print("Transaction sent with hash:", web3.toHex(tx_hash))
         code: null
       }
     ];
-const cryptoTokenStepsC = [
+export const cryptoTokenStepsC = [
   {
     number: 1,
     title: 'Understand the Basics of Blockchain and Tokens',
@@ -563,8 +563,8 @@ const cryptoTokenStepsC = [
     code: null
   }
 ];
-export class CryptoTokenGuideNodeJsComponent {
-  cryptoTokenSteps = [
+
+ export const cryptoTokenSteps22 = [
     {
       number: 1,
       title: 'Understand the Basics of Blockchain and Tokens',
@@ -756,7 +756,7 @@ export class CryptoTokenGuideNodeJsComponent {
       code: null
     }
   ];
-}
+
 export const cryptoTokenSolidity = [
     {
       number: 1,
@@ -987,7 +987,7 @@ export const cryptoTokenSolidity = [
       code: null
     }
   ];
-const cryptoTokenStepsjava = [
+export const cryptoTokenStepsjava = [
   {
     number: 1,
     title: 'Install Dependencies',
@@ -1263,6 +1263,1004 @@ public static void main(String[] args) throws Exception {
 `
   }
 ];
+export const vyperTokenCreationSteps: string[] = [
+  "1. Set Up Your Development Environment:\n" +
+  "- Install Python (version 3.6 or newer).\n" +
+  "- Install Vyper using pip: `pip install vyper`.\n" +
+  "- Install Ethereum tools like web3.py: `pip install web3`.\n" +
+  "- Set up an Ethereum wallet (e.g., MetaMask).\n" +
+  "- Use a test network like Goerli, Rinkeby, or Ganache for testing.",
+
+  "2. Understand Token Standards:\n" +
+  "- Choose the ERC-20 standard for fungible tokens.\n" +
+  "- If creating NFTs, consider ERC-721 or ERC-1155 standards.",
+
+  "3. Write the Vyper Smart Contract:\n" +
+  "- Create a `.vy` file (e.g., MyToken.vy).\n" +
+  "- Define token variables: name, symbol, decimals, and total supply.\n" +
+  "- Initialize the contract using the `__init__` function to set token metadata and total supply.\n" +
+  "- Implement a `transfer` function for token transfers.\n" +
+  "- Add optional events like `Transfer` for transaction tracking.",
+
+  "4. Test Your Contract:\n" +
+  "- Compile the contract using: `vyper MyToken.vy`.\n" +
+  "- Set up a local blockchain (e.g., Ganache) for testing.\n" +
+  "- Write unit tests using Python and `pytest` to validate the contract functionality.",
+
+  "5. Deploy Your Token:\n" +
+  "- Choose a deployment network (testnet or mainnet).\n" +
+  "- Deploy using Python's web3.py library:\n" +
+  "  1. Read and compile your Vyper code.\n" +
+  "  2. Connect to the Ethereum network (e.g., via Infura).\n" +
+  "  3. Deploy the contract using its ABI and bytecode.",
+
+  "6. Verify Your Contract:\n" +
+  "- Publish your source code and ABI on block explorers like Etherscan for transparency.\n" +
+  "- Interact with the token using tools like Remix or MyEtherWallet.",
+
+  "7. Distribute and Use Your Token:\n" +
+  "- Transfer tokens to users or investors using the `transfer` function.\n" +
+  "- Integrate your token into dApps or other platforms.\n" +
+  "- List your token on exchanges to make it tradable."
+];
+export const rustTokenCreationSteps: string[] = [
+  "1. Set Up Your Development Environment:\n" +
+  "- Install Rust using `rustup` (https://rustup.rs/).\n" +
+  "- Install required Rust toolchains using: `rustup install stable`.\n" +
+  "- Install Cargo, Rust's package manager (included with Rust).\n" +
+  "- Set up a Substrate development environment (if using Substrate framework):\n" +
+  "  1. Install system dependencies for Substrate (e.g., Node.js, Yarn, and development tools).\n" +
+  "  2. Clone Substrate Node Template: `git clone https://github.com/substrate-developer-hub/substrate-node-template`.",
+
+  "2. Understand Token Standards:\n" +
+  "- If building on Substrate, use FRAME pallets like `pallet-balances` or create a custom pallet.\n" +
+  "- For Ethereum-like blockchains, follow ERC standards (e.g., ERC-20 for fungible tokens).",
+
+  "3. Write the Rust Code for the Token:\n" +
+  "- If using Substrate:\n" +
+  "  1. Modify or create a custom FRAME pallet.\n" +
+  "  2. Define storage for token metadata (name, symbol, decimals, and total supply).\n" +
+  "  3. Implement token transfer logic and handle balances in storage.\n" +
+  "  4. Add runtime configuration for your token pallet.\n" +
+  "- If not using Substrate, implement your logic using Rust's smart contract frameworks like Ink! for WASM-based contracts.",
+
+  "4. Test Your Token:\n" +
+  "- Write unit tests in Rust using the `#[test]` attribute to validate your token's behavior.\n" +
+  "- Run tests using: `cargo test`.\n" +
+  "- If using Substrate, use Substrate's `node-template` to simulate a local blockchain for testing.",
+
+  "5. Compile and Deploy Your Token:\n" +
+  "- Compile your Rust code using: `cargo build --release`.\n" +
+  "- If using Ink!, compile your contract to WebAssembly (WASM) using: `cargo +nightly contract build`.\n" +
+  "- Deploy the token:\n" +
+  "  1. For Substrate-based tokens, include your pallet in the runtime and run your node.\n" +
+  "  2. For Ink! smart contracts, deploy the WASM file to a compatible blockchain like Polkadot or Kusama.",
+
+  "6. Verify and Interact with Your Token:\n" +
+  "- Verify your deployment by interacting with your token on the blockchain.\n" +
+  "- Use Polkadot.js apps or custom tools to test token functionality.\n" +
+  "- If on Substrate, expose RPC endpoints for users to interact with your token.",
+
+  "7. Distribute and Use Your Token:\n" +
+  "- Use CLI tools or a custom dApp to distribute tokens to users.\n" +
+  "- Integrate your token into existing dApps or platforms.\n" +
+  "- If relevant, list your token on decentralized or centralized exchanges."
+];
+export const goTokenCreationSteps: string[] = [
+  "1. Set Up Your Development Environment:\n" +
+  "- Install Go (Golang) from https://golang.org/.\n" +
+  "- Verify installation by running: `go version`.\n" +
+  "- Set up your workspace and environment variables (e.g., `GOPATH`).\n" +
+  "- Install Ethereum tools and libraries like go-ethereum (Geth):\n" +
+  "  1. Run `go get github.com/ethereum/go-ethereum`.\n" +
+  "  2. Import the `go-ethereum` package in your project.",
+
+  "2. Understand Token Standards:\n" +
+  "- Follow the ERC-20 standard for fungible tokens or ERC-721/1155 for NFTs.\n" +
+  "- Learn the required functions like `totalSupply`, `balanceOf`, `transfer`, and `approve`.",
+
+  "3. Write the Token Contract (in Solidity or Vyper):\n" +
+  "- Since Go interacts with Ethereum through smart contracts, write the token logic in Solidity or Vyper.\n" +
+  "- Compile the contract into bytecode and ABI using tools like Remix or solc.\n" +
+  "- Example Solidity contract for ERC-20:\n" +
+  "  ```solidity\n" +
+  "  pragma solidity ^0.8.0;\n" +
+  "  contract MyToken {\n" +
+  "      string public name = \"MyToken\";\n" +
+  "      string public symbol = \"MTK\";\n" +
+  "      uint8 public decimals = 18;\n" +
+  "      uint256 public totalSupply = 1000000 * (10 ** uint256(decimals));\n" +
+  "      mapping(address => uint256) public balanceOf;\n" +
+  "      constructor() {\n" +
+  "          balanceOf[msg.sender] = totalSupply;\n" +
+  "      }\n" +
+  "  }\n" +
+  "  ```",
+
+  "4. Interact with the Token Using Go:\n" +
+  "- Use the `go-ethereum` library to interact with your smart contract:\n" +
+  "  1. Load the ABI and bytecode of the deployed contract.\n" +
+  "  2. Connect to an Ethereum node (e.g., Geth or Infura).\n" +
+  "  3. Use Go code to call smart contract functions for deployment, transfer, and querying balances.",
+
+  "5. Deploy the Token Contract:\n" +
+  "- Use Go to deploy the compiled smart contract:\n" +
+  "  ```go\n" +
+  "  package main\n\n" +
+  "  import (\n" +
+  "      \"context\"\n" +
+  "      \"fmt\"\n" +
+  "      \"log\"\n" +
+  "      \"math/big\"\n" +
+  "      \"github.com/ethereum/go-ethereum/accounts/abi/bind\"\n" +
+  "      \"github.com/ethereum/go-ethereum/accounts/keystore\"\n" +
+  "      \"github.com/ethereum/go-ethereum/rpc\"\n" +
+  "  )\n\n" +
+  "  func main() {\n" +
+  "      // Connect to an Ethereum node and deploy the contract\n" +
+  "  }\n" +
+  "  ```",
+
+  "6. Test the Token:\n" +
+  "- Write Go tests using the `testing` package to validate token functionality.\n" +
+  "- Simulate transactions and check for correctness (e.g., transfers, approvals, and balance queries).",
+
+  "7. Verify and Use the Token:\n" +
+  "- Verify the contract deployment on block explorers like Etherscan.\n" +
+  "- Use Go code to interact with the deployed contract (e.g., transferring tokens, checking balances).",
+
+  "8. Distribute and Integrate the Token:\n" +
+  "- Transfer tokens to users or investors using the `transfer` function.\n" +
+  "- Integrate the token into applications or dApps using Go APIs.\n" +
+  "- List the token on decentralized or centralized exchanges."
+];
+export const haskellPlutusTokenCreationSteps: string[] = [
+  "1. Set Up Your Development Environment:\n" +
+  "- Install Haskell and GHCup from https://www.haskell.org/.\n" +
+  "- Use GHCup to install the required GHC version and Cabal build tool.\n" +
+  "- Install the Plutus development tools:\n" +
+  "  1. Clone the Plutus repository: `git clone https://github.com/input-output-hk/plutus-apps`.\n" +
+  "  2. Follow the setup guide to configure your environment.\n" +
+  "- Install dependencies like Docker for running the Plutus Playground locally.",
+
+  "2. Understand Native Tokens in Cardano:\n" +
+  "- Cardano supports native tokens, which don’t require smart contracts for basic functionality.\n" +
+  "- Use the Plutus platform for custom logic involving minting policies or advanced features.\n" +
+  "- Learn about UTXO (Unspent Transaction Output) and how tokens are represented on Cardano.",
+
+  "3. Write the Minting Policy in Haskell:\n" +
+  "- Create a Plutus script that defines the conditions for minting and burning tokens.\n" +
+  "  Example:\n" +
+  "  ```haskell\n" +
+  "  {-# LANGUAGE OverloadedStrings #-}\n" +
+  "  module MintingPolicy where\n\n" +
+  "  import Plutus.V1.Ledger.Api\n" +
+  "  import Plutus.V1.Ledger.Contexts\n" +
+  "  import PlutusTx\n\n" +
+  "  mkPolicy :: ScriptContext -> Bool\n" +
+  "  mkPolicy ctx = traceIfFalse \"Unauthorized minting\" authorized\n" +
+  "    where\n" +
+  "      authorized = True -- Add your custom logic here\n\n" +
+  "  policy :: MintingPolicy\n" +
+  "  policy = mkMintingPolicyScript $$(PlutusTx.compile [|| mkPolicy ||])\n  ```",
+
+  "4. Build and Test the Minting Policy:\n" +
+  "- Use the Plutus Playground or a local Plutus environment to test your minting policy.\n" +
+  "- Simulate token minting and burning transactions and validate the script behavior.\n" +
+  "- Use PlutusTx utilities to compile your Haskell code to on-chain script format.",
+
+  "5. Deploy Your Token:\n" +
+  "- Deploy the minting policy to the Cardano blockchain:\n" +
+  "  1. Use the `cardano-cli` to create and sign transactions.\n" +
+  "  2. Mint tokens by attaching your policy script to a transaction.\n" +
+  "- Example CLI command:\n" +
+  "  ```bash\n" +
+  "  cardano-cli transaction build-raw \\\n" +
+  "      --tx-in <UTXO> \\\n" +
+  "      --tx-out <address>+<amount>+\"<policy_id>.<token_name>\" \\\n" +
+  "      --mint \"<amount> <policy_id>.<token_name>\" \\\n" +
+  "      --mint-script-file <policy_script> \\\n" +
+  "      --out-file <tx_raw>\n" +
+  "  ```",
+
+  "6. Test Your Token on the Blockchain:\n" +
+  "- Use testnets like Preprod or Preview for deployment and testing.\n" +
+  "- Verify token minting, burning, and transactions on block explorers like CardanoScan.\n" +
+  "- Test wallet compatibility (e.g., Daedalus, Yoroi, or Flint).",
+
+  "7. Distribute and Use Your Token:\n" +
+  "- Distribute tokens by transferring them to user wallets.\n" +
+  "- Integrate tokens into dApps or platforms that support Plutus.\n" +
+  "- Use smart contracts or off-chain code for advanced token utility.",
+
+  "8. Verify and List Your Token:\n" +
+  "- Register your token metadata on the Cardano Token Registry.\n" +
+  "- List your token on decentralized or centralized exchanges to enable trading."
+];
+export const csharpTokenCreationSteps: string[] = [
+  "1. Set Up Your Development Environment:\n" +
+  "- Install Visual Studio or another C# IDE (e.g., Rider or Visual Studio Code).\n" +
+  "- Install .NET Core SDK from https://dotnet.microsoft.com/.\n" +
+  "- Install the Nethereum library, which provides tools to interact with Ethereum:\n" +
+  "  1. Add the Nethereum NuGet package: `dotnet add package Nethereum.Web3`.\n" +
+  "  2. Include other packages for additional features if needed (e.g., contract deployment, ABI integration).",
+
+  "2. Understand Token Standards:\n" +
+  "- Learn the ERC-20 standard for fungible tokens or ERC-721/1155 for NFTs.\n" +
+  "- Familiarize yourself with the required functions like `totalSupply`, `transfer`, `balanceOf`, and `approve`.",
+
+  "3. Write the Token Smart Contract (in Solidity or Vyper):\n" +
+  "- Define the token logic in Solidity or Vyper for compatibility with Ethereum-based blockchains.\n" +
+  "- Compile the smart contract to get the ABI and bytecode using Remix or solc.\n" +
+  "- Example ERC-20 contract in Solidity:\n" +
+  "  ```solidity\n" +
+  "  pragma solidity ^0.8.0;\n" +
+  "  contract MyToken {\n" +
+  "      string public name = \"MyToken\";\n" +
+  "      string public symbol = \"MTK\";\n" +
+  "      uint8 public decimals = 18;\n" +
+  "      uint256 public totalSupply = 1000000 * (10 ** uint256(decimals));\n" +
+  "      mapping(address => uint256) public balanceOf;\n" +
+  "      constructor() {\n" +
+  "          balanceOf[msg.sender] = totalSupply;\n" +
+  "      }\n" +
+  "  }\n" +
+  "  ```",
+
+  "4. Deploy the Smart Contract Using C#:\n" +
+  "- Use the Nethereum library to deploy the compiled smart contract:\n" +
+  "  1. Connect to an Ethereum node (e.g., Infura or a local Geth instance).\n" +
+  "  2. Use the contract's ABI and bytecode for deployment.\n" +
+  "  Example:\n" +
+  "  ```csharp\n" +
+  "  var web3 = new Web3(\"https://mainnet.infura.io/v3/<YourProjectID>\");\n" +
+  "  var transactionReceipt = await web3.Eth.DeployContract.SendRequestAndWaitForReceiptAsync(\n" +
+  "      abi, bytecode, senderAddress, new HexBigInteger(gas), constructorArgs\n" +
+  "  );\n" +
+  "  var contractAddress = transactionReceipt.ContractAddress;\n" +
+  "  ```",
+
+  "5. Interact with the Token Contract:\n" +
+  "- Use Nethereum to interact with the deployed contract:\n" +
+  "  1. Load the contract using its ABI and address.\n" +
+  "  2. Call functions like `transfer` or `balanceOf`.\n" +
+  "  Example:\n" +
+  "  ```csharp\n" +
+  "  var contract = web3.Eth.GetContract(abi, contractAddress);\n" +
+  "  var transferFunction = contract.GetFunction(\"transfer\");\n" +
+  "  var result = await transferFunction.SendTransactionAsync(senderAddress, recipientAddress, amount);\n" +
+  "  ```",
+
+  "6. Test Your Token:\n" +
+  "- Write unit tests for your smart contract using Solidity testing frameworks.\n" +
+  "- Use Nethereum to test interactions with the deployed contract in C# applications.",
+
+  "7. Distribute and Use Your Token:\n" +
+  "- Transfer tokens to users using the `transfer` function.\n" +
+  "- Integrate your token into C#-based applications or dApps.\n" +
+  "- Use Nethereum for backend integrations, such as processing transactions or querying balances.",
+
+  "8. Verify and List Your Token:\n" +
+  "- Verify your contract on block explorers like Etherscan by providing the source code and ABI.\n" +
+  "- List your token on decentralized or centralized exchanges to enable trading."
+];
+export const dartTokenCreationSteps: string[] = [
+  "1. Set Up Your Development Environment:\n" +
+  "- Install Dart SDK from https://dart.dev/.\n" +
+  "- Install Flutter if you plan to build mobile or web applications around your token.\n" +
+  "- Use a suitable IDE like Visual Studio Code or Android Studio with Dart and Flutter plugins.\n" +
+  "- Install the `web3dart` package for blockchain interactions by adding it to your `pubspec.yaml`:\n" +
+  "  ```yaml\n" +
+  "  dependencies:\n" +
+  "    web3dart: ^2.0.0\n" +
+  "  ```",
+
+  "2. Understand Token Standards:\n" +
+  "- Learn Ethereum token standards like ERC-20 (fungible tokens) and ERC-721/1155 (non-fungible tokens).\n" +
+  "- Familiarize yourself with the functions such as `totalSupply`, `transfer`, `balanceOf`, and `approve`.",
+
+  "3. Write the Token Smart Contract (in Solidity or Vyper):\n" +
+  "- Write your token logic using Solidity or Vyper, following the token standard requirements.\n" +
+  "- Compile the smart contract to generate its ABI and bytecode using Remix or solc.\n" +
+  "- Example Solidity code for an ERC-20 token:\n" +
+  "  ```solidity\n" +
+  "  pragma solidity ^0.8.0;\n" +
+  "  contract MyToken {\n" +
+  "      string public name = \"MyToken\";\n" +
+  "      string public symbol = \"MTK\";\n" +
+  "      uint8 public decimals = 18;\n" +
+  "      uint256 public totalSupply = 1000000 * (10 ** uint256(decimals));\n" +
+  "      mapping(address => uint256) public balanceOf;\n" +
+  "      constructor() {\n" +
+  "          balanceOf[msg.sender] = totalSupply;\n" +
+  "      }\n" +
+  "  }\n" +
+  "  ```",
+
+  "4. Deploy the Token Contract:\n" +
+  "- Use Remix, Truffle, or Hardhat to deploy the smart contract to an Ethereum network.\n" +
+  "- Save the deployed contract's address and ABI for interaction.",
+
+  "5. Interact with the Token Using Dart:\n" +
+  "- Use the `web3dart` package to connect to the blockchain and interact with the deployed contract:\n" +
+  "  1. Connect to an Ethereum node (e.g., Infura or a local Geth instance).\n" +
+  "  2. Load the contract using its ABI and address.\n" +
+  "  Example:\n" +
+  "  ```dart\n" +
+  "  import 'package:web3dart/web3dart.dart';\n" +
+  "  import 'package:http/http.dart';\n\n" +
+  "  void main() async {\n" +
+  "    final client = Web3Client(\"https://mainnet.infura.io/v3/<YourProjectID>\", Client());\n" +
+  "    final credentials = EthPrivateKey.fromHex(\"<YourPrivateKey>\");\n" +
+  "    final contract = DeployedContract(\n" +
+  "      ContractAbi.fromJson(\"<ABI_JSON>\", \"MyToken\"),\n" +
+  "      EthereumAddress.fromHex(\"<ContractAddress>\")\n" +
+  "    );\n" +
+  "    final transferFunction = contract.function(\"transfer\");\n" +
+  "    await client.sendTransaction(\n" +
+  "      credentials,\n" +
+  "      Transaction.callContract(\n" +
+  "        contract: contract,\n" +
+  "        function: transferFunction,\n" +
+  "        parameters: [EthereumAddress.fromHex(\"<RecipientAddress>\"), BigInt.from(1000)]\n" +
+  "      ),\n" +
+  "    );\n" +
+  "  }\n" +
+  "  ```",
+
+  "6. Test Your Token:\n" +
+  "- Use Ethereum testnets like Ropsten, Goerli, or Sepolia to test the deployment and functionality.\n" +
+  "- Simulate transactions (e.g., transfers, approvals) using Dart scripts and the `web3dart` library.",
+
+  "7. Distribute and Use Your Token:\n" +
+  "- Transfer tokens to users using the `transfer` function in your Dart application.\n" +
+  "- Build dApps or mobile/web applications using Flutter and Dart to integrate token functionality.\n" +
+  "- Allow users to interact with your token directly from your application.",
+
+  "8. Verify and List Your Token:\n" +
+  "- Verify your smart contract on block explorers like Etherscan.\n" +
+  "- List your token on decentralized or centralized exchanges to enable trading."
+];
+export const kotlinTokenCreationSteps: string[] = [
+  "1. Set Up Your Development Environment:\n" +
+  "- Install IntelliJ IDEA or Android Studio for Kotlin development.\n" +
+  "- Install the Kotlin SDK from https://kotlinlang.org/.\n" +
+  "- Add the `web3j` library to interact with Ethereum:\n" +
+  "  1. Add the following to your `build.gradle` file:\n" +
+  "    ```gradle\n" +
+  "    dependencies {\n" +
+  "        implementation 'org.web3j:core:4.8.7' // Or latest version\n" +
+  "    }\n" +
+  "    ```",
+
+  "2. Understand Token Standards:\n" +
+  "- Learn the ERC-20 (fungible tokens) and ERC-721 (NFT) token standards.\n" +
+  "- Familiarize yourself with the key functions like `totalSupply`, `transfer`, `balanceOf`, and `approve`.",
+
+  "3. Write the Token Smart Contract (in Solidity or Vyper):\n" +
+  "- Write the token contract in Solidity or Vyper.\n" +
+  "- Compile the contract to generate the ABI and bytecode using Remix or solc.\n" +
+  "- Example Solidity ERC-20 contract:\n" +
+  "  ```solidity\n" +
+  "  pragma solidity ^0.8.0;\n" +
+  "  contract MyToken {\n" +
+  "      string public name = \"MyToken\";\n" +
+  "      string public symbol = \"MTK\";\n" +
+  "      uint8 public decimals = 18;\n" +
+  "      uint256 public totalSupply = 1000000 * (10 ** uint256(decimals));\n" +
+  "      mapping(address => uint256) public balanceOf;\n" +
+  "      constructor() {\n" +
+  "          balanceOf[msg.sender] = totalSupply;\n" +
+  "      }\n" +
+  "  }\n" +
+  "  ```",
+
+  "4. Deploy the Token Contract:\n" +
+  "- Use Remix or Truffle to deploy the compiled smart contract to an Ethereum network.\n" +
+  "- Get the deployed contract's ABI and address for interaction in Kotlin.",
+
+  "5. Interact with the Token Using Kotlin:\n" +
+  "- Use the `web3j` library to connect to Ethereum and interact with the deployed smart contract:\n" +
+  "  1. Set up the Web3j client to connect to Ethereum.\n" +
+  "  2. Load the contract using the ABI and address.\n" +
+  "  Example Kotlin code:\n" +
+  "  ```kotlin\n" +
+  "  val web3j = Web3j.build(HttpService(\"https://mainnet.infura.io/v3/<YourProjectID>\"))\n" +
+  "  val credentials = Credentials.create(\"<YourPrivateKey>\")\n" +
+  "  val contract = MyToken.load(<ContractAddress>, web3j, credentials, GasPrice, GasLimit)\n" +
+  "  val balance = contract.balanceOf(<Address>)\n" +
+  "  ```",
+
+  "6. Test Your Token:\n" +
+  "- Test token functionality by writing test scripts for transferring tokens, checking balances, etc.\n" +
+  "- Use testnets like Ropsten or Goerli for testing deployment and interactions.",
+
+  "7. Distribute and Use Your Token:\n" +
+  "- Transfer tokens to users using the `transfer` function in your Kotlin application.\n" +
+  "- Integrate the token into Kotlin-based mobile or backend applications.",
+
+  "8. Verify and List Your Token:\n" +
+  "- Verify the smart contract on block explorers like Etherscan.\n" +
+  "- List your token on decentralized or centralized exchanges to enable trading."
+];
+export const swiftTokenCreationSteps: string[] = [
+  "1. Set Up Your Development Environment:\n" +
+  "- Install Xcode from the Mac App Store for Swift development.\n" +
+  "- Use CocoaPods or Swift Package Manager to install dependencies like `web3.swift`.\n" +
+  "- Add the `web3.swift` library to interact with Ethereum blockchain:\n" +
+  "  1. In your `Podfile`, add: `pod 'web3.swift'` or use Swift Package Manager to install it.\n" +
+  "  2. Run `pod install` to integrate the library into your project.",
+
+  "2. Understand Token Standards:\n" +
+  "- Familiarize yourself with the ERC-20 standard for fungible tokens or ERC-721 for NFTs.\n" +
+  "- Understand key functions like `totalSupply`, `transfer`, `balanceOf`, and `approve`.",
+
+  "3. Write the Token Smart Contract (in Solidity or Vyper):\n" +
+  "- Write the token logic in Solidity or Vyper.\n" +
+  "- Compile the smart contract to generate the ABI and bytecode using Remix or solc.\n" +
+  "- Example Solidity ERC-20 contract:\n" +
+  "  ```solidity\n" +
+  "  pragma solidity ^0.8.0;\n" +
+  "  contract MyToken {\n" +
+  "      string public name = \"MyToken\";\n" +
+  "      string public symbol = \"MTK\";\n" +
+  "      uint8 public decimals = 18;\n" +
+  "      uint256 public totalSupply = 1000000 * (10 ** uint256(decimals));\n" +
+  "      mapping(address => uint256) public balanceOf;\n" +
+  "      constructor() {\n" +
+  "          balanceOf[msg.sender] = totalSupply;\n" +
+  "      }\n" +
+  "  }\n" +
+  "  ```",
+
+  "4. Deploy the Token Contract:\n" +
+  "- Use Remix or Truffle to deploy the smart contract to Ethereum.\n" +
+  "- Save the contract ABI and address for future interactions in your Swift application.",
+
+  "5. Interact with the Token Using Swift:\n" +
+  "- Use the `web3.swift` library to interact with the Ethereum network:\n" +
+  "  1. Set up a Web3 provider to connect to the Ethereum node.\n" +
+  "  2. Use the contract's ABI and address to create a contract object in Swift.\n" +
+  "  Example Swift code:\n" +
+  "  ```swift\n" +
+  "  import Web3\n" +
+  "  let web3 = try! Web3.InfuraRopstenWeb3() // or your own provider\n" +
+  "  let contract = web3.contract(<ABI>, at: <ContractAddress>, abiVersion: 2)!;\n" +
+  "  let transfer = contract.method(\"transfer\", <Recipient>, <Amount>)\n" +
+  "  let result = try! transfer.send(password: <YourPassword>)\n" +
+  "  ```",
+
+  "6. Test Your Token:\n" +
+  "- Test your token functionality by performing token transfers, checking balances, and other functions using Swift.\n" +
+  "- Use testnets like Ropsten or Goerli to deploy and test the smart contract before using real assets.",
+
+  "7. Distribute and Use Your Token:\n" +
+  "- Transfer tokens to users using the `transfer` function in your Swift-based app.\n" +
+  "- Build dApps using Swift and integrate token functionality for user transactions.",
+
+  "8. Verify and List Your Token:\n" +
+  "- Verify your smart contract on Ethereum block explorers like Etherscan.\n" +
+  "- List your token on decentralized or centralized exchanges to facilitate trading."
+];
+export const scalaTokenCreationSteps: string[] = [
+  "1. Set Up Your Development Environment:\n" +
+  "- Install IntelliJ IDEA or another Scala IDE.\n" +
+  "- Install the Scala SDK from https://www.scala-lang.org/.\n" +
+  "- Add the `web3j` library for Ethereum interaction.\n" +
+  "  1. In your `build.sbt` file, add:\n" +
+  "    ```scala\n" +
+  "    libraryDependencies += \"org.web3j\" % \"core\" % \"4.8.7\"\n" +
+  "    ```",
+
+  "2. Understand Token Standards:\n" +
+  "- Familiarize yourself with ERC-20 (fungible tokens) or ERC-721 (NFTs).\n" +
+  "- Learn the core functions like `totalSupply`, `balanceOf`, `transfer`, and `approve`.",
+
+  "3. Write the Token Smart Contract (in Solidity or Vyper):\n" +
+  "- Write your token logic using Solidity or Vyper, and then compile it to get the ABI and bytecode.\n" +
+  "- Example Solidity ERC-20 contract:\n" +
+  "  ```solidity\n" +
+  "  pragma solidity ^0.8.0;\n" +
+  "  contract MyToken {\n" +
+  "      string public name = \"MyToken\";\n" +
+  "      string public symbol = \"MTK\";\n" +
+  "      uint8 public decimals = 18;\n" +
+  "      uint256 public totalSupply = 1000000 * (10 ** uint256(decimals));\n" +
+  "      mapping(address => uint256) public balanceOf;\n" +
+  "      constructor() {\n" +
+  "          balanceOf[msg.sender] = totalSupply;\n" +
+  "      }\n" +
+  "  }\n" +
+  "  ```",
+
+  "4. Deploy the Token Contract:\n" +
+  "- Use tools like Remix or Truffle to deploy the contract to Ethereum.\n" +
+  "- Retrieve the ABI and address of the deployed contract for Scala interaction.",
+
+  "5. Interact with the Token Using Scala:\n" +
+  "- Use the `web3j` library to interact with Ethereum:\n" +
+  "  1. Connect to the Ethereum network.\n" +
+  "  2. Load the contract using the ABI and address.\n" +
+  "  Example Scala code:\n" +
+  "  ```scala\n" +
+  "  val web3 = Web3j.build(new HttpService(\"https://mainnet.infura.io/v3/<YourProjectID>\"))\n" +
+  "  val credentials = Credentials.create(\"<YourPrivateKey>\")\n" +
+  "  val contract = MyToken.load(<ContractAddress>, web3, credentials, GasPrice, GasLimit)\n" +
+  "  val balance = contract.balanceOf(<Address>)\n" +
+  "  ```",
+
+  "6. Test Your Token:\n" +
+  "- Test the functionality of your token (e.g., transferring tokens, checking balances) in a local or test network.\n" +
+  "- Use Ethereum testnets like Ropsten for testing.",
+
+  "7. Distribute and Use Your Token:\n" +
+  "- Use the `transfer` function in your Scala application to distribute tokens.\n" +
+  "- Integrate token functionality into backend systems or dApps in Scala.",
+
+  "8. Verify and List Your Token:\n" +
+  "- Verify your contract on block explorers like Etherscan.\n" +
+  "- List your token on exchanges for trading."
+];
+export const rubyTokenCreationSteps: string[] = [
+  "1. Set Up Your Development Environment:\n" +
+  "- Install Ruby from https://www.ruby-lang.org/en/.\n" +
+  "- Use an IDE like Visual Studio Code or RubyMine.\n" +
+  "- Install the `ethereum.rb` gem to interact with Ethereum blockchain.\n" +
+  "  1. Add `gem 'ethereum'` to your `Gemfile` and run `bundle install`.",
+
+  "2. Understand Token Standards:\n" +
+  "- Learn about ERC-20 (fungible tokens) and ERC-721 (NFT) standards.\n" +
+  "- Familiarize yourself with required functions like `totalSupply`, `balanceOf`, `transfer`, and `approve`.",
+
+  "3. Write the Token Smart Contract (in Solidity or Vyper):\n" +
+  "- Write your token contract in Solidity or Vyper.\n" +
+  "- Compile the contract using Remix or solc to obtain the ABI and bytecode.\n" +
+  "- Example Solidity ERC-20 contract:\n" +
+  "  ```solidity\n" +
+  "  pragma solidity ^0.8.0;\n" +
+  "  contract MyToken {\n" +
+  "      string public name = \"MyToken\";\n" +
+  "      string public symbol = \"MTK\";\n" +
+  "      uint8 public decimals = 18;\n" +
+  "      uint256 public totalSupply = 1000000 * (10 ** uint256(decimals));\n" +
+  "      mapping(address => uint256) public balanceOf;\n" +
+  "      constructor() {\n" +
+  "          balanceOf[msg.sender] = totalSupply;\n" +
+  "      }\n" +
+  "  }\n" +
+  "  ```",
+
+  "4. Deploy the Token Contract:\n" +
+  "- Deploy the contract to the Ethereum network using Remix or Truffle.\n" +
+  "- Get the deployed contract's ABI and address for future interactions with Ruby.",
+
+  "5. Interact with the Token Using Ruby:\n" +
+  "- Use the `ethereum.rb` gem to interact with Ethereum.\n" +
+  "  1. Set up the connection to the Ethereum network.\n" +
+  "  2. Load the contract using the ABI and address.\n" +
+  "  Example Ruby code:\n" +
+  "  ```ruby\n" +
+  "  client = Ethereum::HttpClient.new('<Infura_URL>')\n" +
+  "  token = Ethereum::Contract.create(file: '<contract_ABI_file>', client: client)\n" +
+  "  token.deploy_and_wait('<sender_private_key>', '1000000')\n" +
+  "  balance = token.call.balanceOf('<user_address>')\n" +
+  "  ```",
+
+  "6. Test Your Token:\n" +
+  "- Test the deployment and functions of your token using Ethereum testnets like Ropsten or Goerli.",
+
+  "7. Distribute and Use Your Token:\n" +
+  "- Use the `transfer` function to distribute tokens using Ruby scripts.\n" +
+  "- Build dApps or backend systems with Ruby that integrate token transactions.",
+
+  "8. Verify and List Your Token:\n" +
+  "- Verify your contract on block explorers like Etherscan.\n" +
+  "- List your token on exchanges for trading."
+];
+export const luaTokenCreationSteps: string[] = [
+  "1. Set Up Your Development Environment:\n" +
+  "- Install Lua from https://www.lua.org/\n" +
+  "- Use an IDE like ZeroBrane Studio or VS Code with Lua extensions.\n" +
+  "- Use Lua libraries like `web3.lua` or call a web3-compatible API to interact with Ethereum.\n" +
+  "  1. Install `web3.lua` from GitHub or use HTTP requests to communicate with Ethereum nodes.",
+
+  "2. Understand Token Standards:\n" +
+  "- Learn about ERC-20 (fungible tokens) and ERC-721 (NFT) standards.\n" +
+  "- Familiarize yourself with key functions like `totalSupply`, `balanceOf`, `transfer`, and `approve`.",
+
+  "3. Write the Token Smart Contract (in Solidity or Vyper):\n" +
+  "- Write your token contract using Solidity or Vyper, then compile the contract to obtain the ABI and bytecode.\n" +
+  "- Example Solidity ERC-20 contract:\n" +
+  "  ```solidity\n" +
+  "  pragma solidity ^0.8.0;\n" +
+  "  contract MyToken {\n" +
+  "      string public name = \"MyToken\";\n" +
+  "      string public symbol = \"MTK\";\n" +
+  "      uint8 public decimals = 18;\n" +
+  "      uint256 public totalSupply = 1000000 * (10 ** uint256(decimals));\n" +
+  "      mapping(address => uint256) public balanceOf;\n" +
+  "      constructor() {\n" +
+  "          balanceOf[msg.sender] = totalSupply;\n" +
+  "      }\n" +
+  "  }\n" +
+  "  ```",
+
+  "4. Deploy the Token Contract:\n" +
+  "- Use Remix, Truffle, or Hardhat to deploy the contract to Ethereum.\n" +
+  "- Save the ABI and address of the deployed contract for interaction in Lua.",
+
+  "5. Interact with the Token Using Lua:\n" +
+  "- Use Lua libraries like `web3.lua` or a Web3 provider to interact with Ethereum.\n" +
+  "  1. Set up the Web3 connection.\n" +
+  "  2. Use the contract's ABI and address to interact with the contract.\n" +
+  "  Example Lua code (pseudo code for interaction):\n" +
+  "  ```lua\n" +
+  "  local web3 = Web3.new('https://mainnet.infura.io/v3/<YourProjectID>')\n" +
+  "  local contract = web3:contract(<ContractAddress>, <ContractABI>)\n" +
+  "  local balance = contract:call('balanceOf', <Address>)\n" +
+  "  ```",
+
+  "6. Test Your Token:\n" +
+  "- Use testnets like Ropsten or Goerli for testing the deployment and interaction with your token.",
+
+  "7. Distribute and Use Your Token:\n" +
+  "- Transfer tokens using the `transfer` function in Lua scripts.\n" +
+  "- Integrate the token in Lua-based applications.",
+
+  "8. Verify and List Your Token:\n" +
+  "- Verify your contract on block explorers like Etherscan.\n" +
+  "- List your token on exchanges for trading."
+];
+export const michelsonTokenCreationSteps: string[] = [
+  "1. Set Up Your Development Environment:\n" +
+  "- Install the `Tezos` client from https://tezos.gitlab.io/\n" +
+  "- Install the `SmartPy` or `Ligo` tools to write and compile Michelson code.\n" +
+  "- Alternatively, use the `Taquito` JavaScript library to interact with Tezos from the client side.\n" +
+  "- Use the `Tezos Studio` IDE for easier contract development and testing.",
+
+  "2. Understand Token Standards:\n" +
+  "- Understand the Tezos FA1.2 or FA2 token standards for creating fungible or non-fungible tokens (NFTs).\n" +
+  "- Learn key functions like `balance_of`, `transfer`, and `approve` for creating token-like behavior.",
+
+  "3. Write the Token Smart Contract (in Michelson, SmartPy, or Ligo):\n" +
+  "- Write your token contract in Michelson (or use SmartPy for easier development).\n" +
+  "- Example Michelson contract for an FA1.2 token (simplified version):\n" +
+  "  ```michelson\n" +
+  "  parameter (pair address address);\n" +
+  "  storage (pair (big_map address nat) nat);\n" +
+  "  code { UNPAIR; GET; IF_NONE { PUSH nat 0 } { };\n" +
+  "  ADD; NIL operation; PAIR; };\n" +
+  "  ```",
+
+  "4. Deploy the Token Contract:\n" +
+  "- Deploy the Michelson contract to the Tezos blockchain using the `Tezos` client or other deployment tools.\n" +
+  "- After deployment, note the contract's address and interact with it using Tezos tools.",
+
+  "5. Interact with the Token Using Michelson:\n" +
+  "- Use the `Taquito` JavaScript library or Tezos client to interact with the Michelson contract.\n" +
+  "  Example interaction with FA1.2 token using Taquito:\n" +
+  "  ```javascript\n" +
+  "  const tezos = await TezosToolkit('https://mainnet-tezos.giganode.io');\n" +
+  "  const contract = await tezos.contract.at('<ContractAddress>');\n" +
+  "  const balance = await contract.methods.balance_of([<Address>]).read();\n" +
+  "  ```",
+
+  "6. Test Your Token:\n" +
+  "- Test the contract on the Tezos testnet (Granadanet or other) before using real tokens or interacting with live contracts.",
+
+  "7. Distribute and Use Your Token:\n" +
+  "- Transfer tokens using the `transfer` function within the Michelson contract.\n" +
+  "- Integrate the token functionality into your Tezos-based dApps or platforms.",
+
+  "8. Verify and List Your Token:\n" +
+  "- Verify your contract using the Tezos block explorer and confirm token transfers and balances.\n" +
+  "- List your token on Tezos exchanges or within the Tezos ecosystem."
+];
+export const moveTokenCreationSteps: string[] = [
+  "1. Set Up Your Development Environment:\n" +
+  "- Install the `Move` language compiler by following the official guide from the Diem (formerly Libra) GitHub.\n" +
+  "- Set up the `Move` VM and use the Diem project tools to test and deploy your contracts.\n" +
+  "- Alternatively, use the `aptos` framework for Move on the Aptos blockchain.",
+
+  "2. Understand Token Standards:\n" +
+  "- In Move, tokens are created using the Move module framework. The basic concepts involve creating `Resources` (similar to assets or tokens).\n" +
+  "- Familiarize yourself with Move's resource types and how they interact with the blockchain.",
+
+  "3. Write the Token Smart Contract (in Move):\n" +
+  "- Write a Move module that defines your token as a `resource` type.\n" +
+  "- Example Move contract for a simple token:\n" +
+  "  ```move\n" +
+  "  module MyToken {\n" +
+  "      resource struct MyToken { amount: u64 };\n" +
+  "      public fun mint(to: &signer, amount: u64) {\n" +
+  "          move_to(to, MyToken { amount });\n" +
+  "      }\n" +
+  "      public fun transfer(from: &signer, to: &signer, amount: u64) {\n" +
+  "          let sender_token = borrow_global_mut<MyToken>(@signer_address(from));\n" +
+  "          sender_token.amount = sender_token.amount - amount;\n" +
+  "          mint(to, amount);\n" +
+  "      }\n" +
+  "  }\n" +
+  "  ```",
+
+  "4. Deploy the Token Contract:\n" +
+  "- Deploy the contract to the Diem or Aptos blockchain.\n" +
+  "- Use the Diem tools or the Aptos CLI to deploy your Move module to the blockchain and interact with it.",
+
+  "5. Interact with the Token Using Move:\n" +
+  "- Use the Move CLI or any other Diem or Aptos-compatible library to invoke your token functions like `mint` or `transfer`.\n" +
+  "  Example interaction using Aptos CLI:\n" +
+  "  ```bash\n" +
+  "  aptos move run --function MyToken::mint --args <amount>\n" +
+  "  aptos move run --function MyToken::transfer --args <from_account> <to_account> <amount>\n" +
+  "  ```",
+
+  "6. Test Your Token:\n" +
+  "- Test your contract and token functionality using the Diem or Aptos testnet before deploying on the mainnet.",
+
+  "7. Distribute and Use Your Token:\n" +
+  "- Transfer tokens using the `transfer` function to distribute tokens across the network.\n" +
+  "- Integrate your token into Diem or Aptos-based dApps or platforms.",
+
+  "8. Verify and List Your Token:\n" +
+  "- Verify the deployment and token transfers using the blockchain explorer for Diem or Aptos.\n" +
+  "- List your token on exchanges or platforms that support the Move ecosystem."
+];
+
+export const rholangTokenCreationSteps: string[] = [
+  "1. Set Up Your Development Environment:\n" +
+  "- Install the `Rholang` compiler from the RChain platform's official repository.\n" +
+  "- Set up an RChain node or use the RChain testnet for development and testing.\n" +
+  "- Use Rholang's IDE (like the RChain IDE) to write and test your contracts.",
+
+  "2. Understand Token Standards:\n" +
+  "- Rholang uses `contracts` and `pointers` to create tokens.\n" +
+  "- Learn how to define a contract and use channels to interact with token balances and transfers.",
+
+  "3. Write the Token Smart Contract (in Rholang):\n" +
+  "- Write a Rholang contract to represent your token's behavior. Tokens in Rholang are usually represented as channels that store balances.\n" +
+  "- Example Rholang token contract:\n" +
+  "  ```rholang\n" +
+  "  contract MyToken(@init, @transfer, @balance) = {\n" +
+  "      new balance in {\n" +
+  "          balance!(0) |\n" +
+  "          for (@from <- @init) {\n" +
+  "              transfer!(from, 100)\n" +
+  "          } |\n" +
+  "          for (@to <- @transfer) {\n" +
+  "              balance!(balance + 100)\n" +
+  "          }\n" +
+  "      }\n" +
+  "  }\n" +
+  "  ```",
+
+  "4. Deploy the Token Contract:\n" +
+  "- Deploy the Rholang contract on the RChain blockchain using RChain's tools and the RChain node.\n" +
+  "- Interact with the deployed contract using RChain's CLI or Web UI.",
+
+  "5. Interact with the Token Using Rholang:\n" +
+  "- Use RChain's client or your own Rholang-based application to interact with the token contract.\n" +
+  "  Example interaction using RChain's web interface:\n" +
+  "  ```rholang\n" +
+  "  new transfer in {\n" +
+  "      transfer!(<address>, 100)\n" +
+  "  }\n" +
+  "  ```",
+
+  "6. Test Your Token:\n" +
+  "- Test the contract on RChain's testnet before deploying it to the mainnet to ensure that the token logic works as expected.",
+
+  "7. Distribute and Use Your Token:\n" +
+  "- Transfer tokens using the `transfer` function to distribute your tokens across accounts or channels.\n" +
+  "- Integrate the token logic into RChain-based applications.",
+
+  "8. Verify and List Your Token:\n" +
+  "- Verify the deployment and token transfers using the RChain explorer.\n" +
+  "- List your token on exchanges or platforms that support RChain-based assets."
+];
+
+
+export const yulTokenCreationSteps: string[] = [
+  "1. Set Up Your Development Environment:\n" +
+  "- Install Solidity and the Yul compiler.\n" +
+  "- Use the Remix IDE, or install Truffle or Hardhat to interact with Ethereum and compile Yul code.\n" +
+  "- Familiarize yourself with the EVM and how Yul interacts with it.",
+
+  "2. Understand Token Standards:\n" +
+  "- In Yul, you will work directly with the EVM bytecode, so understanding ERC-20 or ERC-721 standards is essential.\n" +
+  "- Learn the necessary functions for token behavior like `transfer`, `approve`, `balanceOf`, etc.",
+
+  "3. Write the Token Smart Contract (in Yul):\n" +
+  "- Write the token contract in Yul by embedding the bytecode for the desired ERC-20 or ERC-721 functionality.\n" +
+  "- Example simplified ERC-20 contract in Yul:\n" +
+  "  ```yul\n" +
+  "  { \n" +
+  "    mstore(0x40, add(0x20, mload(0x40)))\n" +
+  "    // token storage and other functionalities\n" +
+  "  }\n" +
+  "  ```",
+
+  "4. Compile the Yul Contract:\n" +
+  "- Use the Solidity compiler to compile the Yul code into EVM bytecode.\n" +
+  "- Use tools like Hardhat or Remix to manage the compilation process and deployment.",
+
+  "5. Deploy the Token Contract:\n" +
+  "- Deploy the compiled bytecode to the Ethereum blockchain.\n" +
+  "- Interact with the contract using a tool like Web3.js or Ethers.js.",
+
+  "6. Interact with the Token Using Yul:\n" +
+  "- Interact with the contract using Web3.js or Ethers.js.\n" +
+  "  Example interaction using Web3.js:\n" +
+  "  ```javascript\n" +
+  "  const tokenContract = new web3.eth.Contract(abi, contractAddress);\n" +
+  "  const balance = await tokenContract.methods.balanceOf(address).call();\n" +
+  "  ```",
+
+  "7. Test Your Token:\n" +
+  "- Test the token contract on the Ethereum testnet (Rinkeby or Goerli).\n" +
+  "- Ensure that functions like `transfer`, `approve`, and `balanceOf` work as expected.",
+
+  "8. Distribute and Use Your Token:\n" +
+  "- Transfer tokens using the `transfer` function and integrate them into dApps or exchanges.",
+
+  "9. Verify and List Your Token:\n" +
+  "- Verify the deployment and token functionality on Etherscan.\n" +
+  "- List your token on decentralized exchanges (DEXs) or other Ethereum-based platforms."
+];
+
+export const yulPlusTokenCreationSteps: string[] = [
+  "1. Set Up Your Development Environment:\n" +
+  "- Install Solidity and the Yul+ compiler.\n" +
+  "- Yul+ is an enhanced version of Yul that offers more structured constructs.\n" +
+  "- Use Remix IDE or Hardhat for deployment and testing on Ethereum.",
+
+  "2. Understand Token Standards:\n" +
+  "- Similar to Yul, Yul+ works with Ethereum bytecode, and understanding ERC-20 or ERC-721 is essential.\n" +
+  "- Yul+ allows more structured control flow and memory management compared to Yul.",
+
+  "3. Write the Token Smart Contract (in Yul+):\n" +
+  "- Yul+ enables more complex code with better control over gas usage and memory.\n" +
+  "- Example ERC-20 implementation in Yul+:\n" +
+  "  ```yul+\n" +
+  "  { \n" +
+  "    let value := calldataload(4)\n" +
+  "    mstore(0x40, add(0x20, value))\n" +
+  "    // Further contract logic\n" +
+  "  }\n" +
+  "  ```",
+
+  "4. Compile the Yul+ Contract:\n" +
+  "- Use the Solidity compiler to compile the Yul+ code into optimized EVM bytecode.\n" +
+  "- Leverage the Hardhat or Truffle framework to facilitate compilation and deployment.",
+
+  "5. Deploy the Token Contract:\n" +
+  "- Deploy the Yul+ contract on Ethereum using Remix, Hardhat, or Truffle.\n" +
+  "- Use Web3.js or Ethers.js for contract interaction.",
+
+  "6. Interact with the Token Using Yul+:\n" +
+  "- Interact with your deployed Yul+ contract by calling functions like `transfer` and `balanceOf`.\n" +
+  "  Example using Ethers.js:\n" +
+  "  ```javascript\n" +
+  "  const tokenContract = new ethers.Contract(contractAddress, abi, provider);\n" +
+  "  const balance = await tokenContract.balanceOf(address);\n" +
+  "  ```",
+
+  "7. Test Your Token:\n" +
+  "- Test the token's functionality on an Ethereum testnet.\n" +
+  "- Ensure that token transfers, approvals, and other functions work correctly.",
+
+  "8. Distribute and Use Your Token:\n" +
+  "- Distribute tokens to users by invoking the `transfer` function and managing tokens in a dApp.",
+
+  "9. Verify and List Your Token:\n" +
+  "- Verify the deployment of the token on Etherscan.\n" +
+  "- List your token on decentralized exchanges (DEXs) and other platforms supporting Ethereum-based assets."
+];
+
+export const zigTokenCreationSteps: string[] = [
+  "1. Set Up Your Development Environment:\n" +
+  "- Install Zig by following the official guide at https://ziglang.org.\n" +
+  "- Zig is a general-purpose language, so you'll need to integrate it with Ethereum (using Zig's FFI or bindings to Solidity/ETH).",
+
+  "2. Understand Token Standards:\n" +
+  "- While Zig does not have a built-in standard for tokens, you can interface with Solidity or other Ethereum-based token standards like ERC-20 by invoking smart contracts.",
+
+  "3. Write the Token Smart Contract (in Zig):\n" +
+  "- Write Zig code that interfaces with the Ethereum blockchain, potentially using Zig's FFI to interact with Solidity contracts.\n" +
+  "- Example Zig code that interacts with Ethereum:\n" +
+  "  ```zig\n" +
+  "  const std = @import('std');\n" +
+  "  // Example Zig code interacting with Ethereum\n" +
+  "  ```",
+
+  "4. Compile the Zig Contract:\n" +
+  "- Compile your Zig contract with Zig's native compiler and interface it with Solidity or other Ethereum-compatible frameworks.",
+
+  "5. Deploy the Token Contract:\n" +
+  "- Deploy your Zig-compiled contract on Ethereum using Remix, Truffle, or Hardhat.\n" +
+  "- Interact with your deployed contract via Web3.js or Ethers.js.",
+
+  "6. Interact with the Token Using Zig:\n" +
+  "- Use Zig's FFI or external bindings to interact with the deployed contract.\n" +
+  "  Example using Web3.js:\n" +
+  "  ```javascript\n" +
+  "  const balance = await tokenContract.methods.balanceOf(address).call();\n" +
+  "  ```",
+
+  "7. Test Your Token:\n" +
+  "- Test the token behavior on Ethereum testnets (like Rinkeby or Goerli) to ensure it works as intended.",
+
+  "8. Distribute and Use Your Token:\n" +
+  "- Transfer tokens using the token's `transfer` function and integrate it into decentralized applications (dApps).",
+
+  "9. Verify and List Your Token:\n" +
+  "- Verify the contract deployment on Etherscan.\n" +
+  "- List your token on decentralized exchanges (DEXs) that support Ethereum-based tokens."
+];
+
+export const elmTokenCreationSteps: string[] = [
+  "1. Set Up Your Development Environment:\n" +
+  "- Install Elm from https://elm-lang.org.\n" +
+  "- Elm is a functional language for frontend development. Use it to build the UI for interacting with smart contracts, but it doesn't directly interact with blockchains.\n" +
+  "- You'll need a backend like JavaScript (using Web3.js) to communicate with the Ethereum blockchain.",
+
+  "2. Understand Token Standards:\n" +
+  "- Elm itself does not create smart contracts but can interact with Ethereum-based smart contracts.\n" +
+  "- Use token standards like ERC-20 or ERC-721 on the blockchain and write Elm code for the user interface.",
+
+  "3. Write the Token Smart Contract (in Solidity, interacting with Elm UI):\n" +
+  "- Write the token contract in Solidity (e.g., ERC-20 or ERC-721).\n" +
+  "- Create a front-end in Elm to interact with this contract, using Web3.js in JavaScript for blockchain interactions.",
+
+  "4. Deploy the Token Contract:\n" +
+  "- Deploy your Solidity token contract on the Ethereum blockchain using tools like Truffle, Hardhat, or Remix.\n" +
+  "- The Elm frontend will communicate with this deployed contract via JavaScript Web3.js or Ethers.js.",
+
+  "5. Interact with the Token Using Elm:\n" +
+  "- Elm cannot directly interact with the Ethereum blockchain, so integrate Web3.js in JavaScript to handle blockchain interactions.\n" +
+  "  Example Elm frontend that sends a `transfer` transaction via JavaScript:\n" +
+  "  ```elm\n" +
+  "  // Elm code that interacts with Web3.js\n" +
+  "  ```",
+
+  "6. Test Your Token:\n" +
+  "- Test your token's interaction in the Elm frontend using Ethereum testnets (Rinkeby or Goerli).",
+
+  "7. Distribute and Use Your Token:\n" +
+  "- Use Elm's frontend to allow users to transfer and interact with the token contract through a Web3.js interface.",
+
+  "8. Verify and List Your Token:\n" +
+  "- Verify the deployment and interactions of your token contract on Etherscan.\n" +
+  "- List your token on decentralized exchanges (DEXs) like Uniswap."
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 const cryptoTokenStepsC2 = [
   {
     number: 1,
@@ -1296,7 +2294,13 @@ const cryptoTokenStepsC2 = [
   }
 ];
 
+*/
 
 
 
 
+export const allArticlesToken=[goTokenCreationSteps,rustTokenCreationSteps,vyperTokenCreationSteps,cryptoTokenStepsjava,cryptoTokenSolidity,cryptoTokenSteps22,cryptoTokenSteps1,cryptoTokenSteps,cryptoTokenStepsC,
+
+  elmTokenCreationSteps, zigTokenCreationSteps, yulPlusTokenCreationSteps, yulTokenCreationSteps,rholangTokenCreationSteps, haskellPlutusTokenCreationSteps,csharpTokenCreationSteps,dartTokenCreationSteps,kotlinTokenCreationSteps,swiftTokenCreationSteps,scalaTokenCreationSteps,rubyTokenCreationSteps,rubyTokenCreationSteps,luaTokenCreationSteps,michelsonTokenCreationSteps,moveTokenCreationSteps
+
+]

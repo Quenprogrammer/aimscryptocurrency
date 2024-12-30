@@ -22,6 +22,16 @@ export const routes: Routes = [
     loadComponent: () => import('../app/company/policy/policy.component')
       .then(m => m.PolicyComponent)
   },
+  {
+    path: 'workspace',
+    loadComponent: () => import('../debugFolder/workspace/workspace.component')
+      .then(m => m.WorkspaceComponent)
+  },
+  {
+    path: 'preview/:id',
+    loadComponent: () => import('../app/platforms/create-token/preview/preview.component')
+      .then(m => m.PreviewComponent)
+  },
 
 
   {path: 'news', loadComponent: () => import('./news/tokens').then(_ => _.Tokens)},
