@@ -25,10 +25,10 @@ import {CurrencyConverterComponent} from "../currency-converter/currency-convert
     ConverterComponent,
     DataStatsComponent,
 
-    CurrencyComponent,
+
     CommunitiesComponent,
     FormsModule,
-    CurrencyConverterComponent,
+
     RouterLink,
 
 

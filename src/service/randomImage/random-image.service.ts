@@ -26,9 +26,8 @@ export class RandomImageService implements OnDestroy {
     this.intervalSubscription = interval(3000).subscribe(() => setImage());
   }
 
-  // Cleanup when the service is destroyed to prevent memory leaks
+  // Cleanup method to unsubscribe from the interval when the service is destroyed
   ngOnDestroy(): void {
-    // Unsubscribe from the interval if it exists
     if (this.intervalSubscription) {
       this.intervalSubscription.unsubscribe();
       console.log('RandomImageService interval unsubscribed');

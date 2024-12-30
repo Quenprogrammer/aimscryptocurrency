@@ -8,7 +8,7 @@ import {FormsModule} from "@angular/forms";
   standalone: true,
   imports: [DatePipe, AsyncPipe, FormsModule], // Import DatePipe
   template: `
-    <div class="justify-content-center mx-auto" style="width: 100%">
+    <div class="container-fluid justify-content-center mx-auto" style="width: 100%">
       <div class="row bg-dark">
         <div class="col ">
           <p class="text-white text-center px-5 py-3 mb-0">
