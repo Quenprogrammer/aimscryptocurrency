@@ -27,6 +27,11 @@ export const routes: Routes = [
     loadComponent: () => import('../app/resources/trade/trade.component')
       .then(m => m.TradeComponent)
   },
+  {
+    path: 'lectures',
+    loadComponent: () => import('../app/academy/lectures/lectures.component')
+      .then(m => m.LecturesComponent)
+  },
 
 
   {path: 'tokensCreation', loadComponent: () => import('../app/resources/news/tokens').then(_ => _.Tokens)},

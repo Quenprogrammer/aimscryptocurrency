@@ -34,7 +34,7 @@ export interface Statistic {
               </div>
               <div class="col-6">
                 <div class="highlight-head">
-                  <h1 class="display-4 display-md-4">{{ stat.animatedValue || 0 }}</h1>
+                  <h1 class="display-5 display-md-4">{{ stat.animatedValue || 0 }}</h1>
                 </div>
                 <div class="highlight-body">
                   <p>{{ stat.label }}</p>

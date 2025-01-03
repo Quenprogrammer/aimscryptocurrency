@@ -1,4 +1,5 @@
 
+
 export const cryptoTokenSteps1 = [
     {
       number: 1,
@@ -563,8 +564,7 @@ export const cryptoTokenStepsC = [
     code: null
   }
 ];
-
- export const cryptoTokenSteps22 = [
+export const cryptoTokenSteps22 = [
     {
       number: 1,
       title: 'Understand the Basics of Blockchain and Tokens',
@@ -756,7 +756,6 @@ export const cryptoTokenStepsC = [
       code: null
     }
   ];
-
 export const cryptoTokenSolidity = [
     {
       number: 1,

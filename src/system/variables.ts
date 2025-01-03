@@ -9,3 +9,4 @@ export const platformsLogos:string='/assets/articles/';
 export const menuItems:string='/assets/items/';
 export const articles:string='/assets/articles/';
 export const apk:string='/assets/apk/';
+export const lectures:string='/assets/lectures/';
