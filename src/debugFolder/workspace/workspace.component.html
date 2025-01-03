@@ -1,1 +1,82 @@
-<app-create-token></app-create-token>
+<div class="container">
+
+  <!--<app-create-token></app-create-token>-->
+  <div class="row">
+    <div class="col-lg-7 bg-secondary ">
+      <!-- Heading -->
+      <div class="w-lg-75 text-center text-lg-start mb-5 mb-lg-7">
+        <h1 class="display-4">Find the Next
+           <br><span class="text-primary text-highlight-warning">Crypto Gem</span> on KuCoin</h1>
+        <form>
+          <div class="row mt-5">
+            <div class="col-8 p-0" >
+              <input type="text" style="width:100%; font-size: 30px">
+            </div>
+            <div class="col-4 p-0" >
+              <button style=" border-radius: 0; margin: 0;" type="button" class="btn btn-primary ">Search</button>
+            </div>
+
+          </div>
+
+          <!-- End Input Card -->
+        </form>
+        <p class="form-text">Search through over 125,000 listings</p>
+      </div></div>
+    <div class="d-none d-lg-block bg-black col-lg-5 position-lg-absolute top-0 end-0">
+      <img class="img-fluid rounded-2 " src="assets/community/img_3.png" alt="Image Description">
+
+      <!-- SVG Shape -->
+      <div class="position-absolute top-0 start-0 zi-n1 mt-n6 ms-n7" style="width: 10rem;">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 335.2 335.2" width="100" height="100">
+          <circle fill="#FFC107" opacity=".7" cx="167.6" cy="167.6" r="130.1"/>
+        </svg>
+      </div>
+      <!-- End SVG Shape -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container overflow-hidden content-space-t-4">
+      <div class="w-lg-75 text-center mx-lg-auto mb-9">
+        <h1 class="display-3 mb-4">Build as frameworks from the ground up</h1>
+        <p class="lead">Bring your idea to life in no time. The website solution for all your needs. For UX designers, entrepreneurs, product managers, marketers, and anyone.</p>
+        <div class="row menu-item ">
+          <h1 class="mb-5">Explore AimsCrypto Products & Services</h1>
+          @for(items of menuItems; track items.name){
+
+
+
+
+            <div class="col-4 col-lg-2 mb-3 mb-lg-2 text ">
+
+              <a class="card-body text-center" href="#">
+                <img style="width: 80px; object-fit: cover" class=" " [src]=items.image alt="Image Description">
+                <div class="card-body">
+                  <h6 class="card-subtitle text-primary">{{items.name}}</h6>
+
+                </div>
+              </a>
+              <!-- End Card -->
+            </div>
+
+
+
+
+          }
+        </div>
+        <div class="container text-center">
+
+        </div>
+      </div>
+    </div>
+
+
+  </div></div>

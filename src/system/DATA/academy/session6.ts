@@ -1,0 +1,25 @@
+import {platformsLogos} from "../../variables";
+
+export const session6=[
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture163.png'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture164.png'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture165.png'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture166.png'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture167.png'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture168.png'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture169.png'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture17.svg'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture170.svg'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture171.svg'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture172.svg'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture173.png'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture18.svg'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture19.svg'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture2.svg'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture20.svg'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture21.svg'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture22.svg'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture23.svg'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture24.svg'},
+  { title: 'Card Title 50',  image: platformsLogos +  'lecture25.svg'},
+]

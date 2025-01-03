@@ -13,6 +13,37 @@ export const routes: Routes = [
       .then(m => m.ConverterComponent)
   },
   {
+    path: 'apk',
+    loadComponent: () => import('../app/resources/apk/apk.component')
+      .then(m => m.ApkComponent)
+  },
+  {
+    path: 'network',
+    loadComponent: () => import('../app/resources/network/network.component')
+      .then(m => m.NetworkComponent)
+  },
+  {
+    path: 'trade',
+    loadComponent: () => import('../app/resources/trade/trade.component')
+      .then(m => m.TradeComponent)
+  },
+
+
+  {path: 'tokensCreation', loadComponent: () => import('../app/resources/news/tokens').then(_ => _.Tokens)},
+  {path: 'tokensCreation/:id', loadComponent: () => import('../app/resources/news/news-details/tokensDetails').then(_ => _.TokensDetails)},
+
+
+  {
+    path: 'createToken',
+    loadComponent: () => import('../app/resources/create-token/create-token.component')
+      .then(m => m.CreateTokenComponent)
+  },
+  {
+    path: 'articles',
+    loadComponent: () => import('../app/articles/articles.component')
+      .then(m => m.ArticlesComponent)
+  },
+  {
     path: 'currency',
     loadComponent: () => import('../app/currency-converter/currency-converter.component')
       .then(m => m.CurrencyConverterComponent)

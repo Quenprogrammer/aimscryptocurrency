@@ -5,13 +5,18 @@ import { communitiesData } from "../../../system/DATA/communities/communities";
 import { TemplateRef } from '@angular/core';
 import {NgForOf, NgIf, NgOptimizedImage} from "@angular/common";
 import { RandomImageService } from '../../../service/randomImage/random-image.service';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-communities',
   standalone: true,
-  imports: [NgOptimizedImage, NgForOf, NgIf],
+  imports: [NgOptimizedImage, NgForOf, NgIf, FormsModule, ReactiveFormsModule],
   styleUrls: ['./../../../system/css/customeCSS.scss'],
   template: `
+
+
+
+
     <style>
       .page-logo {
         border-radius: 10%;
@@ -65,54 +70,182 @@ import { RandomImageService } from '../../../service/randomImage/random-image.se
     </section>
 
     <ng-template #communityModal let-modal>
+
       <div class="modal-header">
         <h4 class="modal-title">{{ selectedCommunity?.name }}</h4>
         <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
       </div>
       <div class="modal-body">
-        <!-- Display the description -->
-        <p><strong>Description:</strong> {{ selectedCommunity?.description }}</p>
 
-        <!-- Display the global dominance -->
-        <p><strong>Global Dominance:</strong> {{ selectedCommunity?.global_dominance }}%</p>
 
-        <!-- Display the general usage -->
-        <p><strong>General Usage:</strong> {{ selectedCommunity?.general_usage }}</p>
 
-        <!-- Display monthly active users -->
-        <p><strong>Monthly Active Users:</strong> {{ selectedCommunity?.monthly_active_users }} million</p>
 
-        <!-- Display the age demographic -->
-        <p><strong>Age Demographic:</strong> {{ selectedCommunity?.age_demographic }}</p>
 
-        <!-- Display the market share -->
-        <p><strong>Market Share:</strong> {{ selectedCommunity?.market_share_in_social_media }}%</p>
-
-        <!-- Display the platform growth rate -->
-        <p><strong>Growth Rate:</strong> {{ selectedCommunity?.platform_growth_rate }}%</p>
-
-        <!-- Display pages and groups -->
-        <div *ngIf="selectedCommunity?.pages_groups?.length > 0">
-          <h4>Pages and Groups:</h4>
+        <div class="container">
           <div class="row">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-3 text-center" *ngFor="let pageGroup of selectedCommunity.pages_groups">
+            <div class="col-lg-8 mb-9 mb-lg-0">
+              <!-- Page Header -->
+              <div class="container pt-4">
+                <div class="page-header">
+                  <!-- Profile Cover -->
+                  <div class="profile-cover">
+                    <div class="profile-cover-img-wrapper">
+                      <img style="height: 150px; width: 100%; object-fit: cover; border-radius: 10px" class="profile-cover-img" src="/assets/Platforms/p78.webp" alt="Image Description">
+                    </div>
+                  </div>
+
+<div class="row">
+  <div class=" col-6 col-md-8" >
+    <div class="row">
+      <div class="col-auto" style="margin-left: 8px; margin-top: -33px">
+        <div class="card" style="height: 120px">
+        <img style="width: 100px; height: 100px" class="p-2" [src]= selectedCommunity?.backComImage alt="Review rating" data-bs-toggle="tooltip" data-bs-placement="top" title="Claimed profile">
+        </div>
+      </div>
+      <div class="col-6">
+
+        <h1 class="h2 mb-1">{{ selectedCommunity?.name }}</h1>
+        <div class="d-flex gap-1">
+          <img src="/assets/svg/star.svg" alt="Review rating" width="14">
+          <img src="/assets/svg/star.svg" alt="Review rating" width="14">
+          <img src="/assets/svg/star.svg" alt="Review rating" width="14">
+          <img src="/assets/svg/star.svg" alt="Review rating" width="14">
+          <img src="/assets/svg/star.svg" alt="Review rating" width="14">
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-6 col-md-4">
+    <div class="col-md-auto align-self-md-end mt-2">
+      <div class="d-grid d-sm-flex gap-2">
+        <a class="btn btn-primary" href="#">54 Open jobs</a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+                </div>
+              </div>
+              <!-- End Page Header -->
+              <!-- Nav Scroller -->
+              <div class="js-nav-scroller hs-nav-scroller-horizontal">
+
+
+        <span class="hs-nav-scroller-arrow-next" style="display: none;">
+          <a class="hs-nav-scroller-arrow-link" href="javascript:;">
+            <i class="bi-chevron-right"></i>
+          </a>
+        </span>
+
+              </div>
+              <!-- End Nav Scroller -->
+
+              <!-- Tab Content -->
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="propertyOverviewNavOne" role="tabpanel" aria-labelledby="propertyOverviewNavOne-tab">
+                  <div class="mt-2">
+                    <!-- Display the description -->
+
+                    <div  class="">
+                      <p><strong>Description:</strong> {{ selectedCommunity?.description }}</p>
+
+                      <p><strong>Monthly Active Users:</strong> {{ selectedCommunity?.monthly_active_users }} million</p>
+
+                      <!-- Display the global dominance -->
+
+
+                    <!-- Display monthly active users -->
+                    <div class="row">
+  <div class="col-6"> <p><strong>Market Share:</strong> {{ selectedCommunity?.market_share_in_social_media }}%</p>
+  </div>
+  <div class="col-6">    <p><strong>Growth Rate:</strong> {{ selectedCommunity?.platform_growth_rate }}%</p>
+  </div>
+
+</div>
+                    <div class="row">
+
+                      <div class="col-6"><p><strong>Age Demographic:</strong> {{ selectedCommunity?.age_demographic }}</p></div>
+                        <div class="col-6"> <p><strong>Growth Rate:</strong> {{ selectedCommunity?.platform_growth_rate }}%</p>
+
+                      </div>
+                      </div>
+                    </div>
+
+                          </div>
+
+
+                  <div class="border-top border-bottom py-2 mt-4 mb-3">
+                    <div class="row col-sm-divider">
+                      <h4>Communities</h4>
+                    </div>
+                    <!-- End Row -->
+                  </div>
+
+
+
+                </div>
+
+                     </div>
+              <!-- End Tab Content -->
+
+            </div>
+            <!-- End Col -->
+
+            <div class="col-lg-4">
+              <!-- Sticky Block -->
+              <div class="card card-bordered">
+                <div class="card-body">
+                  <h1>here</h1>
+
+                </div>
+                <!-- End Card -->
+              </div>
+              <!-- End Sticky Block -->
+            </div>
+            <!-- End Col -->
+          </div>
+          <!-- End Row -->
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <div *ngIf="selectedCommunity?.pages_groups?.length > 0">
+
+          <div class="row">
+            <div class="col-4  col-md-3 col-lg-2 my-3 text-center" *ngFor="let pageGroup of getCurrentPageItems()">
               <a [href]="pageGroup.link" target="_blank" style="text-decoration: none !important;">
-                <img [src]="pageGroup.logo" alt="{{ pageGroup.name }} logo" class="page-logo img-fluid" />
-                <h6 class="" style="color: black;">{{ pageGroup.name }}</h6>
+                <img style="width: 90px; height: 80px; object-fit: cover" loading="lazy" [src]="pageGroup.logo" alt="{{ pageGroup.name }} logo" class="page-logo img-fluid" />
+                <h6 style="color: black;">{{ pageGroup.name }}</h6>
               </a>
             </div>
           </div>
 
-
-
-          <!--  <li *ngFor="let pageGroup of selectedCommunity.pages_groups">
-              <a [href]="pageGroup.link" target="_blank">
-                <img [src]="pageGroup.logo" alt="{{ pageGroup.name }} logo" class="page-logo" />
-                <span>{{ pageGroup.name }}</span>
-              </a>
-            </li>-->
-
+          <!-- Pagination Controls -->
+          <div class="pagination-controls text-center mt-3">
+            <button (click)="previousPage()" [disabled]="currentPage === 1" class="btn btn-primary">Previous</button>
+            <span>Page {{ currentPage }} of {{ totalPages }}</span>
+            <button (click)="nextPage()" [disabled]="currentPage === totalPages" class="btn btn-primary">Next</button>
+          </div>
         </div>
+
+
+
+
+
       </div>
 
       <div class="modal-footer">
@@ -169,4 +302,38 @@ export class CommunitiesComponent implements AfterViewInit, OnDestroy {
     this.subscriptions.unsubscribe();
     console.log('detroyed')
   }
+
+
+
+
+  currentPage: number = 1;
+  itemsPerPage: number = 12;  // Number of items per page (adjust as needed)
+
+  get totalPages(): number {
+    return Math.ceil(this.selectedCommunity?.pages_groups.length / this.itemsPerPage);
+  }
+
+  getCurrentPageItems() {
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    const endIndex = startIndex + this.itemsPerPage;
+    return this.selectedCommunity?.pages_groups.slice(startIndex, endIndex);
+  }
+
+  previousPage() {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+    }
+  }
+
+  nextPage() {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
+    }
+  }
+
+
+
+
+
+
 }

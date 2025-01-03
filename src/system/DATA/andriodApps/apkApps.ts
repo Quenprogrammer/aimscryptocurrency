@@ -1,3 +1,5 @@
+import {apk} from "../../variables";
+
 const andriodApps = [
   {
     "appName": "CoinBase",
@@ -665,3 +667,21 @@ const andriodApps = [
       "downloadLink": "https://play.google.com/store/apps/details?id=com.btt.wallet"
     }*/
   ];
+export const googlePlayApps=[
+  {name:'', link:'', image: apk +'apk1.webp'},
+  {name:'', link:'', image: apk +'apk2.webp'},
+  {name:'', link:'', image: apk +'apk3.webp'},
+  {name:'', link:'', image: apk +'apk4.webp'},
+  {name:'', link:'', image: apk +'apk5.webp'},
+  {name:'', link:'', image: apk +'apk6.webp'},
+  {name:'', link:'', image: apk +'apk7.webp'},
+  {name:'', link:'', image: apk +'apk8.webp'},
+  {name:'', link:'', image: apk +'apk9.webp'},
+  {name:'', link:'', image: apk +'apk10.webp'},
+  {name:'', link:'', image: apk +'apk11.webp'},
+  {name:'', link:'', image: apk +'apk12.webp'},
+  {name:'', link:'', image: apk +'apk13.webp'},
+  {name:'', link:'', image: apk +'apk14.webp'},
+  {name:'', link:'', image: apk +'apk15.webp'},
+
+]

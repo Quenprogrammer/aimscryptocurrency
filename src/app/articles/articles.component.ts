@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {NgForOf, NgIf} from "@angular/common";
+import {articles} from "../../system/DATA/articles/articles";
 
 
 @Component({
@@ -15,6 +16,7 @@ import {NgForOf, NgIf} from "@angular/common";
 export class ArticlesComponent {
 
 
+  protected readonly articles = articles;
 }
 
 

@@ -1,59 +1,34 @@
-<!--
-<div class="container content-space-2 content-space-lg-3">
-  &lt;!&ndash; Heading &ndash;&gt;
-  <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
-    <span class="text-cap">Success stories</span>
-    <h2>See how Front is helping teams get organized and work smarter</h2>
-  </div>
-  &lt;!&ndash; End Heading &ndash;&gt;
-
-  <div class="row  mb-5">
-    <div class="col-12 col-md-4  mb-5 "  *ngFor="let step of allArticles">
-
-      <div class="card h-100 border-0 shadow-lg">
-        <img class="card-img-top" src="assets/Platforms/b7.webp" alt="Image Description">
-
-        <div class="card-body">
-
-          <p class="card-text">Amazon launched their enterprise platform and built a powerful user experience.</p>
-        </div>
-
-
+<div class="container">
+  <div class="row">
+    @for(items of articles; track items.title){
+  <!--  <div class="col-12 col-md-4 col-lg-3 mb-4">
+      <div class="card">
+        <img [src]=items.image alt="Card image cap">
+        <h2>{{items.title}}</h2>
+          <p>{{items.text}}</p>
       </div>
-      &lt;!&ndash; End Card &ndash;&gt;
-    </div>
+    </div>-->
 
-  </div>
-  &lt;!&ndash; End Row &ndash;&gt;
+      <div class="col-md-4 col-lg-3 mb-5">
+        <!-- Card -->
+        <div class="card">
+          <img style="height: 200px" class="card-img-top" [src]=items.image alt="Image Description">
 
-  <div class="text-center">
-    <a class="btn btn-outline-primary" href="#">View all stories</a>
+          <div class="card-body">
+            <h6>{{items.title}}</h6>
+            <p class="card-text">Google is an innovator in public safety technology. First-to-market with TASER conducted energy weapons (CEWs).</p>
+          </div>
+
+          <div class="card-footer pt-0 bg-black">
+            <a class="card-link" href="./page-customer-story.html">Read story <i class="bi-chevron-right small ms-1"></i></a>
+          </div>
+        </div>
+        <!-- End Card -->
+      </div>
+
+      }
   </div>
+
+
+
 </div>
-
-
-
-
-
-
-
-&lt;!&ndash; Display articleSections &ndash;&gt;
-<div *ngFor="let section of allArticles">
-  <h2>{{ section.title }}</h2>
-  <p>{{ section.content }}</p>
-
-  <div *ngIf="section.subSections">
-    <div *ngFor="let subSection of section.subSections">
-      <h3>{{ subSection.title }}</h3>
-      <p>{{ subSection.content }}</p>
-    </div>
-  </div>
-
-  <div *ngIf="section.listItems">
-    <h3>Key Points:</h3>
-    <ul>
-      <li *ngFor="let item of section.listItems">{{ item }}</li>
-    </ul>
-  </div>
-</div>
--->

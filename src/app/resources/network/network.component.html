@@ -1,0 +1,167 @@
+<button (click)='startTimer()'>Start Timer</button>
+<button (click)='pauseTimer()'>Pause</button>
+
+<section class="container" id="tickets">
+  <div class="row border border-light rounded-5 overflow-hidden g-0">
+    <div class="col-md-4 col-xl-4 border-top border-md-0 border-start-md border-light">
+      <div class="card h-100 bg-secondary border-0 rounded-0 py-md-3 py-lg-4 py-xl-5 px-3 px-sm-4 px-lg-5">
+        <div class="card-body py-5 px-2 text-center">
+          <img class="rounded-circle" style="width: 200px" src="assets/component/loader.gif">
+          <h1 class="text-center display-3" style="border-radius: 200px">{{ timeLeft  | number:'1.4-4' }}</h1>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-8 col-xl-8">
+      <div class="card h-100 bg-dark border-0 rounded-0 " data-bs-theme="dark">
+        <div class="position-absolute top-0 start-0 w-100 h-100"
+             style="background-image: url(assets/img/landing/conference/noise.png); mix-blend-mode: soft-light; opacity: 12%"></div>
+        <div class="card-body position-relative z-1 ">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a href="#home" class="nav-link active" data-bs-toggle="tab" role="tab">
+                <i class="fi-home me-2"></i>
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#profile" class="nav-link" data-bs-toggle="tab" role="tab">
+                <i class="fi-user me-2"></i>
+                Vault
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">Dropdown</a>
+              <div class="dropdown-menu">
+                <a href="#messages" class="dropdown-item" data-bs-toggle="tab" role="tab">Messages</a>
+                <a href="#settings" class="dropdown-item" data-bs-toggle="tab" role="tab">Settings</a>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Tabs content -->
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="home" role="tabpanel">
+              <div class="table-responsive pt-sm-2 pt-lg-3" style="height: 350px">
+                <table class="table text-center text-nowrap">
+                  <thead>
+                  <tr>
+
+                    <th scope="col" class="border-0 py-3"><span class="h5 mb-0">Light</span></th>
+                    <th scope="col" class="border-0 py-3"><span class="h5 mb-0">Premium</span></th>
+                    <th scope="col" class="border-0 py-3"><span class="h5 mb-0">Medium</span></th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td class="border-0 bg-secondary py-3"><span class="text-dark">$18</span></td>
+                    <td class="border-0 bg-secondary py-3"><span class="text-dark">$72</span></td>
+                    <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><span class="text-dark">$36</span>
+                    </td>
+                  </tr>
+
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel">
+              <div class="col-lg-12 ">
+
+                <div class="card border-0 py-1 p-md-2 p-xl-3 p-xxl-4">
+                  <div class="card-body">
+
+                    <!-- Stats -->
+                    <div class="row">
+                      <div class=" mt-0 col-md-6 col-sm-6">
+                        <div class="h-100 bg-secondary rounded-3 text-center p-2">
+                          <h2 class="h6 pb-2 mb-1">Earnings (before taxes)</h2>
+                          <div class="h2 text-primary mb-2">$842.00</div>
+                          <p class="fs-sm text-body-secondary mb-0">Sales 8/1/2023 - 8/15/2023</p>
+                        </div>
+                      </div>
+                      <div class="mt-0 col-md-6 col-sm-6">
+                        <div class="h-100 bg-secondary rounded-3 text-center p-2">
+                          <h2 class="h6 pb-2 mb-1">Your balance</h2>
+                          <div class="h2 text-primary mb-2">$735.00</div>
+                          <p class="fs-sm text-body-secondary mb-0">To be paid on 8/15/2023</p>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="row g-4 py-4">
+
+                      <!-- Sales value line chart -->
+
+
+                      <!-- Country sales -->
+                      <div class="col-md-12">
+                        <div class="h-100 border rounded-3 p-4">
+                          <div class="d-flex justify-content-between text-body-secondary fs-sm">
+                            <span>Country</span>
+                            <span>Value</span>
+                          </div>
+                          <div class="mt-3">
+                            <div class="d-flex align-items-center fs-sm text-dark pb-1 mb-2">
+                              <img src="assets/img/account/flags/usa.png" width="16" alt="USA">
+                              <span class="ms-2">United States</span>
+                              <span class="ms-auto">$352</span>
+                            </div>
+                            <div class="progress" style="height: 3px;">
+                              <div class="progress-bar" role="progressbar" style="width: 48%" aria-valuenow="48"
+                                   aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <div class="d-flex align-items-center fs-sm text-dark pb-1 mb-2">
+                              <img src="assets/img/account/flags/sweden.png" width="16" alt="Sweden">
+                              <span class="ms-2">Sweden</span>
+                              <span class="ms-auto">$218</span>
+                            </div>
+                            <div class="progress" style="height: 3px;">
+                              <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30"
+                                   aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <div class="d-flex align-items-center fs-sm text-dark pb-1 mb-2">
+                              <img src="assets/img/account/flags/india.png" width="16" alt="India">
+                              <span class="ms-2">India</span>
+                              <span class="ms-auto">$97</span>
+                            </div>
+                            <div class="progress" style="height: 3px;">
+                              <div class="progress-bar" role="progressbar" style="width: 14%" aria-valuenow="14"
+                                   aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row g-4">
+
+                      <!-- Device shares pie chart -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="messages" role="tabpanel">
+
+            </div>
+            <div class="tab-pane fade" id="settings" role="tabpanel">
+              <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master
+                cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party
+                locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they
+                sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats
+                keffiyeh craft beer marfa ethical.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
