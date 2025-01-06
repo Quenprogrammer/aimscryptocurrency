@@ -10,3 +10,5 @@ export const menuItems:string='/assets/items/';
 export const articles:string='/assets/articles/';
 export const apk:string='/assets/apk/';
 export const lectures:string='/assets/lectures/';
+export const Languages:string='/assets/Languages/';
+export const nodeJS:string='/assets/nodejs/';

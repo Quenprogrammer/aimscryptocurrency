@@ -3,10 +3,51 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
 
   {
+    path: 'homepage',
+    loadComponent: () => import('../app/homepage/homepage.component')
+      .then(m => m.HomepageComponent)
+  },
+  {
+    path: 'market',
+    loadComponent: () => import('../app/market/market.component')
+      .then(m => m.MarketComponent)
+  },
+  {
+    path: 'network',
+    loadComponent: () => import('../app/network/network.component')
+      .then(m => m.NetworkComponent)
+  },
+  {
+    path: 'portfolio',
+    loadComponent: () => import('../app/portfolio/portfolio.component')
+      .then(m => m.PortfolioComponent)
+  },
+  {
+    path: 'assets',
+    loadComponent: () => import('../app/assets/assets.component')
+      .then(m => m.AssetsComponent)
+  },
+  {
     path: 'platforms',
     loadComponent: () => import('../app/platforms/platforms.component')
       .then(m => m.PlatformsComponent)
   },
+  {
+    path: 'devs',
+    loadComponent: () => import('../app/devs/platforms/platforms.component')
+      .then(m => m.PlatformsComponent)
+  },
+  {
+    path: 'p2p',
+    loadComponent: () => import('../app/p2p/p2p.component')
+      .then(m => m.P2pComponent)
+  },
+  {
+    path: 'watchlist',
+    loadComponent: () => import('../app/watchlist/watchlist.component')
+      .then(m => m.WatchlistComponent)
+  },
+
   {
     path: 'converter',
     loadComponent: () => import('../app/converter/converter.component')

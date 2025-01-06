@@ -1,0 +1,35 @@
+<div class="row ">
+  @for(items of ItemsCards; track items.name){
+  <div class="col-md-6 mb-5 my-5">
+    <!-- Card -->
+    <div class="card  shadow-lg border-0 bg-dark">
+      <img class="card-img-top" [src]=items.logo alt="Image Description">
+
+      <div class="card-body">
+        <div class="mb-3">
+          <img style="height: 50px" class="" [src]=items.icon alt="Logo">
+        </div>
+        <h3 class="card-text text-white">Amazon launched their </h3>
+        <p class="card-text text-white">Amazon launched their enterprise platform and built a powerful user
+          experience.</p>
+        <app-socials></app-socials>
+      </div>
+
+
+    </div>
+    <!-- End Card -->
+  </div>
+  }
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-4">
+        <div class="card bg-dark border-0">
+          <img style="height: 60px; object-fit: cover" class="" src="/assets/nodejs/nodeJS1.webp" alt="Logo">
+
+        </div>
+        <hr>
+      </div>
+      <div class="col-8"><h3 class="text-white">testing Article</h3></div>
+    </div>
+  </div>
+</div>

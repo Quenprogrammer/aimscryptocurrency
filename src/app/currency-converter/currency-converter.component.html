@@ -1,6 +1,6 @@
 <div class="container overflow-hidden">
   <div class="card shadow-lg">
-  <h1>Currency Converter</h1>
+  <h1 class="display-4">Currency Converter</h1>
   <form [formGroup]="conversionForm">
     <div>
       <label>From:</label>
@@ -22,7 +22,7 @@
       <label>Amount:</label>
       <input class="form-control" formControlName="amount" type="number">
     </div>
-    <button (click)="convert()">Convert</button>
+    <!--<button (click)="convert()">Convert</button>-->
   </form>
   <p *ngIf="result">Result: {{ result }}</p>
 </div>
@@ -38,7 +38,7 @@
 
   <table class="table caption-top ">
     <thead class="">
-    <tr style="width: 100%">
+    <tr style="width: 98%">
       <th scope="col">SN</th>
       <th scope="col"></th>
       <th scope="col">Country Name</th>
@@ -67,9 +67,9 @@
           <td>{{items.capital}}</td>
 
 
-          <td>
 
-          </td>
+
+
         </tr>
       }
     </tbody>
