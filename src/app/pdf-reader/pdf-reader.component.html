@@ -1,0 +1,58 @@
+<div class="contribution-container">
+  <h2>Contribute to the Community</h2>
+  <p>We welcome contributions from developers like you! Please provide the following details:</p>
+
+  <form [formGroup]="contributionForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Contribution Title:</label>
+      <input id="title" formControlName="title" type="text" placeholder="Enter your contribution title" required>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Contribution Description:</label>
+      <textarea id="description" formControlName="description" placeholder="Describe your contribution" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="category">Category:</label>
+      <select id="category" formControlName="category" required>
+        <option value="bugfix">Bug Fix</option>
+        <option value="feature">Feature</option>
+        <option value="enhancement">Enhancement</option>
+        <option value="documentation">Documentation</option>
+      </select>
+    </div>
+
+    <!-- Add Code Section -->
+    <div class="mb-3">
+      <h5>Add Code</h5>
+      <div formArrayName="addCode">
+        <div *ngFor="let code of addCodeArray.controls; let i = index" [formGroupName]="i" class="mb-3">
+          <label class="form-label">Code Section {{ i + 1 }}</label>
+          <div class="d-flex align-items-center">
+            <select class="form-select me-2" formControlName="codeType">
+              <option value="" disabled>Select Code Type</option>
+              <option *ngFor="let codeType of codeTypes" [value]="codeType">{{ codeType }}</option>
+            </select>
+            <textarea
+              class="form-control me-2"
+              formControlName="codeContent"
+              placeholder="Enter your code here"
+            ></textarea>
+            <button *ngIf="i > 0" type="button" class="btn btn-danger" (click)="removeCodeSection(i)">Remove</button>
+          </div>
+          <div *ngIf="code.get('codeContent')?.touched && code.get('codeContent')?.invalid" class="text-danger">
+            Code content is required.
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-success" (click)="addCodeSection()">+ Add Code</button>
+    </div>
+
+    <button type="submit" [disabled]="!contributionForm.valid">Submit Contribution</button>
+  </form>
+
+  <div *ngIf="submissionStatus" class="status-message">
+    <p>{{ submissionStatus }}</p>
+  </div>
+</div>

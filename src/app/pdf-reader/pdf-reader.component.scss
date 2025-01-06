@@ -1,0 +1,44 @@
+.contribution-container {
+  max-width:1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.status-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border: 1px solid #007bff;
+  color: #007bff;
+  border-radius: 4px;
+  text-align: center;
+}
