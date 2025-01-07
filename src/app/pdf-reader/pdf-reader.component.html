@@ -3,16 +3,19 @@
   <p>We welcome contributions from developers like you! Please provide the following details:</p>
 
   <form [formGroup]="contributionForm" (ngSubmit)="onSubmit()">
+    <!-- Title -->
     <div class="form-group">
       <label for="title">Contribution Title:</label>
       <input id="title" formControlName="title" type="text" placeholder="Enter your contribution title" required>
     </div>
 
+    <!-- Description -->
     <div class="form-group">
       <label for="description">Contribution Description:</label>
       <textarea id="description" formControlName="description" placeholder="Describe your contribution" required></textarea>
     </div>
 
+    <!-- Category -->
     <div class="form-group">
       <label for="category">Category:</label>
       <select id="category" formControlName="category" required>
@@ -41,17 +44,40 @@
             ></textarea>
             <button *ngIf="i > 0" type="button" class="btn btn-danger" (click)="removeCodeSection(i)">Remove</button>
           </div>
-          <div *ngIf="code.get('codeContent')?.touched && code.get('codeContent')?.invalid" class="text-danger">
-            Code content is required.
-          </div>
         </div>
       </div>
       <button type="button" class="btn btn-success" (click)="addCodeSection()">+ Add Code</button>
     </div>
 
+    <!-- File Upload Section -->
+    <div class="form-group">
+      <label for="fileUpload">Upload Files:</label>
+      <input
+        id="fileUpload"
+        type="file"
+        (change)="onFileSelected($event)"
+        multiple
+      >
+    </div>
+
+    <!-- Display Selected Files -->
+    <div *ngIf="selectedFiles.length > 0" class="mb-3">
+      <h5>Selected Files:</h5>
+      <ul>
+        <li *ngFor="let file of selectedFiles; let i = index" class="d-flex align-items-center">
+          <img [src]="file.icon" alt="File Icon" class="me-2" style="width: 30px; height: 30px;">
+          {{ file.file.name }} - {{ file.sizeInKB }} KB
+          <button type="button" class="btn btn-danger btn-sm ms-2" (click)="removeFile(i)">Remove</button>
+        </li>
+      </ul>
+      <p class="fw-bold">Total Size: {{ totalFileSizeInKB }} KB</p>
+    </div>
+
+    <!-- Submit -->
     <button type="submit" [disabled]="!contributionForm.valid">Submit Contribution</button>
   </form>
 
+  <!-- Submission Status -->
   <div *ngIf="submissionStatus" class="status-message">
     <p>{{ submissionStatus }}</p>
   </div>
