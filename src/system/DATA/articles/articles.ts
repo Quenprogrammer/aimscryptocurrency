@@ -441,7 +441,7 @@ export const stakingGuideData = [
     ]
   },
   {
-    title: 'Tools for Staking',
+    title: 'cryptoTools for Staking',
     titles: [
       {
         title: 'Staking Wallets',

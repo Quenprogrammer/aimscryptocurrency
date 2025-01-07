@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer cryptoTools -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 	 viewBox="0 0 460 460" xml:space="preserve">
 <rect x="207.747" y="70.563" transform="matrix(-0.6431 -0.7658 0.7658 -0.6431 405.6015 340.1652)" style="fill:#D8D9DD;" width="148.647" height="10.001"/>
 <rect x="170.235" y="1.234" transform="matrix(-0.7658 -0.6431 0.6431 -0.7658 260.8385 246.1102)" style="fill:#D8D9DD;" width="10.001" height="148.647"/>
 <rect x="25.322" y="142.513" style="fill:#EDEEF0;" width="409.349" height="302.359"/>
-<polygon style="fill:#C8523B;" points="109.647,286.96 103.974,278.726 158.901,240.874 201.205,261.053 270.07,208.794 
+<polygon style="fill:#C8523B;" points="109.647,286.96 103.974,278.726 158.901,240.874 201.205,261.053 270.07,208.794
 	319.923,235.485 370.68,196.053 376.814,203.949 320.928,247.366 271.006,220.638 202.398,272.701 159.815,252.39 "/>
 <rect x="109.05" y="317.727" style="fill:#E5C400;" width="17.768" height="52.722"/>
 <rect x="137.775" y="301.482" style="fill:#E5C400;" width="17.753" height="68.968"/>
@@ -34,6 +34,6 @@
 <path style="fill:#59595A;" d="M228.651,23.888c-6.586,0-11.943-5.358-11.943-11.944S222.065,0,228.651,0
 	s11.944,5.357,11.944,11.943S235.237,23.888,228.651,23.888z M228.651,7c-2.726,0-4.943,2.218-4.943,4.943
 	c0,2.727,2.218,4.944,4.943,4.944c2.727,0,4.944-2.218,4.944-4.944C233.596,9.218,231.378,7,228.651,7z"/>
-<polygon style="fill:#D8D9DD;" points="388.147,384.052 90.799,384.052 90.799,184.385 80.799,184.385 80.799,384.052 
+<polygon style="fill:#D8D9DD;" points="388.147,384.052 90.799,384.052 90.799,184.385 80.799,184.385 80.799,384.052
 	71.846,384.052 71.846,394.052 80.799,394.052 80.799,403.016 90.799,403.016 90.799,394.052 388.147,394.052 "/>
 </svg>

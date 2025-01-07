@@ -1488,7 +1488,7 @@ const whitebitInfo = {
   specialFeatures: [
     "WhiteBIT Token",
     "Staking",
-    "Advanced Charting Tools"
+    "Advanced Charting cryptoTools"
   ],
   mobileApp: {
     platforms: ["iOS", "Android"],
