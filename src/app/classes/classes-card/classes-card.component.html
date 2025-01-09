@@ -1,0 +1,108 @@
+<main id="content" role="main">
+
+
+
+
+    <div class="container space-2" >
+
+
+      @for (classes of allClasses; track classes.className) {
+      <div class="card mb-5"  data-aos-duration="1000" data-aos="fade-right" data-aos-delay="450">
+        <div class="card-body p-4">
+          <!-- Details -->
+          <div class="media d-block d-sm-flex">
+            <div class=" mb-3 mb-sm-0 mr-4">
+              <img class="img-fluid" style="height: 30rem; width: 30rem; object-fit: cover" [src]="classes.bookPhoto" alt="Image Description">
+            </div>
+
+            <div class="media-body">
+              <!-- Header -->
+              <div class="media mb-2">
+                <div class="media-body">
+                  <h1 class="display-4 mb-1">
+                    <a >{{classes.className}}</a>
+                  </h1>
+                  <ul class="list-inline font-size-1 text-muted">
+                    <li class="list-inline-item">
+                      <a class="link-muted" href="company-profile.html">
+                        <span class="fas fa-building mr-1"></span>
+                       Average Attendance
+                      </a>
+                    </li>
+
+                    <li class="list-inline-item">{{classes.averageAttendanceRate + '%'}}</li>
+                  </ul>
+                </div>
+
+
+              </div>
+              <ul class="custom-list">
+                <li>
+
+                  {{ classes.classOverview }}
+                </li>
+
+
+                <li>
+
+                  {{ classes.resourcesAndMaterials }}
+                </li>
+              </ul>
+
+
+
+              <ul>
+
+  <div class="subject-offerings d-flex flex-wrap">
+        <span *ngFor="let subject of classes.subjectOfferings" class="subject-badge">
+
+         <span class="fas fa-check text-success small mr-0"></span> {{ subject }}
+
+        </span>
+        </div>
+
+</ul>
+              <div class="d-md-flex align-items-md-center">
+                <!-- Location -->
+                <div class="u-ver-divider u-ver-divider--none-md pr-4 mb-3 mb-md-0 mr-4">
+                  <h2 class="small text-secondary mb-0">Graduation Rate</h2>
+                  <small class="fas fa-address-book text-secondary align-middle mr-1"></small>
+                  <span class="align-middle">{{classes.graduationRate +'%'}}</span>
+                </div>
+                <!-- End Location -->
+
+
+
+                <!-- End Posted -->
+
+                <div class="u-ver-divider u-ver-divider--none-md pr-4 mb-3 mb-md-0 mr-4">
+                  <h2 class="small text-secondary mb-0">Student retension</h2>
+                  <small class="fas fa-smile text-secondary align-middle mr-1"></small>
+                  <span class="align-middle">{{classes.studentRetentionRate +'%'}}</span>
+                </div>
+
+                <!-- Posted -->
+                <div class="mb-3 mb-md-0">
+                  <h4 class="small text-secondary mb-0">minimum Age Requirement</h4>
+                  <small class="fas fa-school text-secondary align-middle mr-1"></small>
+                  <span class="align-middle">{{classes.minimumAgeRequirement +'years'}} </span>
+                </div>
+                <!-- End Posted -->
+
+              </div>
+            </div>
+          </div>
+          <!-- End Details -->
+        </div>
+      </div>
+      }
+    </div>
+
+
+</main>
+
+
+
+
+
+

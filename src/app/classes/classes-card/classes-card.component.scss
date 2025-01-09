@@ -1,0 +1,24 @@
+.subject-offerings {
+ /* Use flexbox to arrange items in a row */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+  gap: 10px; /* Space between items */
+}
+
+.subject-badge {
+
+
+  padding: 5px 10px; /* Padding around the text */
+  border-radius: 15px; /* Rounded corners */
+  font-size: 14px; /* Font size */
+}
+.custom-list {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.custom-list li {
+  display: flex; /* Use flexbox for proper alignment */
+  align-items: center; /* Center align items */
+  margin-bottom: 5px; /* Space between items */
+}
