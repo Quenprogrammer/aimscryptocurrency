@@ -100,6 +100,13 @@ export const routes: Routes = [
       .then(m => m.PolicyComponent)
   },
   {
+    path: 'reader',
+    loadComponent: () => import('../core/reader/reader.component')
+      .then(m => m.ReaderComponent)
+  },
+
+
+  {
     path: 'workspace',
     loadComponent: () => import('../debugFolder/workspace/workspace.component')
       .then(m => m.WorkspaceComponent)
